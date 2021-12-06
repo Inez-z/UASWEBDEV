@@ -25,23 +25,20 @@
   <div class="form">
      <img src="signIn.png" alt="">
   </div>
-  <div class="contactform" id="col-2">
+  <div class="form" id="col-2">
     <form action="">
-        <div class="text" style="font-size: 20px; font-weight: 500;">Sign In</div>
+        <div class="text">Sign In</div>
         <div class="inputbox">
+          <span>Username</span> <br>
             <input type="text" id="username" name="" required="required">
-            <span>Username</span>
         </div>
         <div class="inputbox">
+            <span>Password</span> <br>
             <input type="email" id="password" name="" required="required">
-            <span>Password</span>
         </div>
         <div class="inputbox">
           <input type="submit" name="" value="Sign In" style="border:0;border-radius: 15px; background-color: #b8926a;" onclick="">
         </div>
-        <!-- <div class="button-signin">
-          <button type="submit">Sign In</button>
-        </div> -->
     </form>
   </div>
 </div>
