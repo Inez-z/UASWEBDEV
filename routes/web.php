@@ -22,5 +22,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/sign-in', function () {
+    return view('sign-in');
+});
+
 
 
