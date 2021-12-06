@@ -14,7 +14,7 @@
 
 <body> <!-- header -->
     <section>
-        <nav>
+        {{-- <nav>
         <!--logo----------------->
             <img src="image/logo.png" class="logo">
         <!--menu----------------->
@@ -31,7 +31,51 @@
                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                 <li><a href="#"><i class="fa fa-user"></i></a></li>
             </ul>
-        </nav>
+        </nav> --}}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            {{-- diganti logo --}}
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png" width="30" height="30" alt="">
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                {{-- <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">All</a>
+                    <a class="dropdown-item" href="#">Men</a>
+                    <a class="dropdown-item" href="#">Women</a>
+                    <a class="dropdown-item" href="#">Kids</a>
+                    <a class="dropdown-item" href="#">Best Seller</a>
+                    {{-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a> --}}
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+              </ul>
+              <div class="flex-grow-1 d-flex">
+                <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+
+            </div>
+          </nav>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
