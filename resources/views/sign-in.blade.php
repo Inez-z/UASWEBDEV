@@ -22,7 +22,7 @@
 
 </form> -->
 <div class="container">
-  <div class="contactform">
+  <div class="form">
      <img src="signIn.png" alt="">
   </div>
   <div class="contactform" id="col-2">

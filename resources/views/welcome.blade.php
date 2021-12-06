@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WatchOut</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -67,12 +67,12 @@
                   <a class="nav-link" href="#">About Us</a>
                 </li>
               </ul>
-              <div class="flex-grow-1 d-flex">
-                <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+                <div class="flex-grow-1 d-flex">
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
+                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
 
             </div>
           </nav>
