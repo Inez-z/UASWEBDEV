@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
@@ -27,19 +27,22 @@
   </div>
   <div class="form" id="col-2">
     <form action="">
-        <div class="text">Sign In</div>
-        <div class="inputbox">
-          <span>Username</span> <br>
-            <input type="text" id="username" name="" required="required">
+        <div class="text">SIGN IN</div>
+        <div class="inputbox" id="email">
+          <span>EMAIL</span> <br>
+            <input type="email" name="" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
         </div>
-        <div class="inputbox">
-            <span>Password</span> <br>
-            <input type="email" id="password" name="" required="required">
+        <div class="inputbox" id="password" >
+            <span>PASSWORD</span> <br>
+            <input type="password" name="" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
         </div>
-        <div class="inputbox">
-          <input type="submit" name="" value="Sign In" style="border:0;border-radius: 15px; background-color: #b8926a;" onclick="">
+        <div id="sign-in">
+          <input type="submit" name="" value="SIGN IN" style="letter-spacing: 0.03em; font-size:small; weight: 150px; height: 38px; border:0 ;border-radius: 30px; background-color: #b8926a; color:#ffff" onclick="">
         </div>
     </form>
+  </div>
+  <div id="regist">
+      <p style="font-size: 12px">Don't have an account? <span style="font-weight:500;"> SIGN UP</span></p>
   </div>
 </div>
 

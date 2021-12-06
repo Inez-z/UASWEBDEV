@@ -1,0 +1,54 @@
+body {
+    background-color: #eae6df;
+    margin:0px;
+    padding:0px;
+}
+
+.container .form .text{
+    position: absolute;
+    width: 97px;
+    height: 30px;
+    left: 60%;
+    top: 30%;
+
+    font-style: normal;
+    font-weight:bolder;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+}
+
+.container span{
+    font-size: small;
+    font-weight:500;
+}
+
+#email{
+    position: absolute;
+    width: 319px;
+    height: 68px;
+    left: 55%;
+    top: 40%;
+}
+
+#password{
+    position: absolute;
+    width: 319px;
+    height: 68px;
+    left: 55%;
+    top: 50%;
+}
+
+#sign-in{
+    position: absolute;
+    left: 61%;
+    top: 65%;
+}
+
+#regist{
+    position: absolute;
+    left: 56%;
+    top: 77%;
+}
