@@ -1,10 +1,12 @@
-body {
-    background-color: #eae6df;
+/* STYLING SIGN IN */
+.body-sign-in {
+    background-color: #d4c8be;
     margin:0px;
     padding:0px;
+    height: 577px;
 }
 
-.container-right{
+.container-signin-right{
     width: 360px;
     margin-left: 622px;
     margin-top: 80px;
@@ -16,7 +18,7 @@ body {
     position: fixed;
 }
 
-.container-left{
+.container-signin-left{
     width: 355px;
     margin-left: 288px;
     margin-top: 32px;
@@ -24,7 +26,7 @@ body {
     height: 404px;
     border: 1px solid #d4c8be;
     border-radius: 19px;
-    background-color: #d4c8be;
+    background-color: #eae6df;
     position: fixed;
 }
 
@@ -68,4 +70,20 @@ body {
     position: absolute;
     left: 722px;
     top: 433px;
+}
+
+/* STYLING SIGN UP */
+.form-sign-up .text{
+    position:fixed;
+    width: 150px;
+    height: 30px;
+    left: 766px;
+    top: 130px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    color: #000000;
 }
