@@ -4,15 +4,38 @@ body {
     padding:0px;
 }
 
-.container .form .text{
-    position: absolute;
+.container-right{
+    width: 360px;
+    margin-left: 622px;
+    margin-top: 80px;
+    /* margin: auto; */
+    height: 404px;
+    border: 1px solid #d4c8be;
+    border-radius: 19px;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.container-left{
+    width: 355px;
+    margin-left: 288px;
+    margin-top: 32px;
+    /* margin: auto; */
+    height: 404px;
+    border: 1px solid #d4c8be;
+    border-radius: 19px;
+    background-color: #d4c8be;
+    position: fixed;
+}
+
+.form-sign-in .text{
+    position:fixed;
     width: 97px;
     height: 30px;
-    left: 60%;
-    top: 30%;
-
+    left: 766px;
+    top: 130px;
     font-style: normal;
-    font-weight:bolder;
+    font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.02em;
@@ -20,7 +43,7 @@ body {
     color: #000000;
 }
 
-.container span{
+.form-sign-in span{
     font-size: small;
     font-weight:500;
 }
@@ -29,26 +52,20 @@ body {
     position: absolute;
     width: 319px;
     height: 68px;
-    left: 55%;
-    top: 40%;
+    left: 706px;
+    top: 191px;
 }
 
 #password{
     position: absolute;
     width: 319px;
     height: 68px;
-    left: 55%;
-    top: 50%;
+    left: 706px;
+    top: 250px;
 }
 
-#sign-in{
+#regist {
     position: absolute;
-    left: 61%;
-    top: 65%;
-}
-
-#regist{
-    position: absolute;
-    left: 56%;
-    top: 77%;
+    left: 722px;
+    top: 433px;
 }
