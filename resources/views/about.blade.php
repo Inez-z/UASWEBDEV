@@ -30,7 +30,7 @@
                     </ul>
                 </nav>
                 <div class="bg">
-                    <img src="image/about_header.png">
+                    <img src="image/about (3).png">
                 </div>
                 <div class="desc">
                     <img src="image/about_desc.png">

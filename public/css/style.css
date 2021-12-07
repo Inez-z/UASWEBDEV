@@ -173,7 +173,7 @@ div.foto-foto img{
 .desc{
     position: absolute;
     top: 350px;
-    margin-left: 290px;
+    margin-left: 310px;
     margin-right: 30px;
     width: 50%;
     height: 50%;
@@ -208,8 +208,8 @@ table{
 }
 .cart-info{
     display: flex;
-    flex-wrap: wrap; 
-    
+    flex-wrap: wrap;
+
 }
 
 .container > h1{
@@ -271,7 +271,7 @@ td input{
     bottom: 70px;
     right: 170px;
     padding: 20px;
-    
+
 }
 
 .card-action .btn{
@@ -343,11 +343,11 @@ td input{
     font-weight: normal;
     font-size: 25px;
     text-align: left;
-    
+
 }
 .total-price span{
     /* display: flex;  */
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-bottom: 10px;
     margin-left: 450px;
     font-weight: bold;
