@@ -29,5 +29,10 @@ Route::get('/sign-in', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-
+Route::get('/cart', function () {
+    return view('cart');
+});
+Route::get('/detail', function () {
+    return view('detail');
+});
 
