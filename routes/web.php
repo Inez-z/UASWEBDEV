@@ -43,3 +43,7 @@ Route::get('/detail', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
+Route::get('/editprofile', function () {
+    return view('editprof');
+});
