@@ -83,13 +83,13 @@
         <br>
         <br>
         <div style="text-align:left">
-          <h2>My Profile</h2>
+        <h2>My Profile</h2>
+        <h3>My Name</h3>
         </div>
         <div class="row">
           <div class="column">
-            <img src="/image/song kang.jpg" style="width:100%">
+            <img src="/image/song kang.jpg" style="width:60%">
           </div>
-          {{-- <div style="text-align:left"><h3>Your Name</h3></div> --}}
           <div class="column">
             <form action="/action_page.php">
               <label for="fname">First Name</label>
