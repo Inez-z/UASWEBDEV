@@ -89,16 +89,13 @@
                         </div>
 
                         <div class="detailco">
-                            <button class="detailco">Pay Now</button>
                         </div>
+
+                        <button class="paybutton">Pay Now</button>
 
                         <br>
                         <br>
                         <br>
-
-                        <div class="item2">
-                            <button class="btn-decor">Pay Now</button>
-                        </div>
 
                     </div>
                 </div>

@@ -499,10 +499,25 @@ div.dp-foto-produk img{
     position :relative;
     width: 468px;
     height: 350px;
-    left: 823px;
+    left: 620px;
     top: 350px;
     margin-top: -761px;
     background: #B8926A;
     border-radius: 20px;
 }
+.paybutton{
+    outline: none;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 190px;
+    background: #b8926a;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 10px;
+    margin-top: 400px;
+    margin-left: 810px;
 
+}
