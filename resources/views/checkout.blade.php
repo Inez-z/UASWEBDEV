@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>cart</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Checkout</title>
+        <link rel="stylesheet" type="text/css" href="css/checkout.css"/>
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -59,7 +59,8 @@
                   </nav>
             <div class="small-container cart page">
                      <div class="container">
-                            <h1>My Shopping Cart</h1>
+                            <h1>Checkout</h1>
+
                             <div class="card" style="background-color: transparent">
                                 <div class="cart-info">
                                     <img src="image/men2.png" width="150">
@@ -70,16 +71,7 @@
                                     </div>
                                 </div>
 
-                            <div class="card-action">
-                                <button class="btn" onclick="handleCounterPlus()">+</button>
-                                <input type="text" id="counter" class="counter" value="1">
-                                <button class="btn" onclick="handleCounterMin()">-</button>
-                            </div>
-
-                            <div class="Product-remove">
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                            <h5>$229</h5>
+                            <h5>x1</h5>
                         </div>
                         <div class="card" style="background-color: transparent">
                             <div class="cart-info">
@@ -91,51 +83,28 @@
                                        </div>
                                    </div>
 
-                               <div class="card-action">
-                                   <button class="btn" onclick="handleCounterPlus()">+</button>
-                                   <input type="text" id="counter" class="counter" value="1">
-                                   <button class="btn" onclick="handleCounterMin()">-</button>
-                               </div>
 
-                               <div class="Product-remove">
-                                   <i class="far fa-trash-alt"></i>
-                               </div>
-                               <h5>$159</h5>
+                               <h5>x1</h5>
                            </div>
                         </div>
 
-                        <div class="total-price">
-                        <h6>$388</h6>
-                        <h7>Disc : 5%</h7>
-
-                        <p>
-                        <span>Subtotal</span>
-                        <span>$366</span>
-                        </p>
-
-                        <div class="btn-con">
-                        <div class="item">
-                            <button class="btn-decor-outline">Continue Shopping</button>
+                        <div class="detailco">
+                            <button class="detailco">Pay Now</button>
                         </div>
+
+                        <br>
+                        <br>
+                        <br>
+
                         <div class="item2">
-                            <button class="btn-decor">Checkout</button>
+                            <button class="btn-decor">Pay Now</button>
                         </div>
+
                     </div>
                 </div>
                 </div>
             </section>
-     <script>
-         const counter = document.getElementById("counter");
-         let countervalue = counter.value;
 
-         function handleCounterPlus() {
-             counter.value = ++countervalue;
-         }
-
-         function handleCounterMin() {
-             counter.value = --countervalue;
-         }
-     </script>
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
