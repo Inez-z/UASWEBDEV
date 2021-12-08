@@ -7,22 +7,25 @@
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #D4C8BE;
+    border: 2px solid #c9a07f;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+
   }
 
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #c9a07f;
     color: #D4C8BE;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 8%;
+    width: 125%;
   }
 
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #000000;
   }
 
   /* Style the container/contact section */
@@ -38,6 +41,7 @@
     width: 50%;
     margin-top: 6px;
     padding: 20px;
+
   }
 
   /* Clear floats after the columns */
@@ -54,3 +58,7 @@
       margin-top: 0;
     }
   }
+
+.submitprof{
+    margin-right: 20%;
+}

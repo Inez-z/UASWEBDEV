@@ -82,29 +82,45 @@
     <div class="container">
         <br>
         <br>
-        <div style="text-align:left">
+        <div style="text-align:center">
         <h2>My Profile</h2>
-        <h3>My Name</h3>
+            <br>
+            <br>
         </div>
         <div class="row">
           <div class="column">
+            <div style="text-align:center">
             <img src="/image/song kang.jpg" style="width:60%">
+            <h3> </h3>
+
+            <h3>My Name</h3>
+            <h3>Classic</h3>
+            </div>
           </div>
           <div class="column">
             <form action="/action_page.php">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <input type="submit" value="Submit">
+              <label for="fname">Reseller ID</label>
+              <input type="text" id="ressid" name="Reseller ID" placeholder="AXB351847">
+
+              <label for="lname">Name</label>
+              <input type="text" id="name" name="Name" placeholder="Song Kang">
+
+              <label for="fname">Address</label>
+              <input type="text" id="address" name="Address" placeholder="Busan">
+
+              <label for="fname">Phone</label>
+              <input type="text" id="phone" name="Phone" placeholder="05829483">
+
+              <label for="fname">Email</label>
+              <input type="text" id="email" name="Email" placeholder="skang@gmail.com">
+
+              <label for="fname">Password</label>
+              <input type="text" id="pass" name="Pass" placeholder="336j86">
+
+              <div class="submitprof">
+                <input type="submit" value="Submit">
+              </div>
+
             </form>
           </div>
         </div>

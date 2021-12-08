@@ -97,8 +97,9 @@
                                     <h3>Disc :</h3>
                                     <h3>Subtotal :</h3>
                                     <br>
-                                    <h3>______________</h3>
                                     <br>
+                                    <h3>______________________________</h3>
+
                                     <h3>Grand Total :</h3>
                                 </div>
                             </div>
@@ -110,7 +111,10 @@
                                     <h3>Total</h3>
                                     <h3>Disc</h3>
                                     <h3>Subtotal</h3>
-
+                                    <br>
+                                    <br>
+                                    <h3>____</h3>
+                                    <h3>Grand Total</h3>
 
                                 </div>
                             </div>
