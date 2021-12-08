@@ -498,7 +498,7 @@ div.dp-foto-produk img{
     margin-top: 300%;
     position :relative;
     width: 468px;
-    height: 350px;
+    height: 387px;
     left: 620px;
     top: 350px;
     margin-top: -761px;
@@ -520,4 +520,11 @@ div.dp-foto-produk img{
     margin-top: 400px;
     margin-left: 810px;
 
+}
+.co-info{
+    margin-left: 10%;
+}
+.data-info{
+    margin-left: 60%;
+    margin-top: -70%;
 }

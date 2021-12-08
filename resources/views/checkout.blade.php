@@ -70,7 +70,6 @@
                                         <h4 class="Product-price">$229</h4>
                                     </div>
                                 </div>
-
                             <h5>x1</h5>
                         </div>
                         <div class="card" style="background-color: transparent">
@@ -82,13 +81,39 @@
                                            <h4 class="Product-price">$159</h4>
                                        </div>
                                    </div>
-
-
                                <h5>x1</h5>
                            </div>
                         </div>
 
+
+
                         <div class="detailco">
+                            <div class="co-info" >
+                                <div>
+                                    <br>
+                                    <h2>Detail Order</h2>
+                                    <br>
+                                    <h3>Total :</h3>
+                                    <h3>Disc :</h3>
+                                    <h3>Subtotal :</h3>
+                                    <br>
+                                    <h3>______________</h3>
+                                    <br>
+                                    <h3>Grand Total :</h3>
+                                </div>
+                            </div>
+                            <div class="data-info" >
+                                <div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3>Total</h3>
+                                    <h3>Disc</h3>
+                                    <h3>Subtotal</h3>
+
+
+                                </div>
+                            </div>
                         </div>
 
                         <button class="paybutton">Pay Now</button>
