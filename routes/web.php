@@ -47,3 +47,4 @@ Route::get('/checkout', function () {
 Route::get('/editprofile', function () {
     return view('editprof');
 });
+

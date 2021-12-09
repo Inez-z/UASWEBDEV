@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="css/profil.css"/>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="css/editprofile.css"/>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -117,8 +117,13 @@
               <label for="fname">Password</label>
               <input type="text" id="pass" name="Pass" placeholder="336j86">
 
-              <div class="submitprof">
-                <input type="submit" value="Submit">
+              <div class="cancel">
+                <input type="submit" value="Cancel">
+                <input type="submit" value="Save">
+              </div>
+
+              <div class="save">
+                <input type="submit" value="Save">
               </div>
 
             </form>
