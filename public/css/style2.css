@@ -1,5 +1,5 @@
 /* STYLING SIGN IN */
-.body-sign-in {
+.body-sign-in{
     background-color: #d4c8be;
     margin:0px;
     padding:0px;
@@ -73,7 +73,7 @@
 }
 
 /* STYLING SIGN UP */
-.form-sign-up .text{
+.form-sign-up .title-sign-up{
     position:fixed;
     width: 150px;
     height: 30px;
@@ -86,4 +86,10 @@
     letter-spacing: 0.02em;
 
     color: #000000;
+}
+
+.form-sign-up{
+    position: fixed;
+    left: 529px;
+    top: 148px;
 }
