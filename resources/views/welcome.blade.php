@@ -32,6 +32,7 @@
                 <li><a href="#"><i class="fa fa-user"></i></a></li>
             </ul>
         </nav> --}}
+        <h1>halooo</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             {{-- diganti logo --}}
             <a class="navbar-brand" href="#">
