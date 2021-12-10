@@ -48,3 +48,7 @@ Route::get('/editprofile', function () {
     return view('editprof');
 });
 
+Route::get('/invoice', function () {
+    return view('invoice');
+});
+

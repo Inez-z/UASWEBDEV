@@ -73,23 +73,78 @@
 }
 
 /* STYLING SIGN UP */
-.form-sign-up .title-sign-up{
+.title-sign-up{
     position:fixed;
-    width: 150px;
-    height: 30px;
-    left: 766px;
-    top: 130px;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     letter-spacing: 0.02em;
-
+    top: 120px;
+    left: 546px;
     color: #000000;
 }
 
-.form-sign-up{
+.body-sign-up{
+    background-color: #d4c8be;
+    margin:0px;
+    padding:0px;
+    height: 577px;
+}
+
+.form-sign-up {
     position: fixed;
-    left: 529px;
-    top: 148px;
+    font-size: 14px;
+    font-style: bolder;
+    left: 516px;
+    top: 160px;
+    width: 200px;
+    height: 30px;
+}
+
+.form-sign-up .su-inputbox-2{
+    position: fixed;
+    left: 668px;
+    top: 160px;
+}
+
+.container-sign-up{
+    width: 485px;
+    margin-left: 394px;
+    margin-top: 81px;
+    /* margin: auto; */
+    height: 428px;
+    border: none;
+    border-radius: 19px;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+#move-sign-in{
+    position: fixed;
+    left: 560px;
+    top: 470px;
+}
+
+#sign-up{
+    position: fixed;
+    left: 585px;
+    top: 400px;
+}
+
+/* Styling Invoice */
+.body-invoice{
+    background-color: #eae6df;
+}
+
+.container-invoice{
+    width: 485px;
+    margin-left: 394px;
+    margin-top: 81px;
+    /* margin: auto; */
+    height: 428px;
+    border: none;
+    border-radius: 19px;
+    background-color: #d4c8be;
+    position: fixed;
 }
