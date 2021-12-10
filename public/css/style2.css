@@ -138,13 +138,59 @@
 }
 
 .container-invoice{
-    width: 485px;
-    margin-left: 394px;
-    margin-top: 81px;
+    width: 1123px;
+    margin-left: 63px;
+    margin-top: 22px;
+    height: 89px;
     /* margin: auto; */
-    height: 428px;
+    height: 467px;
     border: none;
-    border-radius: 19px;
+    border-radius: 5px;
     background-color: #d4c8be;
-    position: fixed;
+    position: static;
+}
+
+.container2-invoice{
+    width: 500px;
+    margin-left: 19px;
+    margin-top: 22px;
+    height: 89px;
+    /* margin: auto; */
+    height: 467px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b8926a;
+    position: static;
+}
+
+.container-invoice h4{
+    position: absolute;
+    left: 114px;
+    top: 97px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.container-invoice h5{
+    position: absolute;
+    left: 1003px;
+    top: 105px;
+}
+
+.subtitle-top{
+    position: absolute;
+    left: 114px;
+    top: 159px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 8px;
+}
+
+.subtitle-top-value{
+    position: absolute;
+    left: 235px;
+    top: 159px;
+    font-size: 15px;
+    /* font-weight: 500; */
+    line-height: 8px;
 }

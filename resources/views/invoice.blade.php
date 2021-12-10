@@ -53,40 +53,43 @@
             </div>
           </nav>
         <div class="container-invoice">
+            <h4 id="title-invoice">INVOICE</h4>
+            <h5 id="date-invoice">10/12/2021</h5>
+            <div class="subtitle-top">
+                <p>Invoice Number</p>
+                <p>Customer Name</p>
+                <p>Address</p>
+            </div>
+            <div class="subtitle-top-value">
+                <p>: INV/466/HJ</p>
+                <p>: Zefanya Okta</p>
+                <p>: Jalan Raya Indah 21 Jakarta</p>
+            </div>
+            <div class="table-invoice">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Size</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                </tr>
+            </div>
+            </div>
 
+            <div class="container2-invoice">
+                <div class="subtitle-bottom">
+                    <p>Total</p>
+                    <p>Discount</p>
+                    <p>Grand Total</p>
+                </div>
+                <div class="subtitle-bottom-value">
+                    <p>: $289</p>
+                    <p>: 5%</p>
+                    <p>: $280</p>
+                </div>
         </div>
-        <div id="title-invoice">INVOICE</div>
-        <div id="date-invoice">10/12/2021</div>
-        <div class="subtitle-top">
-            <p>Invoice Number</p>
-            <p>Customer Name</p>
-            <p>Address</p>
-        </div>
-        <div class="subtitle-top-value">
-            <p>: INV/466/HJ</p>
-            <p>: Zefanya Okta</p>
-            <p>: Jalan Raya Indah 21 Jakarta</p>
-        </div>
-        <div class="table-invoice">
-            <tr>
-                <th>Product Name</th>
-                <th>Size</th>
-                <th>Color</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Subtotal</th>
-            </tr>
-        </div>
-        <div class="subtitle-bottom">
-            <p>Total</p>
-            <p>Discount</p>
-            <p>Grand Total</p>
-        </div>
-        <div class="subtitle-bottom-value">
-            <p>: $289</p>
-            <p>: 5%</p>
-            <p>: $280</p>
-        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
