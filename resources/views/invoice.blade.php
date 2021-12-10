@@ -86,7 +86,7 @@
                 <div class="subtitle-bottom-value">
                     <p>: $289</p>
                     <p>: 5%</p>
-                    <p>: $280</p>
+                    <p style="font-weight: bolder">: $280</p>
                 </div>
         </div>
 

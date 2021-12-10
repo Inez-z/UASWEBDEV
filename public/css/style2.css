@@ -151,16 +151,14 @@
 }
 
 .container2-invoice{
-    width: 500px;
-    margin-left: 19px;
-    margin-top: 22px;
-    height: 89px;
-    /* margin: auto; */
-    height: 467px;
+    width: 1122px;
+    margin-left: 64px;
+    margin-top: -104px;
+    height: 104px;
     border: none;
     border-radius: 5px;
     background-color: #b8926a;
-    position: static;
+    position: absolute;
 }
 
 .container-invoice h4{
@@ -193,4 +191,31 @@
     font-size: 15px;
     /* font-weight: 500; */
     line-height: 8px;
+}
+
+.subtitle-bottom{
+    position: absolute;
+    left: 841px;
+    top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 8px;
+}
+
+.subtitle-bottom-value{
+    position: absolute;
+    left: 939px;
+    top: 24px;
+    font-size: 15px;
+    line-height: 8px;
+}
+
+.table-invoice{
+    position: absolute;
+    left: 114px;
+    top: 250px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 8px;
+    column-width: 250px;
 }
