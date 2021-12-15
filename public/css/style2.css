@@ -214,8 +214,8 @@
     position: absolute;
     left: 114px;
     top: 250px;
-    font-size: 15px;
+    /* font-size: 15px;
     font-weight: 500;
-    line-height: 8px;
+    line-height: 8px; */
     column-width: 250px;
 }

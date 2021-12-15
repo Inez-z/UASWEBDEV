@@ -65,7 +65,7 @@
                 <p>: Zefanya Okta</p>
                 <p>: Jalan Raya Indah 21 Jakarta</p>
             </div>
-            <div class="table-invoice">
+            <table class="table-invoice">
                 <tr>
                     <th>Product Name</th>
                     <th>Size</th>
@@ -74,7 +74,15 @@
                     <th>Qty</th>
                     <th>Subtotal</th>
                 </tr>
-            </div>
+                <tr>
+                    <td>Daniel Wellington Iconic Emerald</td>
+                    <td>27</td>
+                    <td>Green</td>
+                    <td>$289</td>
+                    <td>1</td>
+                    <td>$289</td>
+                </tr>
+            </table>
             </div>
 
             <div class="container2-invoice">
