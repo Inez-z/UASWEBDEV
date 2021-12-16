@@ -101,7 +101,7 @@
 <a href="bestseller.html"><button class="btncatmen">Best Seller</button></a>
 </div>
 
-<div class="productmen" id="product-list">
+<div class="product-container" id="product-list">
 <!--box product---------------------------------------------->
 <div class="boxproduct-container">
       <div class="galleryproductmen">
@@ -152,16 +152,14 @@
         <div class="productprice">Price</div>
       </div>
 </div>
-<div>
 <button class="seemoremen">See More</button>
-</div>
 </div>
 
 <!--footer-->
 <div class="footer-home">
-    <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+    <p class="tulisankiri">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
     <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
-    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
+    <p class="tulisankanan">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
   </div>
 
 
