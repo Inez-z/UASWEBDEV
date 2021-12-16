@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/welcome", [ShopController::class, "list"]);
 
 Route::get('/about', function () {
     return view('about');
