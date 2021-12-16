@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WatchOut</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/cssbycategory.css"/>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -91,16 +91,6 @@
         </div>
       </div>
 
-      <!-- Product ----------------->
-    <!--dropdown------------->
-    <div class="dropdownmen">
-        <button class="dropbtn">Sort By</button>
-        <div class="dropdown-content">
-        <a href="#">Low Price</a>
-        <a href="#">High Price</a>
-        </div>
-      </div>
-
 <!--Category---->
 <div class="categorymen">
 <p>Category</p>
@@ -169,10 +159,10 @@
 
 <!--footer-->
 <div class="footer-home">
-<p class="tulisankanan">WATCHOUT <br><br><br> Address <br><br> Store & Office <br> Made, Surabaya <br><br><br><br>Office Hour <br><br>Monday - Sunday <br> 10.00-18.00 </p>
-<p class="tulisantengah"><br><br><br><br>GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br><br>Phone<br>1474832<br><br><br>Service Center<br>3593748</p>
-<p class="tulisankiri"><br><br><br><br>SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br><br>Facebook<br>watchout_global<br><br><br>Twitter<br>watchout_global</p>
-</div>
+    <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+    <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
+    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
