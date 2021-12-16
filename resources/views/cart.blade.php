@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     </head>
-    
+
     <body>
         <section>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,7 +21,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-        
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -29,23 +29,23 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="#">Link</a>
-                        </li> 
+                        </li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Category
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">All</a>
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
-                            <a class="dropdown-item" href="#">Kids</a>
-                            <a class="dropdown-item" href="#">Best Seller</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/all">All</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/men">Men</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/women">Women</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/kids">Kids</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                           </div>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">About Us</a>
+                          <a class="nav-link" href="http://127.0.0.1:8000/about">About Us</a>
                         </li>
                       </ul>
                         <div class="flex-grow-1 d-flex">
@@ -54,7 +54,7 @@
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>
-        
+
                     </div>
                   </nav>
             <div class="small-container cart page">
@@ -69,13 +69,13 @@
                                         <h4 class="Product-price">$229</h4>
                                     </div>
                                 </div>
-                          
+
                             <div class="card-action">
                                 <button class="btn" onclick="handleCounterPlus()">+</button>
                                 <input type="text" id="counter" class="counter" value="1">
                                 <button class="btn" onclick="handleCounterMin()">-</button>
                             </div>
-                            
+
                             <div class="Product-remove">
                                 <i class="far fa-trash-alt"></i>
                             </div>
@@ -90,29 +90,29 @@
                                            <h4 class="Product-price">$159</h4>
                                        </div>
                                    </div>
-                             
+
                                <div class="card-action">
                                    <button class="btn" onclick="handleCounterPlus()">+</button>
                                    <input type="text" id="counter" class="counter" value="1">
                                    <button class="btn" onclick="handleCounterMin()">-</button>
                                </div>
-                               
+
                                <div class="Product-remove">
                                    <i class="far fa-trash-alt"></i>
                                </div>
                                <h5>$159</h5>
                            </div>
                         </div>
-                     
+
                         <div class="total-price">
                         <h6>$388</h6>
                         <h7>Disc : 5%</h7>
-                    
+
                         <p>
                         <span>Subtotal</span>
                         <span>$366</span>
                         </p>
-                    
+
                         <div class="btn-con">
                         <div class="item">
                             <button class="btn-decor-outline">Continue Shopping</button>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 </div>
-            </section> 
+            </section>
      <script>
          const counter = document.getElementById("counter");
          let countervalue = counter.value;
@@ -136,6 +136,13 @@
              counter.value = --countervalue;
          }
      </script>
+     <!--footer-->
+    <div class="footer-home">
+    <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+    <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
+    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
+    </div>
+
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>

@@ -67,7 +67,8 @@
     margin-right: 50%;
     margin-top: 50%;
     width:30%;
-    top:0%;
-    float:left
+    top:70%;
+    float:left;
+    transform: scaleY(100%);
 }
 

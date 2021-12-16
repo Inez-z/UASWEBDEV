@@ -58,3 +58,15 @@ Route::get('/invoice', function () {
 Route::get('men', function (){
     return view('men');
 });
+Route::get('women', function (){
+    return view('women');
+});
+Route::get('kids', function (){
+    return view('kids');
+});
+Route::get('all', function (){
+    return view('all');
+});
+Route::get('bestseller', function (){
+    return view('bestseller');
+});
