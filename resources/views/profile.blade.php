@@ -14,27 +14,9 @@
 
 <body> <!-- header -->
     <section>
-        {{-- <nav>
-        <!--logo----------------->
-            <img src="image/logo.png" class="logo">
-        <!--menu----------------->
-            <ul>
-                <li><a href="#" class="nav-active">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">About</a></li>
-                <div class="search-container">
-                    <form action="/action_page.php">
-                      <input type="text" placeholder="Search.." name="search" size="35">
-                    </form>
-                  </div>
-                <li><a href="#"><i class="fa fa-search"></i></a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                <li><a href="#"><i class="fa fa-user"></i></a></li>
-            </ul>
-        </nav> --}}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             {{-- diganti logo --}}
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">
                 <img src="image/logo.png" width="30" height="30" alt="">
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 {{-- <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
