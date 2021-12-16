@@ -18,7 +18,7 @@
                     <ul>
                         <li><a href="#" class="nav-active">Home</a></li>
                         <li><a href="#">Category</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="http://127.0.0.1:8000/about">About</a></li>
                         <div class="search-container">
                             <form action="/action_page.php">
                               <input type="text" placeholder="Search.." name="search" size="35">

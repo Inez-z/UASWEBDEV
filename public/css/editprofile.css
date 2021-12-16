@@ -69,6 +69,6 @@
     width:30%;
     top:70%;
     float:left;
-    transform: scaleY(-100px);
+    transform: scaleY(100%);
 }
 

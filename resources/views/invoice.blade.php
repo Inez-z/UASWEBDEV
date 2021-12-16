@@ -40,7 +40,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
+                  <a class="nav-link" href="http://127.0.0.1:8000/about">About Us</a>
                 </li>
               </ul>
                 <div class="flex-grow-1 d-flex">
