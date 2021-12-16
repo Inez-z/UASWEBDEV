@@ -35,11 +35,11 @@
                             Category
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">All</a>
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
-                            <a class="dropdown-item" href="#">Kids</a>
-                            <a class="dropdown-item" href="#">Best Seller</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/all">All</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/men">Men</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/women">Women</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/kids">Kids</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                           </div>
