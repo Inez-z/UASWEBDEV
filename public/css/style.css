@@ -99,6 +99,7 @@ div.galleryshopnow img{
     line-height: 0px;
     text-align: left;
     padding-left: 7%;
+    padding-top: 10px;
 }
 .product-text p:nth-child(3){
     font-family: Poppins;
@@ -126,7 +127,10 @@ div.galleryproduct img{
 * {
     box-sizing: border-box;
   }
-
+.row-container{
+    height: 180px;
+    font-family: 'Times New Roman', Times, serif;
+}
   /* Create three equal columns that floats next to each other */
   .column {
     float: left;
@@ -138,27 +142,87 @@ div.galleryproduct img{
     color: #f2f2f2;
   }
   /* Clear floats after the columns */
-  .row:after {
+  .row-container:after {
     content: "";
     display: table;
     clear: both;
   }
-.foto-container{
+  .foto-container{
     align-items: center;
     text-align: center;
+    height: 450px;
 }
 div.foto-foto{
     float: left;
-    width: 571px;
-    margin-bottom: 5%;
-    margin-left: 3%;
+    width: 550px;
+    margin-left: 4.3%;
     margin-top: 5%;
     background-color: #d4c8be;
 }
 div.foto-foto img{
     width: 100%;
-    height: 300px;
+    height: 370px;
 }
+.popular-container{
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    transform: translateY(5%);
+}
+div.popularproduct{
+    float: left;
+    width: 230px;
+    margin-bottom: 5%;
+    margin-left: 11%;
+    border: 1px solid #b8926a;
+    background-color: #d4c8be;
+    border-radius:5%;
+}
+div.popularproduct img{
+    width: 100%;
+    height: 225px;
+}
+.boxpopular-container{
+    background-color: #b8926a;
+    height:320px;
+    background: linear-gradient(to bottom, #ffffff 30%, #b8926a 0);
+}
+.couple-container{
+    padding-top:8%;
+    padding-bottom: 4%;
+}
+.couple-container img{
+    width:85%;
+    height: 500px;
+    margin-left: 7.5%;
+}
+.footer-home{
+    background-color: #2d2d2b;
+    height: 400px;
+    color: #f2f2f2;
+    font-family: Times New Roman;
+}
+.tulisankanan{
+    font-size: 17px;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+.tulisantengah{
+    font-size: 17px;
+    padding-left: 45%;
+    transform: translateY(-107%);
+}
+.tulisankiri{
+    font-size: 17px;
+    padding-left:78%;
+    transform: translateY(-215%);
+}
+
+
+
+
+
+
 
 /* about us */
 
@@ -198,6 +262,14 @@ div.foto-foto img{
     overflow: hidden;
     display: flex;
 }
+
+
+
+
+
+
+
+
 /* cart */
 .cart-page{
     margin: 80px auto;
@@ -238,7 +310,6 @@ td input{
     height: 30px;
     padding: 5px;
 }
-
 .Product-remove{
     position: absolute;
     bottom: 85px;
@@ -250,6 +321,15 @@ td input{
     font-size: 20px;
     border-color: #b8926a;
 }
+
+
+
+
+
+
+
+
+
 /* box cart */
 .container{
     max-width: 1200px;
@@ -264,7 +344,6 @@ td input{
     border-radius: 14px;
     margin-bottom: 20px;
 }
-
 
 .card-action{
     position: absolute;
@@ -425,6 +504,14 @@ td input{
     background: #ffffff;
     color: #b8926a;
 }
+
+
+
+
+
+
+
+
 /* detail produk */
 .detail-produk > h1{
     position: absolute;
