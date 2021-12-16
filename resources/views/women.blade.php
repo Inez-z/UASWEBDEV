@@ -94,11 +94,11 @@
 <!--Category---->
 <div class="categorymen">
 <p>Category</p>
-<button class="btncatmen">All</button><br>
-<button class="btncatmen">Men</button><br>
-<button class="btncatmen">Women</button><br>
-<button class="btncatmen">Kids</button><br>
-<a href="bestseller.html"><button class="btncatmen">Best Seller</button></a>
+<a href="http://127.0.0.1:8000/all"><button class="btncatmen">All</button></a><br>
+<a href="http://127.0.0.1:8000/men"><button class="btncatmen">Men</button></a><br>
+<a href="http://127.0.0.1:8000/women"><button class="btncatmen">Women</button></a><br>
+<a href="http://127.0.0.1:8000/kids"><button class="btncatmen">Kids</button></a><br>
+<a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a>
 </div>
 
 <div class="product-container" id="product-list">

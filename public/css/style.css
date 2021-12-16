@@ -1,45 +1,7 @@
 @charset "utf-8";
-body {
-    background-color: #eae6df;
-    margin:0px;
-    padding:0px;
-}
-ul{
-    list-style:none ;
-}
-a{
-    text-decoration:none;
-}
-nav{
-    display:flex;
-    justify-content:space-between;
-    height: 70px;
-    padding:5px 5% 0% 5%;
-    /* background-image: url(../UASHAHA/image/satu.png); */
-}
-nav ul{
-    display:flex;
-}
-nav ul li a{
-    padding:3px 3px;
-    margin:15px;
-    font-family:calibri;
-    color:whitesmoke;
-    font-size:20px;
-    letter-spacing:1px;
-}
-nav ul li a:hover{
-    background-color: #d4c8be;
-    color: #555 !important;
-    font-weight: 700;
-    transition: all ease 0.4s;
-}
+
 .logo{
     height: 10px;
-}
-.nav-active{
-    font-weight:550;
-    color: whitesmoke;
 }
 .box-container{
     height:225px;
@@ -200,15 +162,6 @@ div.popularproduct img{
     background-color: #2d2d2b;
     height: 400px;
     color: #f2f2f2;
-    font-family: Times New Roman;
-}
-
-.footer-home-detail{
-    background-color: #2d2d2b;
-    height: 400px;
-    color: #f2f2f2;
-    top: 700px;
-    position: relative;
     font-family: Times New Roman;
 }
 .tulisankanan{

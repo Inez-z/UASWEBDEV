@@ -88,7 +88,7 @@
         <img src="image/men.jpg" alt="Men">
       </a>
       <div class="category">Men</div>
-      <a href="#"><button class="shopnow-btn">Shop Now</button></a>
+      <a href="http://127.0.0.1:8000/men"><button class="shopnow-btn">Shop Now</button></a>
     </div>
 
     <div class="galleryshopnow">
@@ -96,7 +96,7 @@
         <img src="image/women.jpg" alt="mockup">
       </a>
       <div class="category">Women</div>
-      <a href="#"><button class="shopnow-btn">Shop Now</button></a>
+      <a href="http://127.0.0.1:8000/women"><button class="shopnow-btn">Shop Now</button></a>
     </div>
 
     <div class="galleryshopnow">
@@ -104,7 +104,7 @@
         <img src="image/kids.jpg" alt="company">
       </a>
       <div class="category">Kids</div>
-      <a href="#"><button class="shopnow-btn">Shop Now</button></a>
+      <a href="http://127.0.0.1:8000/kids"><button class="shopnow-btn">Shop Now</button></a>
     </div>
 </div>
 
