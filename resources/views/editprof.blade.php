@@ -119,7 +119,7 @@
 
               <div class="cancel">
                 <input type="submit" value="Cancel">
-                <input type="submit" value="Save">
+
               </div>
 
               <div class="save">
