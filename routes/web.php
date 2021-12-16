@@ -52,3 +52,6 @@ Route::get('/invoice', function () {
     return view('invoice');
 });
 
+Route::get('men', function (){
+    return view('men');
+});
