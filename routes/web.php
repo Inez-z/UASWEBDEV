@@ -15,11 +15,17 @@ use App\Http\Controllers\ShopController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get("/welcome", [ShopController::class, "list"]);
+
+Route::get("/men", [ShopController::class, "MenWatches"]);
+
+Route::get("/women", [ShopController::class, "WomenWatches"]);
+
+Route::get("/kids", [ShopController::class, "KidsWatches"]);
 
 Route::get('/about', function () {
     return view('about');
@@ -55,15 +61,15 @@ Route::get('/invoice', function () {
     return view('invoice');
 });
 
-Route::get('men', function (){
-    return view('men');
-});
-Route::get('women', function (){
-    return view('women');
-});
-Route::get('kids', function (){
-    return view('kids');
-});
+// Route::get('men', function (){
+//     return view('men');
+// });
+// Route::get('women', function (){
+//     return view('women');
+// });
+// Route::get('kids', function (){
+//     return view('kids');
+// });
 Route::get('all', function (){
     return view('all');
 });

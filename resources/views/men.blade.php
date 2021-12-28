@@ -101,9 +101,21 @@
 <a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a>
 </div>
 
+
 <div class="product-container" id="product-list">
+    @foreach ($items as $i)
+        <div class="boxproduct-container">
+            <div class="galleryproductmen">
+            <a target="_blank" href="image/kids1.png">
+                <img src="image/kids1.png" alt="kids1">
+            </a>
+            <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
+            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            </div>
+        <div>
+    @endforeach
 <!--box product---------------------------------------------->
-<div class="boxproduct-container">
+{{-- <div class="boxproduct-container">
       <div class="galleryproductmen">
         <a target="_blank" href="image/kids1.png">
           <img src="image/kids1.png" alt="kids1">
@@ -150,7 +162,7 @@
         </a>
         <div class="productname">Product Name</div>
         <div class="productprice">Price</div>
-      </div>
+      </div>--}}
 </div>
 <button class="seemoremen">See More</button>
 </div>

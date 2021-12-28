@@ -117,7 +117,54 @@
               <p>Best Seller | Low Price | High Price</p>
           </div>
 
-    <!--box product---------------------------------------------->
+
+    {{-- @foreach ($items as $i)
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
+                        <!-- Product price-->
+                        Rp. {{$i->J_HARGA}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach --}}
+
+    @foreach ($items as $i)
+        <div class="boxproduct-container">
+            <div class="galleryproduct">
+            <a target="_blank" href="image/kids1.png">
+                <img src="image/kids1.png" alt="kids1">
+            </a>
+            <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
+            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            </div>
+        <div>
+    @endforeach
+    {{-- <div class="col mb-5">
+        <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <!-- Product name-->
+                    <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
+                    <!-- Product price-->
+                    Rp. {{$i->J_HARGA}}
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+
+    {{-- <!--box product---------------------------------------------->
       <div class="boxproduct-container">
               <div class="galleryproduct">
                 <a target="_blank" href="image/kids1.png">
@@ -167,7 +214,7 @@
                 <div class="productprice">Price</div>
               </div>
       </div>
-      </div>
+      </div> --}}
 
     <!-- Free Shipping, best quality, Online support -->
     <div class="row-container">
