@@ -103,12 +103,13 @@ div.galleryproductmen img{
     color: #f1f1f1;
 }
 .footer-home{
-    padding-top: 9%;
+    /* padding-top: 9%; */
     background-color: #2d2d2b;
-    height: 470px;
+    height: 400px;
+    width: 100%;
     color: #f2f2f2;
     font-family: Times New Roman;
-}
+} 
 .tulisankiri{
     font-size: 17px;
     padding-left: 10%;
@@ -134,3 +135,4 @@ div.galleryproductmen img{
     cursor: pointer;
     font-size: 30px;
 }
+
