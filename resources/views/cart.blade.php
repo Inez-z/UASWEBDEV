@@ -54,6 +54,13 @@
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>
+                        <div class="nav-cart">
+                        <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
+                        </div>
+                        <div class="nav-profile">
+                        <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
+                        </div>
+
 
                     </div>
                   </nav>
@@ -71,9 +78,9 @@
                                 </div>
 
                             <div class="card-action">
-                                <button class="btn" onclick="handleCounterPlus()">+</button>
-                                <input type="text" id="counter" class="counter" value="1">
                                 <button class="btn" onclick="handleCounterMin()">-</button>
+                                <input type="text" id="counter" class="counter" value="1">
+                                <button class="btn" onclick="handleCounterPlus()">+</button>
                             </div>
 
                             <div class="Product-remove">
@@ -92,9 +99,9 @@
                                    </div>
 
                                <div class="card-action">
-                                   <button class="btn" onclick="handleCounterPlus()">+</button>
-                                   <input type="text" id="counter" class="counter" value="1">
                                    <button class="btn" onclick="handleCounterMin()">-</button>
+                                   <input type="text" id="counter" class="counter" value="1">
+                                   <button class="btn" onclick="handleCounterPlus()">+</button>
                                </div>
 
                                <div class="Product-remove">

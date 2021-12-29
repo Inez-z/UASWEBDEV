@@ -283,7 +283,17 @@ td input{
     font-size: 20px;
     border-color: #b8926a;
 }
-
+.nav-cart{
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    padding-right: 30px;
+}
+.nav-profile{
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+}
 
 
 
