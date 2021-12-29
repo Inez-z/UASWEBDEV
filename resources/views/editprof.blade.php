@@ -55,6 +55,12 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
+                <div class="nav-cart">
+                        <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
+                        </div>
+                        <div class="nav-profile">
+                        <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
+                        </div>
             </div>
           </nav>
 

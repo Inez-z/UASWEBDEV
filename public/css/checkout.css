@@ -528,3 +528,14 @@ div.dp-foto-produk img{
     margin-left: 60%;
     margin-top: -70%;
 }
+.nav-cart{
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    padding-right: 30px;
+}
+.nav-profile{
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+}

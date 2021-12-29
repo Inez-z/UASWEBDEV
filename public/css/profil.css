@@ -62,3 +62,14 @@
 .submitprof{
     margin-right: 20%;
 }
+.nav-cart{
+  color: black;
+  cursor: pointer;
+  font-size: 30px;
+  padding-right: 30px;
+}
+.nav-profile{
+  color: black;
+  cursor: pointer;
+  font-size: 30px;
+}
