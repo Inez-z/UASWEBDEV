@@ -16,23 +16,23 @@
                <div class="title-sign-up">CREATE ACCOUNT</div>
                <div class="su-inputbox" id="su-firstname" >
                    <span>FIRST NAME</span> <br>
-                   <input type="text" name="" required="required" placeholder="Zefanya" size="12" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="" required="required" placeholder="Your first name" size="12" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox-2" id="su-lastname" >
                    <span>LAST NAME</span> <br>
-                   <input type="text" name="" required="required" size="12" placeholder="Okta" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="" required="required" size="12" placeholder="Your last name" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-phone" >
                    <span>PHONE</span> <br>
-                   <input type="text" name="" required="required" size="35" placeholder="08123456789" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="" required="required" size="35" placeholder="Your phone number" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-address" >
                    <span>ADDRESS</span> <br>
-                   <input type="text" name="" required="required" size="35" placeholder="Jalan Raya Indah 21 Jakarta" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="" required="required" size="35" placeholder="Your address" style="border: none; border-bottom: 1px solid #999999">
                </div>
                 <div class="su-inputbox" id="su-email">
                  <span>EMAIL</span> <br>
-                   <input type="email" name="" required="required" size="35" placeholder="zoktaviana@gmail.com" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="email" name="" required="required" size="35" placeholder="Your email" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-password" >
                    <span>PASSWORD</span> <br>
