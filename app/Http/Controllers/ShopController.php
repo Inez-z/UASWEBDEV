@@ -7,6 +7,7 @@ use App\Models\Men;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 use DB;
 
 class ShopController extends Controller
@@ -20,7 +21,7 @@ class ShopController extends Controller
     public function MenWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'M%')
-                ->get();
+                ->paginate(6);
         return view("men", [
             "items" => $items
         ]);
@@ -28,7 +29,7 @@ class ShopController extends Controller
     public function WomenWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'W%')
-                ->get();
+                ->paginate(6);
         return view("women", [
             "items" => $items
         ]);
@@ -36,9 +37,17 @@ class ShopController extends Controller
     public function KidsWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'K%')
-                ->get();
+                ->paginate(6);
         return view("kids", [
             "items" => $items
+        ]);
+    }
+    public function detail($sku){
+        $item = Item::query()->find($sku);
+
+        return view("detail", [
+            "nama" => $item->J_MERK,
+            "i" => $item
         ]);
     }
 }

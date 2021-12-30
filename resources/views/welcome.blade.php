@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body> <!-- header -->
@@ -122,26 +122,6 @@
               <p>Best Seller</p>
               <p>Best Seller | Low Price | High Price</p>
           </div>
-
-
-    {{-- @foreach ($items as $i)
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Product image-->
-                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
-                        <!-- Product price-->
-                        Rp. {{$i->J_HARGA}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endforeach --}}
-
     @foreach ($items as $i)
         <div class="boxproduct-container">
             <div class="galleryproduct">
@@ -153,74 +133,14 @@
             </div>
         <div>
     @endforeach
-    {{-- <div class="col mb-5">
-        <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-            <!-- Product details-->
-            <div class="card-body p-4">
-                <div class="text-center">
-                    <!-- Product name-->
-                    <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
-                    <!-- Product price-->
-                    Rp. {{$i->J_HARGA}}
-                </div>
-            </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="pagination-button">
+            {{$items->links()}}
         </div>
-    </div> --}}
-
-
-    {{-- <!--box product---------------------------------------------->
-      <div class="boxproduct-container">
-              <div class="galleryproduct">
-                <a target="_blank" href="image/kids1.png">
-                  <img src="image/kids1.png" alt="kids1">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-
-              <div class="galleryproduct">
-                <a target="_blank" href="image/kids2.png">
-                  <img src="image/kids2.png" alt="kids2">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-
-              <div class="galleryproduct">
-                <a target="_blank" href="image/men1.png">
-                  <img src="image/men1.png" alt="men1">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-
-              <div class="galleryproduct">
-                <a target="_blank" href="image/men2.png">
-                  <img src="image/men2.png" alt="men2">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-
-              <div class="galleryproduct">
-                <a target="_blank" href="image/women1.png">
-                  <img src="image/women1.png" alt="women1">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-
-              <div class="galleryproduct">
-                <a target="_blank" href="image/women2.png">
-                  <img src="image/women2.png" alt="women2">
-                </a>
-                <div class="productname">Product Name</div>
-                <div class="productprice">Price</div>
-              </div>
-      </div>
-      </div> --}}
+    </div>
+</div>
 
     <!-- Free Shipping, best quality, Online support -->
     <div class="row-container">
