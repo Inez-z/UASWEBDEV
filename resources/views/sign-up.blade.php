@@ -12,31 +12,32 @@
 
         </div>
          <div class="form-sign-up" id="col-2">
-           <form action="">
+           <form action="/sign-up/insert" method="POST">
+               {{ csrf_field() }}
                <div class="title-sign-up">CREATE ACCOUNT</div>
                <div class="su-inputbox" id="su-firstname" >
                    <span>FIRST NAME</span> <br>
-                   <input type="text" name="" required="required" placeholder="Your first name" size="12" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="firstname" required="required" placeholder="Your first name" size="12" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox-2" id="su-lastname" >
                    <span>LAST NAME</span> <br>
-                   <input type="text" name="" required="required" size="12" placeholder="Your last name" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="lastname" required="required" size="12" placeholder="Your last name" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-phone" >
                    <span>PHONE</span> <br>
-                   <input type="text" name="" required="required" size="35" placeholder="Your phone number" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="phone" required="required" size="35" placeholder="Your phone number" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-address" >
                    <span>ADDRESS</span> <br>
-                   <input type="text" name="" required="required" size="35" placeholder="Your address" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="text" name="address" required="required" size="35" placeholder="Your address" style="border: none; border-bottom: 1px solid #999999">
                </div>
                 <div class="su-inputbox" id="su-email">
                  <span>EMAIL</span> <br>
-                   <input type="email" name="" required="required" size="35" placeholder="Your email" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="email" name="email" required="required" size="35" placeholder="Your email" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="su-inputbox" id="su-password" >
                    <span>PASSWORD</span> <br>
-                   <input type="password" name="" required="required" size="35" placeholder="*********" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="password" name="password" required="required" size="35" placeholder="*********" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div id="sign-up">
                    <input type="submit" name="" value="SIGN UP" onclick="" style="letter-spacing: 0.03em; font-size: 12px; weight: 150px; height: 38px; border: 0; border-radius: 29px; background-color: #b8926a; color: #ffff; padding: 7px 38px 8px 41px;">

@@ -42,7 +42,7 @@ Route::get('/sign-in', function () {
 });
 
 Route::get('/sign-up', function () {
-    return view('sign-up');
+    return view('sign-up', ['sign-up' => $signup]);
 });
 
 Route::get('/profile', function () {
@@ -82,3 +82,5 @@ Route::get('/invoice', function () {
 // Route::get('bestseller', function (){
 //     return view('bestseller');
 // });
+
+Route::post('/sign-up/insert', 'App\Http\Controlers\SignUpController@insert');
