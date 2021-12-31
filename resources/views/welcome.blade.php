@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 
 <body> <!-- header -->
@@ -55,12 +55,6 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
-                <div class="nav-cart">
-                        <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
-                        </div>
-                        <div class="nav-profile">
-                        <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
-                        </div>
 
             </div>
           </nav>
@@ -122,6 +116,26 @@
               <p>Best Seller</p>
               <p>Best Seller | Low Price | High Price</p>
           </div>
+
+
+    {{-- @foreach ($items as $i)
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
+                        <!-- Product price-->
+                        Rp. {{$i->J_HARGA}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach --}}
+
     @foreach ($items as $i)
         <div class="boxproduct-container">
             <div class="galleryproduct">
@@ -133,14 +147,74 @@
             </div>
         <div>
     @endforeach
-</div>
-<div class="row">
-    <div class="col">
-        <div class="pagination-button">
-            {{$items->links()}}
+    {{-- <div class="col mb-5">
+        <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <!-- Product name-->
+                    <a href="{{ url('detail/'.$i->J_SKU) }}" class="productname"><h5 class="fw-bolder">{{ $i-> J_MERK }}</h5></a>
+                    <!-- Product price-->
+                    Rp. {{$i->J_HARGA}}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </div> --}}
+
+
+    {{-- <!--box product---------------------------------------------->
+      <div class="boxproduct-container">
+              <div class="galleryproduct">
+                <a target="_blank" href="image/kids1.png">
+                  <img src="image/kids1.png" alt="kids1">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+
+              <div class="galleryproduct">
+                <a target="_blank" href="image/kids2.png">
+                  <img src="image/kids2.png" alt="kids2">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+
+              <div class="galleryproduct">
+                <a target="_blank" href="image/men1.png">
+                  <img src="image/men1.png" alt="men1">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+
+              <div class="galleryproduct">
+                <a target="_blank" href="image/men2.png">
+                  <img src="image/men2.png" alt="men2">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+
+              <div class="galleryproduct">
+                <a target="_blank" href="image/women1.png">
+                  <img src="image/women1.png" alt="women1">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+
+              <div class="galleryproduct">
+                <a target="_blank" href="image/women2.png">
+                  <img src="image/women2.png" alt="women2">
+                </a>
+                <div class="productname">Product Name</div>
+                <div class="productprice">Price</div>
+              </div>
+      </div>
+      </div> --}}
 
     <!-- Free Shipping, best quality, Online support -->
     <div class="row-container">
@@ -235,11 +309,12 @@
     <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
   </div>
 
-  <button id="btnScrollTop" onclick="scrollToTop()">
-    <i class="material-icons">keyboard_double_arrow_up</i>
+  <button class="btnScrollTop" id="btnScrollTop" onclick="scrollToTop()">
+    {{-- <img src="image/up.png" width="30" height="30"> --}}
+    <i class="fas fa-arrow-up"></i>
   </button>
 
-  var btnScrollTop = document.getElementById(btnScrollTop)
+  <script> var btnScrollTop = document.getElementById(btnScrollTop)
 var rootElement = document.documentElement
 function scrollToTop(){
   rootElement.scrollTo({
@@ -248,6 +323,9 @@ function scrollToTop(){
   })
 }
 btnScrollTop.addEventListener("click", scrollToTop)
+</script>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

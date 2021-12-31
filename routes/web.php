@@ -41,6 +41,8 @@ Route::get('/sign-in', function () {
     return view('sign-in');
 });
 
+Route::post('/sign-in2','App\Http\Controllers\SignUpController@authentication');
+
 Route::get('/sign-up', function () {
     return view('sign-up', ['sign-up' => $signup]);
 });

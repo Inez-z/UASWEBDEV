@@ -18,15 +18,34 @@
             <img src="signIn.png" alt="">
          </div>
          <div class="form-sign-in" id="col-2">
-           <form action="">
+            @if (Session::has('success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ Session::get('success') }}</strong>
+            </div>
+        @endif
+        @if (Session::has('error'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ Session::get('error') }}</strong>
+            </div>
+        @endif
+        @if (Session::has('keluar'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ Session::get('keluar') }}</strong>
+            </div>
+        @endif
+           <form action="/sign-in2" method="POST">
+            @csrf
                <div class="text">SIGN IN</div>
                <div class="inputbox" id="email">
                  <span>EMAIL</span> <br>
-                   <input type="email" name="" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="email" name="email" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div class="inputbox" id="password" >
                    <span>PASSWORD</span> <br>
-                   <input type="password" name="" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
+                   <input type="password" name="password" required="required" size="25" style="border: none; border-bottom: 1px solid #999999">
                </div>
                <div id="sign-in">
                    <input type="submit" name="" value="SIGN IN" onclick="" style="letter-spacing: 0.03em; font-size: 12px; weight: 150px; height: 38px; border: 0; border-radius: 29px; background-color: #b8926a; color: #ffff; padding: 7px 38px 8px 41px; position: absolute; top: 330px; left:748px">
