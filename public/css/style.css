@@ -163,6 +163,8 @@ div.popularproduct img{
     height: 400px;
     color: #f2f2f2;
     font-family: Times New Roman;
+    position: relative;
+    text-align: left;
 }
 .footer-home-detail{
     background-color: #2d2d2b;
@@ -171,6 +173,15 @@ div.popularproduct img{
     height: 400px;
     color: #f2f2f2;
     font-family: Times New Roman;
+}
+.footer-home-about{
+    background-color: #2d2d2b;
+    height: 400px;
+    color: #f2f2f2;
+    font-family: Times New Roman;
+    position: relative;
+    text-align: left;
+    top: 2075px;
 }
 .tulisankanan{
     font-size: 17px;
