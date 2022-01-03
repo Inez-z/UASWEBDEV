@@ -145,8 +145,8 @@
     @foreach ($items as $i)
         <div class="boxproduct-container">
             <div class="galleryproduct">
-            <a target="_blank" href="image/kids1.png">
-                <img src="image/kids1.png" alt="kids1">
+            <a target="_blank" href="{{ url('detail/'.$i->J_SKU) }}">
+                <img src="image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
             <div class="productprice"> Rp. {{$i->J_HARGA}}</div>

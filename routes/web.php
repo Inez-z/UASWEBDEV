@@ -20,18 +20,28 @@ use App\Http\Controllers\ShopController;
 // });
 
 Route::get("/welcome", [ShopController::class, "list"]);
+
 Route::prefix("/men")->group(function(){
     Route::get("/", [ShopController::class, "MenWatches"]);
 Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 });
 
-Route::get("/women", [ShopController::class, "WomenWatches"]);
+Route::prefix("/women")->group(function(){
+    Route::get("/", [ShopController::class, "WomenWatches"]);
+Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+});
 
-Route::get("/kids", [ShopController::class, "KidsWatches"]);
+Route::prefix("/kids")->group(function(){
+    Route::get("/", [ShopController::class, "KidsWatches"]);
+Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+});
 
 Route::get("/bestseller", [ShopController::class, "list"]);
 
-Route::get("/all", [ShopController::class, "list"]);
+Route::prefix("/all")->group(function(){
+    Route::get("/", [ShopController::class, "list"]);
+Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+});
 
 Route::get('/about', function () {
     return view('about');

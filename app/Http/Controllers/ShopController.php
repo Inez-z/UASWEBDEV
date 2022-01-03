@@ -43,8 +43,10 @@ class ShopController extends Controller
         ]);
     }
     public function detail($sku){
-        $item = Item::query()->find($sku);
-
+        $item = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->first();
+        // dd($item);
         return view("detail", [
             "nama" => $item->J_MERK,
             "i" => $item

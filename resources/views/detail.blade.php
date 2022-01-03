@@ -64,21 +64,21 @@
                     </div>
                   </nav>
                   <div class="detail-produk">
-                    <h1 class="dpnama-jam">Daniel Wellington Iconic Emerald</h1>
-                    <h2 class="dpharga-jam">$229</h2>
+                    <h1 class="dpnama-jam">{{$nama}}</h1>
+                    <h2 class="dpharga-jam">{{$i->J_HARGA}}</h2>
                     <h3>Category    :</h3>
                     <h4>Color       :</h4>
-                    <h11>Size        :</h11>
+                    <h11>Size       :</h11>
                     <h6>Description :</h6>
                     <div class="dp-isi">
                         <h7 class="dp-category">Men</h7>
-                        <h8 class="dp-color">Gold</h8>
-                        <h9 class="dp-size">28</h9>
-                        <h10 class="dp-desc">The Iconic Link Emerald features a glossy emerald green dial. Available in polished stainless steel with a vibrant silver finish or refined rose gold plating.</h10>
+                        <h8 class="dp-color">{{$i->J_WARNA}}</h8>
+                        <h9 class="dp-size">{{$i->J_UKURAN}}</h9>
+                        <h10 class="dp-desc">{{$i->J_DESKRIPSI}}</h10>
                     </div>
                     <div class="btn-action">
                       <button class="circle" onclick="handleCounterMin()">-</button>
-                      <input type="text" id="number" class="number" value="1">
+                      <input type="text" id="number" class="number" value="1" min="1" max="{{$i->J_STOK}}">
                       <button class="circle" onclick="handleCounterPlus()">+</button>
                     </div>
                     <div class="btn-dp">
@@ -111,7 +111,7 @@
                     }
                 </script>
 
-     <!--footer-->           
+     <!--footer-->
     <div class="footer-home-detail">
     <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
     <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
