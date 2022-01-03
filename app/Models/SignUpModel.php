@@ -6,24 +6,9 @@
 
     class SignUpModel extends Model
     {
-        // public function insert_reseller($request)
-        // {
-        //     DB::table('reseller')-> insert([
-        //         'firstname' => $request -> R_NAMA,
-        //         'lastname' => $request -> R_NAMA,
-        //         'phone' => $request -> R_HP,
-        //         'address' => $request -> R_ALAMAT,
-        //         'email' => $request -> R_EMAIL,
-        //         'password' => $request -> R_PASSWORD
-        //         // r_id, m_id belom
-        //     ]);
-        // }
-
         public function insert($data){
-            $cmd = "CALL pInsertReseller(:name, :addrress, :email, :phone, :password)";
-
+            $cmd = "CALL pInsertReseller(:name, :address, :email, :phone, :password)";
             $res = DB::insert($cmd,$data);
-
             return $res;
         }
 

@@ -85,4 +85,4 @@ Route::get('/invoice', function () {
 //     return view('bestseller');
 // });
 
-Route::post('/sign-up/insert', 'App\Http\Controlers\SignUpController@insert');
+Route::post('/sign-up/insert', 'App\Http\Controllers\SignUpController@insert');

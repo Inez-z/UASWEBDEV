@@ -62,7 +62,7 @@ class SignUpController extends Controller
         $flag_exist = $user->insert($data);
 
         if($flag_exist==1){
-            session::flash('Success', 'You have successfully created an account!');
+            Session::flash('Success', 'You have successfully created an account!');
             return redirect('/sign-in');
         }
     }
