@@ -44,7 +44,7 @@ Route::get('/sign-in', function () {
 Route::post('/sign-in2','App\Http\Controllers\SignUpController@authentication');
 
 Route::get('/sign-up', function () {
-    return view('sign-up', ['sign-up' => $signup]);
+    return view('sign-up');
 });
 
 Route::get('/profile', function () {

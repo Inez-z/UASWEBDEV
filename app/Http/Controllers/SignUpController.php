@@ -16,9 +16,57 @@ class SignUpController extends Controller
     // fungsi untuk insert data ke dalam database
     public function insert(Request $request)
     {
-        $signup = $this->insert_reseller($request);
-        return redirect('/sign-in');
+        $messages = array();
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $name = $firstname . ' ' . $lastname;
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        //lakukan validasi inputan
+        if($firstname == ''){
+            array_push($messages, 'First name must be filled out.');
+        }
+        if($lastname == ''){
+            array_push($messages, 'Last name must be filled out.');
+        }
+        if($phone == ''){
+            array_push($messages, 'Phone must be filled out.');
+        }
+        if($address == ''){
+            array_push($messages, 'Address must be filled out.');
+        }
+        if($email == ''){
+            array_push($messages, 'Email must be filled out.');
+        }
+        if($password == ''){
+            array_push($messages, 'Password must be filled out.');
+        }
+
+        if (isset($messages) && count($messages)>0){
+            Session::flash('danger', $messages);
+            return redirect('/sign-up');
+        }
+
+        $data = [
+            'name' => $name,
+            'address' => $address,
+            'email' => $email,
+            'phone' => $phone,
+            'password' => $password
+        ];
+
+        $user = New SignUpModel;
+        $flag_exist = $user->insert($data);
+
+        if($flag_exist==1){
+            session::flash('Success', 'You have successfully created an account!');
+            return redirect('/sign-in');
+        }
     }
+
     public function authentication(Request $req){
         $email = $_POST['email'];
         $password = $req->input('password');
