@@ -74,12 +74,14 @@
                                         <h2 class="Product-name">Daniel Wellington Classic</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
                                         <h4 class="Product-price">$229</h4>
+                                        <input type="hidden" name="Product-price" value=$229>
+                                        <input type="hidden" namespace="totaltxtprice" value=0>
                                     </div>
                                 </div>
 
                             <div class="card-action">
                                 <button class="btn" onclick="handleCounterMin()">-</button>
-                                <input type="text" id="counter" class="counter" value="1">
+                                <input name="text" id="counter" class="counter" value=0 size="2">
                                 <button class="btn" onclick="handleCounterPlus()">+</button>
                             </div>
 
@@ -95,12 +97,14 @@
                                            <h2 class="Product-name">Daniel Wellington Petite</h2>
                                            <h3 class="Product-size">Size 28 color Brown</h3>
                                            <h4 class="Product-price">$159</h4>
+                                           <input type="hidden" name="Product-price" value=$159>
+                                        <input type="hidden" namespace="totaltxtprice" value=0>
                                        </div>
                                    </div>
 
                                <div class="card-action">
                                    <button class="btn" onclick="handleCounterMin()">-</button>
-                                   <input type="text" id="counter" class="counter" value="1">
+                                   <input name="text" id="counter" class="counter" value=0 size="2">
                                    <button class="btn" onclick="handleCounterPlus()">+</button>
                                </div>
 
@@ -111,9 +115,14 @@
                            </div>
                         </div>
 
-                        <div class="total-price">
+                        <!-- <div class="total-price">
                         <h6>$388</h6>
-                        <h7>Disc : 5%</h7>
+                        <h7>Disc : 5%</h7> -->
+
+                        <td colspan=2 class="text-end">Total : </td>
+                        <td><span class="totalamount">0</span></td>
+
+                        </td>
 
                         <p>
                         <span>Subtotal</span>
@@ -132,16 +141,32 @@
                 </div>
             </section>
      <script>
-         const counter = document.getElementById("counter");
-         let countervalue = counter.value;
+         var totalamount = document.querySelectorAll(".totalamount");
+         var amountBytext = document.querySelectorAll("input[name=totaltxtprice]");
+         var textCountByEachProd = document.querySelectorAll("input[name=text]");
 
-         function handleCounterPlus() {
-             counter.value = ++countervalue;
+         function addtexttocart(text){
+             textCount.value = parseFloat(textCount.value)+1;
+             
+             var temptotalamount = 0;
+             amountBytext.foreach(text => {
+                 temptotalamount = temptotalamount + parseFloat(text.value)
+             })
+
+             totalamount.innerHTML = temptotalamount;
+
          }
 
-         function handleCounterMin() {
-             counter.value = --countervalue;
-         }
+        //  const counter = document.getElementById("counter");
+        //  let countervalue = counter.value;
+
+        //  function handleCounterPlus() {
+        //      counter.value = ++countervalue;
+        //  }
+
+        //  function handleCounterMin() {
+        //      counter.value = --countervalue;
+        //  }
      </script>
      <!--footer-->
     <div class="footer-home">
