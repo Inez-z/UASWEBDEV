@@ -52,4 +52,7 @@ class ShopController extends Controller
             "i" => $item
         ]);
     }
+    public function buynow(){
+        
+    }
 }
