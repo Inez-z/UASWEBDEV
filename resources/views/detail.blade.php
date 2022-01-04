@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>detail</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        {{-- <link rel="stylesheet" type="text/css" href="css/style.css"/> --}}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+        {{-- <link href="" rel="stylesheet" type="text/css" > --}}
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -16,7 +18,8 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <!-- {{-- diganti logo --}} -->
                     <a class="navbar-brand" href="http://127.0.0.1:8000/">
-                        <img src="image/logo.png" width="30" height="30" alt="">
+                        <img src={{asset('image/logo.png')}} width="30" height="30" alt="">
+
                       </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -93,8 +96,9 @@
                   <div class="box-dp">
                       <div class="dp-foto-produk">
                         <a target="_blank" href="image/men2.png">
-                            <img src="image/men2.png" alt="Men">
+                            <img src= {{asset('image/fotoproduk/'.$i->J_KODE);}} alt="Men">
                           </a>
+                          {{-- {{ asset('img/photo.jpg'); }} --}}
                       </div>
                     </div>
                   </section>
