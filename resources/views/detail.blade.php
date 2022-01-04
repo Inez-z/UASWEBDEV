@@ -86,7 +86,7 @@
                     </div>
                     <div class="btn-dp">
                         <div class="dp">
-                            <button class="btn-buynow"><i class="fas fa-money-bill"></i>Buy Now</button>
+                            <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow"><i class="fas fa-money-bill"></i>Buy Now</button></a>
                         </div>
                         <div class="dp2">
                             <button class="btn-add"><i class="fa fa-shopping-cart"></i>Add to Cart</button>

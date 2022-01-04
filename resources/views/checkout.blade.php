@@ -63,6 +63,26 @@
 
                     </div>
                   </nav>
+{{--
+                  <table class="table table-default">
+                    <tr>
+                        <th>ID</th><th>Nama</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th>
+                    </tr>
+                    @for ($i = 0; $i < 3; $i++)
+                    <tr>
+                        <td>{{$i}}</td><td><img src="https://dummyimage.com/50x50/ffffff/000000" style="max-width: 50px;">  Barang {{$i}}</td>
+                        <td>
+                            <input class="form-control d-inline text-center me-3 txtJumlah" type="number" value="{{$i}}" style="max-width: 6rem">
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button" name="btnUpdate" value="1">
+                                <i class="btnUpdate me-1"></i>
+                                Update
+                            </button>
+                        </td>
+                        <td>{{$i}}</td><td>{{$i*$i}}</td>
+                    </tr>
+                    @endfor
+                    </table> --}}
+
             <div class="small-container cart page">
                      <div class="container">
                             <h1>Checkout</h1>
@@ -146,7 +166,7 @@
   <div class="footer-home3">
     <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
   </div>
-          
+
 
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

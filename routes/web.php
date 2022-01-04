@@ -43,6 +43,8 @@ Route::prefix("/all")->group(function(){
 Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 });
 
+Route::get("/checkout/{sku}", [ShopController::class, "buynow"], [ShopController::class, "list"]);
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -67,9 +69,9 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+// Route::get('/checkout', function () {
+//     return view('checkout');
+// });
 
 Route::get('/editprofile', function () {
     return view('editprof');
