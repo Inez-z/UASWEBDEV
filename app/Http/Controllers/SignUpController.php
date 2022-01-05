@@ -91,8 +91,31 @@ class SignUpController extends Controller
             Session::flash('error', 'Email atau Password tidak sesuai!');
             return redirect('/sign-in');
         }
+
     }
 
+    public function profile(){
+        $email_login = Session::get('login');
+        $user = new SignUpModel;
+        $profile_login = $user->get_account($email_login);
+        // dd($profile);
+        return view('profile',compact('profile_login'));
+    }
+
+    public function editprofile(Request $req){
+        $data_reseller = [
+            'R_ID'      => $req->input('Reseller_ID'),
+            'R_NAMA'  => $req->input('Name'),
+            'R_ALAMAT' => $req->input('Address'),
+            'R_HP'    => $req->input('Phone'),
+
+        ];
+        // dd($data_reseller);
+        $user = new SignUpModel;
+        $edit = $user->edit_account($data_reseller);
+        // dd($edit);
+        return redirect('/profile');
+    }
 }
 
 ?>

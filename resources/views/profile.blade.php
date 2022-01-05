@@ -81,29 +81,30 @@
             <img src="/image/song kang.jpg" style="width:60%">
             <h3> </h3>
 
-            <h3>My Name</h3>
-            <h3>Classic</h3>
+            <h3>{{$profile_login->R_NAMA}}</h3>
+
             </div>
           </div>
           <div class="column">
-            <form action="/action_page.php">
+            <form action="/editprofile" method="POST">
+                @csrf
               <label for="fname">Reseller ID</label>
-              <input type="text" id="ressid" name="Reseller ID" placeholder="AXB351847">
+              <input type="text" id="ressid" name="Reseller_ID" value="{{$profile_login->R_ID}}" readonly>
 
               <label for="lname">Name</label>
-              <input type="text" id="name" name="Name" placeholder="Song Kang">
+              <input type="text" id="name" name="Name" value="{{$profile_login->R_NAMA}}">
 
               <label for="fname">Address</label>
-              <input type="text" id="address" name="Address" placeholder="Busan">
+              <input type="text" id="address" name="Address" value="{{$profile_login->R_ALAMAT}}">
 
               <label for="fname">Phone</label>
-              <input type="text" id="phone" name="Phone" placeholder="05829483">
+              <input type="text" id="phone" name="Phone" value="{{$profile_login->R_HP}}">
 
               <label for="fname">Email</label>
-              <input type="text" id="email" name="Email" placeholder="skang@gmail.com">
+              <input type="text" id="email" name="Email" value="{{$profile_login->R_EMAIL}}" readonly>
 
               <label for="fname">Password</label>
-              <input type="text" id="pass" name="Pass" placeholder="336j86">
+              <input type="text" id="pass" name="Pass" value="{{$profile_login->R_PASSWORD}}" readonly>
 
               <div class="submitprof">
                 <input type="submit" value="Submit">

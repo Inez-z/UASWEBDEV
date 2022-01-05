@@ -55,13 +55,14 @@ Route::get('/sign-in', function () {
 
 Route::post('/sign-in2','App\Http\Controllers\SignUpController@authentication');
 
+Route::get('/profile','App\Http\Controllers\SignUpController@profile');
+
+Route::post('/editprofile','App\Http\Controllers\SignUpController@editprofile');
+
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
 Route::get('/cart', function () {
     return view('cart');
 });
