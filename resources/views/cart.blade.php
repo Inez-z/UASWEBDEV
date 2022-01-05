@@ -80,15 +80,17 @@
                                 </div>
 
                             <div class="card-action">
-                                <button class="btn" onclick="handleCounterMin()">-</button>
-                                <input name="text" id="counter" class="counter" value=0 size="2">
-                                <button class="btn" onclick="handleCounterPlus()">+</button>
+                                <button class="btn minus-btn disabled" type="button">-</button>
+                                <input type="text" id="quantity" value=1 size="2">
+                                <button class="btn plus-btn" type="button">+</button>
                             </div>
 
                             <div class="Product-remove">
                                 <i class="far fa-trash-alt"></i>
                             </div>
-                            <h5>$229</h5>
+                            <p class="toprice">
+                                <span id="price">$229</span>
+                            </p>
                         </div>
                         <div class="card" style="background-color: transparent">
                             <div class="cart-info">
@@ -102,27 +104,28 @@
                                        </div>
                                    </div>
 
-                               <div class="card-action">
-                                   <button class="btn" onclick="handleCounterMin()">-</button>
-                                   <input name="text" id="counter" class="counter" value=0 size="2">
-                                   <button class="btn" onclick="handleCounterPlus()">+</button>
-                               </div>
+                                   <div class="card-action">
+                                <button class="btn minus-btn disabled" type="button">-</button>
+                                <input type="text" id="quantity" value=1 size="2">
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
 
                                <div class="Product-remove">
                                    <i class="far fa-trash-alt"></i>
                                </div>
-                               <h5>$159</h5>
+                               <p class="toprice">
+                                <span id="price">$159</span>
+                            </p>
                            </div>
                         </div>
 
-                        <!-- <div class="total-price">
+                        <div class="total-price">
                         <h6>$388</h6>
-                        <h7>Disc : 5%</h7> -->
+                        <h7>Disc : 5%</h7>
 
-                        <td colspan=2 class="text-end">Total : </td>
+                        <!-- <td colspan=2 class="text-end">Total : </td>
                         <td><span class="totalamount">0</span></td>
-
-                        </td>
+                        </td> -->
 
                         <p>
                         <span>Subtotal</span>
@@ -141,32 +144,42 @@
                 </div>
             </section>
      <script>
-         var totalamount = document.querySelectorAll(".totalamount");
-         var amountBytext = document.querySelectorAll("input[name=totaltxtprice]");
-         var textCountByEachProd = document.querySelectorAll("input[name=text]");
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+        var valueCount
 
-         function addtexttocart(text){
-             textCount.value = parseFloat(textCount.value)+1;
-             
-             var temptotalamount = 0;
-             amountBytext.foreach(text => {
-                 temptotalamount = temptotalamount + parseFloat(text.value)
-             })
+        
+        var price = document.getElementById("price").innerText;
+        function toprice(){
+            var total = valueCount * price;
+            document.getElementById("price").innerText = total
+        }
 
-             totalamount.innerHTML = temptotalamount;
+        document.querySelector(".plus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount++;
+            document.getElementById("quantity").value = valueCount
 
-         }
+            if(valueCount > 1){
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classlist.remove("disabled")
+            }
 
-        //  const counter = document.getElementById("counter");
-        //  let countervalue = counter.value;
+            
+        })
+        
+        document.querySelector(".minus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount--;
+            document.getElementById("quantity").value = valueCount
 
-        //  function handleCounterPlus() {
-        //      counter.value = ++countervalue;
-        //  }
+            if(valueCount == 1){
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
 
-        //  function handleCounterMin() {
-        //      counter.value = --countervalue;
-        //  }
+            
+
+        })
+
      </script>
      <!--footer-->
     <div class="footer-home">
