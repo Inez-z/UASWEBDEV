@@ -281,7 +281,7 @@ table{
     font-weight: bold;
 }
 
-h5{
+.toprice{
     position: absolute;
     bottom: 80px;
     right: 80px;
