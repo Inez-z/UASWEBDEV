@@ -30,6 +30,7 @@
 
   /* Style the container/contact section */
   .container {
+    margin-top: 2%;
     border-radius: 5px;
     background-color: #D4C8BE;
     padding: 10px;
@@ -77,29 +78,29 @@
   background-color: #2d2d2b;
   height: 400px;
   color: #f2f2f2;
-  font-family: Times New Roman;
+  font-family: Poppins;
   position: relative;
   display: flex;
- text-align: left 100px;
- padding-left: 150px;
- padding-top: 50px;
- 
+  text-align: left 100px;
+  padding-left: 120px;
+  padding-top: 70px;
+  margin-top: 2%;
 }
 .footer-home2{
   color: #f2f2f2;
-  font-family: Times New Roman;
   position: absolute;
+  font-family: Poppins;
  text-align: left;
- padding: 70px;
- top: 935px;
- left: 570px;
+ padding: 50px;
+ top: 1020px;
+ left: 500px;
 }
 .footer-home3{
   color: #f2f2f2;
-  font-family: Times New Roman;
   position: absolute;
  text-align: left;
- padding: 70px;
- top: 930px;
+ font-family: Poppins;
+ padding: 50px;
+ top: 1020px;
  right: 100px;
 }

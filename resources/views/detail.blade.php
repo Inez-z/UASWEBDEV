@@ -86,10 +86,10 @@
                     </div>
                     <div class="btn-dp">
                         <div class="dp">
-                            <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow"><i class="fas fa-money-bill"></i>Buy Now</button></a>
+                            <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
                         </div>
                         <div class="dp2">
-                            <button class="btn-add"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
+                            <button class="btn-add"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                   </div>

@@ -122,55 +122,6 @@
         <div>
     @endforeach
 
-<!--box product---------------------------------------------->
-{{-- <div class="boxproduct-container">
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/kids1.png">
-          <img src="image/kids1.png" alt="kids1">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>
-
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/kids2.png">
-          <img src="image/kids2.png" alt="kids2">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>
-
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/men1.png">
-          <img src="image/men1.png" alt="men1">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>
-
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/men2.png">
-          <img src="image/men2.png" alt="men2">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>
-
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/women1.png">
-          <img src="image/women1.png" alt="women1">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>
-
-      <div class="galleryproductmen">
-        <a target="_blank" href="image/women2.png">
-          <img src="image/women2.png" alt="women2">
-        </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
-      </div>--}}
 </div>
 <div class="row">
     <div class="col">
@@ -179,7 +130,6 @@
         </div>
     </div>
 </div>
-<button class="seemoremen">See More</button>
 </div>
 
 <!--footer-->
