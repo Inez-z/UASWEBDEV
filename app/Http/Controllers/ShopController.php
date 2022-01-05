@@ -52,7 +52,21 @@ class ShopController extends Controller
             "i" => $item
         ]);
     }
-    public function buynow(){
-        
+    public function buynow($sku){
+        $item = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->first();
+        // dd($item);
+        return view("checkout", [
+            "nama" => $item->J_MERK,
+            "i" => $item
+        ]);
     }
+    // public function addDetailBuy(Request $request, $sku){
+    //     $request->validate([
+    //         "inputQuantity"=>"numeric"
+    //     ]);
+    //     $item = Item::query()->findOrFail($sku);
+
+    // }
 }
