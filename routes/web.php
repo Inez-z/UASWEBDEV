@@ -43,7 +43,7 @@ Route::prefix("/all")->group(function(){
 Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 });
 
-Route::get("/checkout/{sku}", [ShopController::class, "buynow"], [ShopController::class, "list"]);
+Route::get("/checkout/{sku}", [ShopController::class, "buynow"]);
 
 Route::get('/about', function () {
     return view('about');

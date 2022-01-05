@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Checkout</title>
-        <link rel="stylesheet" type="text/css" href="css/checkout.css"/>
+        {{-- <link rel="stylesheet" type="text/css" href="css/checkout.css"/> --}}
+        <link href="{{ asset('css/checkout.css') }}" rel="stylesheet" type="text/css" >
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -16,7 +17,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <!-- {{-- diganti logo --}} -->
                     <a class="navbar-brand" href="http://127.0.0.1:8000/">
-                        <img src="image/logo.png" width="30" height="30" alt="">
+                        <img src={{asset('image/logo.png')}} width="30" height="30" alt="">
                       </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -63,31 +64,65 @@
 
                     </div>
                   </nav>
-{{--
-                  <table class="table table-default">
-                    <tr>
-                        <th>ID</th><th>Nama</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th>
-                    </tr>
-                    @for ($i = 0; $i < 3; $i++)
-                    <tr>
-                        <td>{{$i}}</td><td><img src="https://dummyimage.com/50x50/ffffff/000000" style="max-width: 50px;">  Barang {{$i}}</td>
-                        <td>
-                            <input class="form-control d-inline text-center me-3 txtJumlah" type="number" value="{{$i}}" style="max-width: 6rem">
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button" name="btnUpdate" value="1">
-                                <i class="btnUpdate me-1"></i>
-                                Update
-                            </button>
-                        </td>
-                        <td>{{$i}}</td><td>{{$i*$i}}</td>
-                    </tr>
-                    @endfor
-                    </table> --}}
+
+                  <h1>Checkout</h1>
+                  <div class="small-container cart page">
+                        @for ($j = 0; $j < 1; $j++)
+                        {{-- <tr> --}}
+                        <div class="container">
+                                <div class="card" style="background-color: transparent">
+                                    <div class="cart-info">
+                                        <img src={{asset('image/fotoproduk/'.$i->J_KODE);}} width="150">
+                                        <div>
+                                            <h2 class="Product-name">{{$i->J_MERK}}</h2>
+                                            <h3 class="Product-size">{{$i->J_WARNA}}/{{$i->J_UKURAN}}</h3>
+                                            <h4 class="Product-price">${{$i->J_HARGA}}</h4>
+                                        </div>
+                                    </div>
+                                    <h5>x1</h5>
+                                </div>
+                            </div>
+                        {{-- </tr> --}}
+                        @endfor
+                    <div class="detailco">
+                        <div class="co-info" >
+                            <div>
+                                <br>
+                                <h2>Detail Order</h2>
+                                <br>
+                                <h3>Total :</h3>
+                                <h3>Disc :</h3>
+                                <h3>Subtotal :</h3>
+                                <br>
+                                <br>
+                                <h3>______________________________</h3>
+
+                                <h3>Grand Total :</h3>
+                            </div>
+                        </div>
+                    <div class="data-info" >
+                        <div>
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Total</h3>
+                            <h3>Disc</h3>
+                            <h3>Subtotal</h3>
+                            <br>
+                            <br>
+                            <h3>____</h3>
+                            <h3>Grand Total</h3>
+
+                        </div>
+                    </div>
+                  </div>
+
 
             <div class="small-container cart page">
                      <div class="container">
-                            <h1>Checkout</h1>
+                            {{-- <h1>Checkout</h1> --}}
 
-                            <div class="card" style="background-color: transparent">
+                            {{-- <div class="card" style="background-color: transparent">
                                 <div class="cart-info">
                                     <img src="image/men2.png" width="150">
                                     <div>
@@ -97,57 +132,27 @@
                                     </div>
                                 </div>
                             <h5>x1</h5>
-                        </div>
-                        <div class="card" style="background-color: transparent">
-                            <div class="cart-info">
-                                       <img src="image/women1.png" width="150">
-                                       <div>
-                                           <h2 class="Product-name">Daniel Wellington Petite</h2>
-                                           <h3 class="Product-size">Size 28 color Brown</h3>
-                                           <h4 class="Product-price">$159</h4>
-                                       </div>
-                                   </div>
-                               <h5>x1</h5>
-                           </div>
-                        </div>
-
-
-
-                        <div class="detailco">
-                            <div class="co-info" >
-                                <div>
-                                    <br>
-                                    <h2>Detail Order</h2>
-                                    <br>
-                                    <h3>Total :</h3>
-                                    <h3>Disc :</h3>
-                                    <h3>Subtotal :</h3>
-                                    <br>
-                                    <br>
-                                    <h3>______________________________</h3>
-
-                                    <h3>Grand Total :</h3>
-                                </div>
                             </div>
-                            <div class="data-info" >
-                                <div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <h3>Total</h3>
-                                    <h3>Disc</h3>
-                                    <h3>Subtotal</h3>
-                                    <br>
-                                    <br>
-                                    <h3>____</h3>
-                                    <h3>Grand Total</h3>
-
-                                </div>
+                            <div class="card" style="background-color: transparent">
+                                <div class="cart-info">
+                                        <img src="image/women1.png" width="150">
+                                        <div>
+                                            <h2 class="Product-name">Daniel Wellington Petite</h2>
+                                            <h3 class="Product-size">Size 28 color Brown</h3>
+                                            <h4 class="Product-price">$159</h4>
+                                        </div>
+                                    </div>
+                                <h5>x1</h5>
                             </div>
+                            </div> --}}
+
+
+
+
                         </div>
+
 
                         <button class="paybutton">Pay Now</button>
-
                         <br>
                         <br>
                         <br>

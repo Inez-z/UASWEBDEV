@@ -113,6 +113,7 @@
                     function handleCounterMin() {
                         number.value = --numbervalue;
                     }
+
                 </script>
 
      <!--footer-->
