@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WatchOut</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -52,7 +52,7 @@
                 <div class="flex-grow-1 d-flex">
                     <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn-search" type="submit">Search</button>
                     </form>
                 </div>
                 <div class="nav-cart">
@@ -67,13 +67,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="image/satu.png" alt="First slide">
+              <img class="d-block w-100" src="../image/satu.png" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="image/Daniel Wellington.png" alt="Second slide">
+              <img class="d-block w-100" src="../image/Daniel Wellington.png" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="image/Christmas.png" alt="Third slide">
+              <img class="d-block w-100" src="../image/Christmas.png" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -91,7 +91,7 @@
 <div class="box-container">
     <div class="galleryshopnow">
       <a target="_blank" href="image/men.jpg">
-        <img src="image/men.jpg" alt="Men">
+        <img src="../image/men.jpg" alt="Men">
       </a>
       <div class="category">Men</div>
       <a href="http://127.0.0.1:8000/men"><button class="shopnow-btn">Shop Now</button></a>
@@ -99,7 +99,7 @@
 
     <div class="galleryshopnow">
       <a target="_blank" href="image/women.jpg">
-        <img src="image/women.jpg" alt="mockup">
+        <img src="../image/women.jpg" alt="mockup">
       </a>
       <div class="category">Women</div>
       <a href="http://127.0.0.1:8000/women"><button class="shopnow-btn">Shop Now</button></a>
@@ -107,7 +107,7 @@
 
     <div class="galleryshopnow">
       <a target="_blank" href="image/kids.jpg">
-        <img src="image/kids.jpg" alt="company">
+        <img src="../image/kids.jpg" alt="company">
       </a>
       <div class="category">Kids</div>
       <a href="http://127.0.0.1:8000/kids"><button class="shopnow-btn">Shop Now</button></a>
@@ -120,7 +120,7 @@
           <div class="product-text">
               <p>Our Collections</p>
               <p>Best Seller</p>
-              <p>Best Seller | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
+              <p><a href="http://127.0.0.1:8000/bestseller">Best Seller</a> | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
 
           </div>
 
@@ -147,7 +147,7 @@
         <div class="boxproduct-container">
             <div class="galleryproduct">
             <a target="_blank" href="{{ url('detail/'.$i->J_SKU) }}">
-                <img src="image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
+                <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
             <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
@@ -205,13 +205,13 @@
   <div class="foto-container">
     <div class="foto-foto">
       <a target="_blank" href="image/gambar1.jpg">
-        <img src="image/gambar1.jpg" alt="gambar1">
+        <img src="../image/gambar1.jpg" alt="gambar1">
       </a>
     </div>
 
     <div class="foto-foto">
       <a target="_blank" href="image/gambar2.jpg">
-        <img src="image/gambar2.jpg" alt="gambar2">
+        <img src="../image/gambar2.jpg" alt="gambar2">
       </a>
     </div>
   </div>
@@ -224,7 +224,7 @@
     <div class="boxpopular-container">
       <div class="popularproduct">
         <a target="_blank" href="image/kids1.png">
-          <img src="image/kids1.png" alt="kids1">
+          <img src="../image/kids1.png" alt="kids1">
         </a>
         <div class="productname">Product Name</div>
         <div class="productprice">Price</div>
@@ -232,7 +232,7 @@
 
       <div class="popularproduct">
         <a target="_blank" href="image/kids2.png">
-          <img src="image/kids2.png" alt="kids2">
+          <img src="../image/kids2.png" alt="kids2">
         </a>
         <div class="productname">Product Name</div>
         <div class="productprice">Price</div>
@@ -240,7 +240,7 @@
 
       <div class="popularproduct">
         <a target="_blank" href="image/men1.png">
-          <img src="image/men1.png" alt="men1">
+          <img src="../image/men1.png" alt="men1">
         </a>
         <div class="productname">Product Name</div>
         <div class="productprice">Price</div>
@@ -252,7 +252,7 @@
   <!--Couple Watches-->
   <div class="couple-container">
     <a target="_blank" href="image/7.png">
-      <img src="image/7.png" alt="couple">
+      <img src="../image/7.png" alt="couple">
     </a>
   </div>
 
@@ -264,7 +264,7 @@
   </div>
 
   <button class="btnScrollTop" id="btnScrollTop" onclick="scrollToTop()">
-    {{-- <img src="image/up.png" width="30" height="30"> --}}
+    {{-- <img src="../image/up.png" width="30" height="30"> --}}
     <i class="fas fa-arrow-up"></i>
   </button>
 
