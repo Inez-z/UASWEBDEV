@@ -54,6 +54,8 @@ Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 
 Route::get("/checkout/{sku}", [ShopController::class, "buynow"]);
 
+Route::get("/cart/{sku}", [ShopController::class, "buynow"]);
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -72,9 +74,9 @@ Route::get('/sign-up', function () {
     return view('sign-up');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
 Route::get('/detail', function () {
     return view('detail');
 });
