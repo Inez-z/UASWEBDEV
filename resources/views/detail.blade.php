@@ -80,9 +80,9 @@
                         <h10 class="dp-desc">{{$i->J_DESKRIPSI}}</h10>
                     </div>
                     <div class="btn-action">
-                      <button class="circle" onclick="handleCounterMin()">-</button>
-                      <input type="text" id="number" class="number" value="1" min="1" max="{{$i->J_STOK}}">
-                      <button class="circle" onclick="handleCounterPlus()">+</button>
+                      <button class="btn minus-btn disabled" type="button">-</button>
+                      <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" >
+                      <button class="btn plus-btn" type="button">+</button>
                     </div>
                     <div class="btn-dp">
                         <div class="dp">
@@ -103,18 +103,36 @@
                     </div>
                   </section>
                   <script>
-                    const number = document.getElementById("number");
-                    let numbervalue = number.value;
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+        var valueCount
 
-                    function handleCounterPlus() {
-                        number.value = ++numbervalue;
-                    }
+        document.querySelector(".plus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount++;
+            document.getElementById("quantity").value = valueCount
 
-                    function handleCounterMin() {
-                        number.value = --numbervalue;
-                    }
+            if(valueCount > 1){
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classlist.remove("disabled")
+            }
 
-                </script>
+
+        })
+
+        document.querySelector(".minus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount--;
+            document.getElementById("quantity").value = valueCount
+
+            if(valueCount == 1){
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
+
+
+
+        })
+
+     </script>
 
      <!--footer-->
     <div class="footer-home-detail">
