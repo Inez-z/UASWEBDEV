@@ -3,6 +3,19 @@
 .logo{
     height: 10px;
 }
+.btn-search{
+    color: black;
+    padding: 1.8% 3% 1.8% 3%;
+    border-radius: 10%;
+    border-style:double;
+    border-color: rgb(167, 167, 167);
+    background-color: transparent;
+}
+.btn-search:hover{
+    background-color: #f2f2f2;
+    font-weight: 510;
+    color: black;
+}
 .box-container{
     height:225px;
     align-items: center;

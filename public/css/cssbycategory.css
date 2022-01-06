@@ -7,6 +7,21 @@
     font-weight:550;
     color: whitesmoke;
 }
+
+.btn-search{
+    color: black;
+    padding: 1.8% 3% 1.8% 3%;
+    border-radius: 10%;
+    border-style:double;
+    border-color: rgb(167, 167, 167);
+    background-color: transparent;
+}
+.btn-search:hover{
+    background-color: #f2f2f2;
+    font-weight: 510;
+    color: black;
+}
+
 .dropbtn {
     background-color: #d4c8be;
     color: #3e3d3d;
@@ -38,7 +53,9 @@
     display: block;
 }
 .dropdown-content a:hover {
-    background-color: #d4c8be
+    background-color: #d4c8be;
+    text-decoration: none;
+    color: #3e3d3d;
 }
 .dropdownmen:hover .dropdown-content {
     display: block;
