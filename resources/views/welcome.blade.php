@@ -120,7 +120,8 @@
           <div class="product-text">
               <p>Our Collections</p>
               <p>Best Seller</p>
-              <p>Best Seller | Low Price | High Price</p>
+              <p>Best Seller | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
+              
           </div>
 
 

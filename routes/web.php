@@ -20,6 +20,8 @@ use App\Http\Controllers\ShopController;
 // });
 
 Route::get("/welcome", [ShopController::class, "list"]);
+// Route::get("/lowprice", [ShopController::class, "welcome_lowprice"]);
+// Route::get("/highprice", [ShopController::class, "welcome_highprice"]);
 
 Route::prefix("/men")->group(function(){
     Route::get("/", [ShopController::class, "MenWatches"]);
