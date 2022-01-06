@@ -23,17 +23,24 @@ Route::get("/welcome", [ShopController::class, "list"]);
 
 Route::prefix("/men")->group(function(){
     Route::get("/", [ShopController::class, "MenWatches"]);
-Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/lowprice", [ShopController::class, "men_lowprice"]);
+    Route::get("/highprice", [ShopController::class, "men_highprice"]);
 });
+
 
 Route::prefix("/women")->group(function(){
     Route::get("/", [ShopController::class, "WomenWatches"]);
-Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/lowprice", [ShopController::class, "women_lowprice"]);
+    Route::get("/highprice", [ShopController::class, "women_highprice"]);
 });
 
 Route::prefix("/kids")->group(function(){
     Route::get("/", [ShopController::class, "KidsWatches"]);
-Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/detail/{sku}", [ShopController::class, "detail"]);
+    Route::get("/lowprice", [ShopController::class, "kids_lowprice"]);
+    Route::get("/highprice", [ShopController::class, "kids_highprice"]);
 });
 
 Route::get("/bestseller", [ShopController::class, "list"]);

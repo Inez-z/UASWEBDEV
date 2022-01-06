@@ -26,6 +26,24 @@ class ShopController extends Controller
             "items" => $items
         ]);
     }
+    public function men_lowprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'M%')
+                ->orderBy('J_HARGA')
+                ->paginate(6);
+        return view("men", [
+            "items" => $items
+        ]);
+    }
+    public function men_highprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'M%')
+                ->orderBy('J_HARGA','desc')
+                ->paginate(6);
+        return view("men", [
+            "items" => $items
+        ]);
+    }
     public function WomenWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'W%')
@@ -34,9 +52,46 @@ class ShopController extends Controller
             "items" => $items
         ]);
     }
+    public function women_lowprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'W%')
+                ->orderBy('J_HARGA')
+                ->paginate(6);
+        return view("women", [
+            "items" => $items
+        ]);
+    }
+    public function women_highprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'W%')
+                ->orderBy('J_HARGA','desc')
+                ->paginate(6);
+        return view("women", [
+            "items" => $items
+        ]);
+    }
+    
     public function KidsWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'K%')
+                ->paginate(6);
+        return view("kids", [
+            "items" => $items
+        ]);
+    }
+    public function kids_lowprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'K%')
+                ->orderBy('J_HARGA')
+                ->paginate(6);
+        return view("kids", [
+            "items" => $items
+        ]);
+    }
+    public function kids_highprice(){
+        $items = DB::table('jam_tangan')
+                ->where('J_SKU', 'like', 'K%')
+                ->orderBy('J_HARGA','desc')
                 ->paginate(6);
         return view("kids", [
             "items" => $items
