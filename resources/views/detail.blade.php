@@ -79,7 +79,7 @@
                         <h9 class="dp-size">{{$i->J_UKURAN}}</h9>
                         <h10 class="dp-desc">{{$i->J_DESKRIPSI}}</h10>
                     </div>
-                    <div class="btn-action">
+                    <div class="btn-actionnew">
                       <button class="btn minus-btn disabled" type="button">-</button>
                       <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" >
                       <button class="btn plus-btn" type="button">+</button>
