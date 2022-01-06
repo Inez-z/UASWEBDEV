@@ -120,7 +120,7 @@
           <div class="product-text">
               <p>Our Collections</p>
               <p>Best Seller</p>
-              <p>Best Seller | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
+              <p><a href="http://127.0.0.1:8000/bestseller">Best Seller</a> | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
 
           </div>
 
