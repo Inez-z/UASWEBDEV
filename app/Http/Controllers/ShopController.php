@@ -107,28 +107,28 @@ class ShopController extends Controller
             "i" => $item
         ]);
     }
-    // public function welcome_lowprice($sku){
-    //     $item = DB::table('jam_tangan')
-    //     ->where('J_KODE', $sku)
-    //     ->orderBy('J_HARGA')
-    //     ->first();
-    //     // dd($item);
-    //     return view("detail", [
-    //         "nama" => $item->J_MERK,
-    //         "i" => $item
-    //     ]);
-    // }
-    // public function welcome_highprice($sku){
-    //     $item = DB::table('jam_tangan')
-    //     ->where('J_KODE', $sku)
-    //     ->orderBy('J_HARGA','desc')
-    //     ->first();
-    //     // dd($item);
-    //     return view("detail", [
-    //         "nama" => $item->J_MERK,
-    //         "i" => $item
-    //     ]);
-    // }
+    public function welcome_lowprice($sku){
+        $item = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->orderBy('J_HARGA')
+        ->first();
+        // dd($item);
+        return view("detail", [
+            "nama" => $item->J_MERK,
+            "i" => $item
+        ]);
+    }
+    public function welcome_highprice($sku){
+        $item = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->orderBy('J_HARGA','desc')
+        ->first();
+        // dd($item);
+        return view("detail", [
+            "nama" => $item->J_MERK,
+            "i" => $item
+        ]);
+    }
     public function buynow($sku){
         $item = DB::table('jam_tangan')
         ->where('J_KODE', $sku)
