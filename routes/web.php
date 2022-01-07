@@ -55,7 +55,7 @@ Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 
 Route::get("/checkout/{sku}", [ShopController::class, "buynow"]);
 
-Route::get("/cart/{sku}", [ShopController::class, "buynow"]);
+Route::get("/cart/{sku}", [ShopController::class, "addcart"]);
 
 Route::get('/about', function () {
     return view('about');

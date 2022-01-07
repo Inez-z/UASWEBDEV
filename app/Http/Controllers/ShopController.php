@@ -70,7 +70,7 @@ class ShopController extends Controller
             "items" => $items
         ]);
     }
-    
+
     public function KidsWatches(){
         $items = DB::table('jam_tangan')
                 ->where('J_SKU', 'like', 'K%')
@@ -111,7 +111,7 @@ class ShopController extends Controller
         $items = DB::table('jam_tangan')
         ->orderBy('J_HARGA')
         ->paginate(6);
-        
+
         // dd($items);
         return view("welcome", compact('items'));
     }
@@ -119,7 +119,7 @@ class ShopController extends Controller
         $items = DB::table('jam_tangan')
         ->orderBy('J_HARGA','desc')
         ->paginate(6);
-        
+
         // dd($items);
         return view("welcome", compact('items'));
     }
@@ -131,6 +131,16 @@ class ShopController extends Controller
         return view("checkout", [
             "nama" => $item->J_MERK,
             "i" => $item
+        ]);
+    }
+    public function addcart(){
+        $item = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->first();
+        // dd($item);
+        return view("cart", [
+            // "nama" => $item->J_MERK,
+            // "i" => $item
         ]);
     }
     // public function addDetailBuy(Request $request, $sku){
