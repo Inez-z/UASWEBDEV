@@ -134,7 +134,7 @@
 
                         <div class="btn-con">
                         <div class="item">
-                            <button class="btn-decor-outline">Continue Shopping</button>
+                            <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
                         </div>
                         <div class="item2">
                             <button class="btn-decor">Checkout</button>
