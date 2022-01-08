@@ -10,6 +10,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
 use DB;
 
+
 class ShopController extends Controller
 {
     public function list(){

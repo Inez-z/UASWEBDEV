@@ -87,7 +87,7 @@
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
-                        </div>
+                        </div>                        
                         <div class="dp2">
                             <a href="/cart/{{$i->J_KODE}}"><button class="btn-add"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                         </div>

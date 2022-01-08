@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    
 
 </head>
-
+@if(Session::get('authentication'))
+    <div class="alert alert-dark " role="alert">
+    {{Session::get('authentication')}}
+    <button type="button" class="fas fa-times" data-dismiss="alert">
+        <span aria-label="true"></span>
+    </button>
+    </div>
+    @endif
+    
 <body> <!-- header -->
     <section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -86,6 +96,7 @@
           </a>
         </div>
     </section>
+    
 
 <!--box category, shop now---------------------------------------------->
 <div class="box-container">
@@ -113,6 +124,7 @@
       <a href="http://127.0.0.1:8000/kids"><button class="shopnow-btn">Shop Now</button></a>
     </div>
 </div>
+
 
 <!-- Product ----------------->
 <div class="product" id="product-list">
