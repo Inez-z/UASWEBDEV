@@ -69,7 +69,7 @@
     {{-- profile form --}}
     <div class="container">
         <br>
-        <br>
+        <a href="/sign-in"><p class="logout">Log Out</p></a>
         <div style="text-align:center">
         <h2>My Profile</h2>
             <br>
