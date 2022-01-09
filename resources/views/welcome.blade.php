@@ -61,7 +61,8 @@
               </ul>
                 <div class="flex-grow-1 d-flex">
                     <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
-                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search" value="{{request('search')}}">
+                         <form action="/posts">
                         <button class="btn-search" type="submit">Search</button>
                     </form>
                 </div>
