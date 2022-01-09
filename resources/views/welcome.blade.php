@@ -14,13 +14,19 @@
 
 </head>
 @if(Session::get('authentication'))
-    <div class="alert alert-dark " role="alert">
-    {{Session::get('authentication')}}
-    <button type="button" class="fas fa-times" data-dismiss="alert">
-        <span aria-label="true"></span>
-    </button>
-    </div>
-    @endif
+    <!-- <div class="alert alert-dark " role="alert"> -->
+      <div class="alert show" role="alert">
+        {{Session::get('authentication')}}
+        <span class="msg">Welcome to Watchout! Happy Shopping</span>
+        <span class="close-btn">
+          <span class="fas fa-times" data-dismiss="alert"></span>
+          <span aria-label="true"></span> 
+        </span>
+        </div>
+      @endif
+    
+    <!-- <button type="button" class="fas fa-times" data-dismiss="alert">
+     </button> -->
 
 <body> <!-- header -->
     <section>
@@ -132,7 +138,7 @@
           <div class="product-text">
               <p>Our Collections</p>
               <p>Best Seller</p>
-              <p><a href="http://127.0.0.1:8000/bestseller">Best Seller</a> | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
+              <p><a href="http://127.0.0.1:8000/bestseller">Best Seller</a>  | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
 
           </div>
 

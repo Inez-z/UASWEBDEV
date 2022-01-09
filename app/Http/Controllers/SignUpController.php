@@ -84,7 +84,7 @@ class SignUpController extends Controller
             Session::put('login', $email);
             Session::put('pass', $password);
             Session::flash('success', 'Anda berhasil Login!');
-            $req->session()->flash('authentication','Welcome back to Watchout!');
+            $req->session()->flash('authentication');
             
 
             return redirect('/welcome');
