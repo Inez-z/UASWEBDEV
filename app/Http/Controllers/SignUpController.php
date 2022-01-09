@@ -14,7 +14,7 @@ class SignUpController extends Controller
     }
 
     // fungsi untuk insert data ke dalam database
-    public function insert(Request $request)
+    public function insert(Request $req)
     {
         $messages = array();
         $firstname = $_POST['firstname'];
@@ -63,6 +63,7 @@ class SignUpController extends Controller
 
         if($flag_exist==1){
             Session::flash('Success', 'You have successfully created an account!');
+            $req->session()->flash('authentication2');
             return redirect('/sign-in');
         }
     }
