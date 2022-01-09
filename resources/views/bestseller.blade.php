@@ -17,7 +17,7 @@
     <section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             {{-- diganti logo --}}
-            <a class="navbar-brand" href="/welcome">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/welcome">
                 <img src="image/logo.png" width="30" height="30" alt="">
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,6 +130,22 @@
     </div>
 </div>
 </div>
+
+<button class="btnScrollTop" id="btnScrollTop" onclick="scrollToTop()">
+    {{-- <img src="../image/up.png" width="30" height="30"> --}}
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script> var btnScrollTop = document.getElementById(btnScrollTop)
+var rootElement = document.documentElement
+function scrollToTop(){
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+btnScrollTop.addEventListener("click", scrollToTop)
+</script>
 
 <!--footer-->
 <div class="footer-home">
