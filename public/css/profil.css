@@ -117,3 +117,14 @@
     font-weight: 510;
     color: black;
 }
+.logout{
+    text-align:right;
+    text-decoration:underline black;
+    color: black;
+    margin-right: 3%;
+    font-size:20px;
+    cursor: pointer;
+}
+.logout:hover{
+    font-weight:600;
+}
