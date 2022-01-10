@@ -20,11 +20,11 @@
         <span class="msg">Welcome to Watchout! Happy Shopping</span>
         <span class="close-btn">
           <span class="fas fa-times" data-dismiss="alert"></span>
-          <span aria-label="true"></span> 
+          <span aria-label="true"></span>
         </span>
         </div>
       @endif
-    
+
     <!-- <button type="button" class="fas fa-times" data-dismiss="alert">
      </button> -->
 
@@ -169,7 +169,7 @@
                 <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            <div class="productprice"> $. {{$i->J_HARGA}}</div>
             </div>
         <div>
     @endforeach

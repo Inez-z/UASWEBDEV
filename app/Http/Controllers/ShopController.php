@@ -134,7 +134,8 @@ class ShopController extends Controller
             "i" => $item
         ]);
     }
-    public function addcart(){
+
+    public function addcart($sku){
         $item = DB::table('jam_tangan')
         ->where('J_KODE', $sku)
         ->first();
