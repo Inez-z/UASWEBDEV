@@ -69,12 +69,12 @@
                   <div class="detail-produk">
                     <h1 class="dpnama-jam">{{$nama}}</h1>
                     <h2 class="dpharga-jam">{{$i->J_HARGA}}</h2>
-                    <h3>Category    :</h3>
+                    {{-- <h3>Category    :</h3> --}}
                     <h4>Color       :</h4>
                     <h11>Size       :</h11>
                     <h6>Description :</h6>
                     <div class="dp-isi">
-                        <h7 class="dp-category">Men</h7>
+                        {{-- <h7 class="dp-category">Men</h7> --}}
                         <h8 class="dp-color">{{$i->J_WARNA}}</h8>
                         <h9 class="dp-size">{{$i->J_UKURAN}}</h9>
                         <h10 class="dp-desc">{{$i->J_DESKRIPSI}}</h10>
@@ -87,7 +87,7 @@
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
-                        </div>                        
+                        </div>
                         <div class="dp2">
                             <a href="/cart/{{$i->J_KODE}}"><button class="btn-add"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                         </div>
