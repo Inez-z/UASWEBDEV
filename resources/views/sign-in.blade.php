@@ -9,14 +9,13 @@
 </head>
 
 @if(Session::get('authentication2'))
-    <!-- <div class="alert alert-dark " role="alert"> -->
       <div class="alert show" role="alert">
         {{Session::get('authentication')}}
         <span class="msg">You have successfully created your account! Please Login.</span>
-        <span class="close-btn">
+        {{-- <span class="close-btn">
           <span class="fas fa-times" data-dismiss="alert"></span>
           <span aria-label="true"></span>
-        </span>
+        </span> --}}
         </div>
       @endif
 

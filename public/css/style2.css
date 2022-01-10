@@ -135,9 +135,9 @@
 /*alertsignup*/
 .alert{
     background: #B8926B;
-    padding: 40px 40px;
+    padding: 20px 20px;
     min-width: 220px;
-    position: absolute;
+    position: relative;
     right: 0px;
     top: 10px;
     overflow: hidden;
@@ -149,7 +149,7 @@
     font-size: 18px;
     color: white;
 }
-.alert .close-btn{
+/* .alert .close-btn{
     position: absolute;
     right: 0px;
     top: 50%;
@@ -166,7 +166,7 @@
     font-size: 22px;
     line-height: 40px;
 }
-
+ */
 
 
 
