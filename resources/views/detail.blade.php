@@ -57,9 +57,11 @@
                                 <button class="btn-search" type="submit">Search</button>
                             </form>
                         </div>
+                        @if(session('login') != "")
                         <div class="nav-cart">
                         <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
                         </div>
+                        @endif
                         <div class="nav-profile">
                         <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
                         </div>
@@ -91,11 +93,12 @@
                       <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" name="jumlahproduk" >
                       <button class="btn plus-btn" type="button">+</button>
                     </div>
+                    @if(session('login') != "")
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
                         </div>
-
+                    @endif
                     </div>
                   </div>
 
@@ -107,10 +110,12 @@
                           {{-- {{ asset('img/photo.jpg'); }} --}}
                       </div>
                     </div>
-
+                    @if(session('login') != "")
                     <div class="dp2">
                         <a href=""><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                     </div>
+                    @endif
+
                 </form>
 
 
