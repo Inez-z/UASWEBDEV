@@ -27,7 +27,7 @@ class TransaksiModel extends Model
         // cari totalfinal
         $total_final = (double)$total_harga * ((100-(double)$diskon[0]->M_DISKON)/100);
         // dd($reseller_id, $total_harga, $diskon, $total_final, $ngecek);
-        $cmd = "CALL pInsertTransaksiPembelian(:idbeli, :sku, :qty, :price, :delete)";
+        $cmd = "CALL pInsertTransaksiPembelian(fGENBeliID(),0, curdate(), 'jumlahproduk', 'total_harga', 'diskon', 'total_final',0,0)";
         $data = [
             'namaproduk'  => $data['namaproduk'],
             'hargaproduk'  => $data['hargaproduk'],
