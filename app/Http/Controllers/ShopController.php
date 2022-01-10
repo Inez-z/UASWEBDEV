@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailTransaksi;
 use App\Models\Item;
+use App\Models\TransaksiModel;
 use App\Models\Men;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
+use Session;
 use DB;
 
 
@@ -135,15 +138,22 @@ class ShopController extends Controller
         ]);
     }
 
-    public function addcart($sku){
-        $item = DB::table('jam_tangan')
-        ->where('J_KODE', $sku)
-        ->first();
-        // dd($item);
-        return view("cart", [
-            // "nama" => $item->J_MERK,
-            // "i" => $item
-        ]);
+    public function transaksi(Request $req){
+        $email=Session::get('login');
+        $tanggal=
+        $data = [
+            'namaproduk'=>$req->namaproduk,
+            'hargaproduk'  => $req->hargaproduk,
+            'warnaproduk'     => $req->warnaproduk,
+            'ukuranproduk'    => $req->ukuranproduk,
+            'deskripsiproduk'     => $req->deskripsiproduk,
+            'jumlahproduk'     => $req->jumlahproduk,
+            'email' => $email
+        ];
+        // dd($data);
+        $usr = new TransaksiModel();
+        $res = $usr->insert_transaksi($data);
+
     }
     // public function addDetailBuy(Request $request, $sku){
     //     $request->validate([

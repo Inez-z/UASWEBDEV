@@ -66,8 +66,12 @@
 
                     </div>
                   </nav>
+                  <form action="/transaksi" method="POST">
+                    @csrf
                   <div class="detail-produk">
-                    <h1 class="dpnama-jam">{{$nama}}</h1>
+                      <input type="hidden" name="namaproduk" value="{{$nama}}">
+                    <h1 class="dpnama-jam" >{{$nama}}</h1>
+                    <input type="hidden" name="hargaproduk" value="{{$i->J_HARGA}}">
                     <h2 class="dpharga-jam">{{$i->J_HARGA}}</h2>
                     {{-- <h3>Category    :</h3> --}}
                     <h4>Color       :</h4>
@@ -75,24 +79,26 @@
                     <h6>Description :</h6>
                     <div class="dp-isi">
                         {{-- <h7 class="dp-category">Men</h7> --}}
-                        <h8 class="dp-color">{{$i->J_WARNA}}</h8>
+                        <input type="hidden" name="warnaproduk" value="{{$i->J_WARNA}}">
+                        <h8 class="dp-color" >{{$i->J_WARNA}}</h8>
+                        <input type="hidden"  name="ukuranproduk" value="{{$i->J_UKURAN}}">
                         <h9 class="dp-size">{{$i->J_UKURAN}}</h9>
-                        <h10 class="dp-desc">{{$i->J_DESKRIPSI}}</h10>
+                        <input type="hidden" name="deskripsiproduk" value="{{$i->J_DESKRIPSI}}">
+                        <h10 class="dp-desc" >{{$i->J_DESKRIPSI}}</h10>
                     </div>
                     <div class="btn-actionnew">
                       <button class="btn minus-btn disabled" type="button">-</button>
-                      <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" >
+                      <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" name="jumlahproduk" >
                       <button class="btn plus-btn" type="button">+</button>
                     </div>
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
                         </div>
-                        <div class="dp2">
-                            <a href="/cart/{{$i->J_KODE}}"><button class="btn-add"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
-                        </div>
+
                     </div>
                   </div>
+
                   <div class="box-dp">
                       <div class="dp-foto-produk">
                         <a target="_blank" href="image/men2.png">
@@ -101,7 +107,15 @@
                           {{-- {{ asset('img/photo.jpg'); }} --}}
                       </div>
                     </div>
-                  </section>
+
+                    <div class="dp2">
+                        <a href=""><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
+                    </div>
+                </form>
+
+
+
+                </section>
                   <script>
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
         var valueCount
