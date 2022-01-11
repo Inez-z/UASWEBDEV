@@ -167,17 +167,16 @@ class ShopController extends Controller
     //searching
     public function index()
     {
-        $posts = Post::latest();
+        $items = DB::table('jam_tangan')
+        ->orderBy('J_HARGA','desc')
+        ->where('J_MERK','like','%' . request('search') . '%')
+        ->paginate(6);
 
-        if(request('search')) {
-            $posts->where('title','like','%' . request('search') . '%')
-                  ->orWhere('body','like','%' . request('search') . '%');
-        }
+        // if(request('search')) {
+            // $items->where('J_MERK','like','%' . request('search') . '%');
 
-        return view('posts',[
-            "title" => "All Posts",
-            "active" => "posts",
-            "posts" => $posts->get()
-        ]);
+        // }
+        // dd($items);
+        return view("welcome", compact('items'));
     }
 }
