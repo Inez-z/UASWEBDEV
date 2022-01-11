@@ -12,6 +12,12 @@ class TransaksiModel extends Model
 
     public function insert_transaksi($data){
         // dd($data);
+
+        // query untuk panggil func beli id
+        $bid ="select fGENBeliID() as `bid`";
+        $beli_id = DB::select($bid);
+        // dd($beli_id);
+
         // query untuk mencari reseller id
         $email = $data['email'];
         $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
@@ -34,7 +40,15 @@ class TransaksiModel extends Model
         //  dd($reseller_id[0], $total_harga, $diskon, $total_final);
         // dd($reseller_id[0]->R_ID,$total_harga, $diskon[0]->M_DISKON, $total_final);
 
-        $cmd = "CALL pInsertTransaksiPembelian(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        //cari SKU
+        $kode = $data['kode'];
+        $s ="select J_SKU from jam_tangan where J_KODE='".$kode[0]."';";
+        $sku = DB::select($s);
+        dd($sku);
+
+        if($reseller_id)
+
+        $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
 
         $data = [
             'namaproduk'  => $data['namaproduk'],
@@ -46,7 +60,7 @@ class TransaksiModel extends Model
             'email' =>  $data['email']
         ];
 
-        // $cmd = "CALL pInsertDetailBeli(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        $cmd2 = "CALL pInsertDetailBeli(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
 
         $res = DB::insert($cmd);
         // $res = DB::insert($data);
