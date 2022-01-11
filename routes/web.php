@@ -75,6 +75,8 @@ Route::get('/profile','App\Http\Controllers\SignUpController@profile');
 
 Route::post('/editprofile','App\Http\Controllers\SignUpController@editprofile');
 
+Route::get('/logout', '\App\Http\Controllers\SignUpController@logout');
+
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
@@ -97,21 +99,5 @@ Route::get('/editprofile', function () {
 Route::get('/invoice', function () {
     return view('invoice');
 });
-
-// Route::get('men', function (){
-//     return view('men');
-// });
-// Route::get('women', function (){
-//     return view('women');
-// });
-// Route::get('kids', function (){
-//     return view('kids');
-// });
-// Route::get('all', function (){
-//     return view('all');
-// });
-// Route::get('bestseller', function (){
-//     return view('bestseller');
-// });
 
 Route::post('/sign-up/insert', 'App\Http\Controllers\SignUpController@insert');

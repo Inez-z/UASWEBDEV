@@ -120,6 +120,11 @@ class SignUpController extends Controller
         // dd($edit);
         return redirect('/profile');
     }
+
+    public function logout(Request $req){
+        Session::flush();
+        return redirect('/welcome');
+    }
 }
 
 ?>

@@ -76,11 +76,14 @@
                 <div class="nav-cart">
                         <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
                         </div>
+                        <div class="nav-profile">
+                          <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
+                        </div>
                 @endif
                         <div class="nav-profile">
-                        <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
+                          <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
+                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
-
             </div>
           </nav>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
