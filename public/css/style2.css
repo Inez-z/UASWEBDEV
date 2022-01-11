@@ -27,7 +27,7 @@
     border: 1px solid #d4c8be;
     border-radius: 19px;
     background-color: #eae6df;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .form-sign-in .text{
@@ -149,7 +149,7 @@
     font-size: 18px;
     color: white;
 }
-/* .alert .close-btn{
+.alert .close-btn{
     position: absolute;
     right: 0px;
     top: 50%;
@@ -166,7 +166,7 @@
     font-size: 22px;
     line-height: 40px;
 }
- */
+
 
 
 
