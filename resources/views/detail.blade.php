@@ -112,7 +112,7 @@
                     </div>
                     @if(session('login') != "")
                     <div class="dp2">
-                        <a href=""><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
+                        <a href="/cart/{{$i->J_KODE}}"><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                     </div>
                     @endif
 

@@ -57,7 +57,7 @@
                         </div>
                         @if(session('login') != "")
                         <div class="nav-cart">
-                        <a class="fas fa-shopping-cart" style="color:black" href="http://127.0.0.1:8000/cart"><a>
+                        <a class="fas fa-shopping-cart" style="color:black" href=/cart"><a>
                         </div>
                         @endif
                         <div class="nav-profile">

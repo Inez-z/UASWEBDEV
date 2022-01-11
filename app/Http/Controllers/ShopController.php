@@ -154,6 +154,7 @@ class ShopController extends Controller
         $usr = new TransaksiModel();
         $res = $usr->insert_transaksi($data);
 
+        return view("cart");
     }
     // public function addDetailBuy(Request $request, $sku){
     //     $request->validate([

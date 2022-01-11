@@ -20,14 +20,22 @@ class TransaksiModel extends Model
         //  untuk menghitung total harga
         $total_harga = (double)$data['hargaproduk']*(double)$data['jumlahproduk'];
 
+        $jumlahproduk = $data['jumlahproduk'];
+
         // query untuk mencari diskon
         $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
         $diskon = DB::select($disc);
 
         // cari totalfinal
         $total_final = (double)$total_harga * ((100-(double)$diskon[0]->M_DISKON)/100);
-        // dd($reseller_id, $total_harga, $diskon, $total_final, $ngecek);
-        $cmd = "CALL pInsertTransaksiPembelian(fGENBeliID(),0, curdate(), 1, [$total_harga], [$diskon], [$total_final],0,0)";
+
+        $tanggal = date("Y-m-d");
+        // dd($tanggal);
+        //  dd($reseller_id[0], $total_harga, $diskon, $total_final);
+        // dd($reseller_id[0]->R_ID,$total_harga, $diskon[0]->M_DISKON, $total_final);
+
+        $cmd = "CALL pInsertTransaksiPembelian(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+
         $data = [
             'namaproduk'  => $data['namaproduk'],
             'hargaproduk'  => $data['hargaproduk'],
@@ -37,7 +45,11 @@ class TransaksiModel extends Model
             'jumlahproduk'     => $data['jumlahproduk'],
             'email' =>  $data['email']
         ];
-        $res = DB::insert($cmd,$data);
+
+        // $cmd = "CALL pInsertDetailBeli(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+
+        $res = DB::insert($cmd);
+        // $res = DB::insert($data);
         return $res;
     }
 }
