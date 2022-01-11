@@ -179,6 +179,6 @@ class ShopController extends Controller
 
         // }
         // dd($items);
-        return view("welcome", compact('items'));
+        return view("posts", compact('items'));
     }
 }

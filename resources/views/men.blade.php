@@ -51,10 +51,10 @@
                 </li>
               </ul>
                 <div class="flex-grow-1 d-flex">
-                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
-                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn-search" type="submit">Search</button>
-                    </form>
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1" action="/posts" method="GET">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search" value="{{request('search')}}">
+                       <button class="btn-search" type="submit">Search</button>
+                   </form>
                 </div>
                 @if(session('login') != "")
                 <div class="nav-cart">
