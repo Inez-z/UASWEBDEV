@@ -116,6 +116,7 @@
                     </div>
                     @endif
 
+                    <input type="hidden" value="{{$sku}}" name="kode" >
                 </form>
 
 

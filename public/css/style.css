@@ -723,7 +723,7 @@ td input{
     padding: 20px;
 }
 
-.btn-actionnew .circle{
+.btn-actionnew .btn{
     font-size: 15px;
     font-weight: bold;
     background-color:#b8926a ;
@@ -737,11 +737,11 @@ td input{
     position: relative;
 }
 
-.btn-actionnew .circle:hover{
+.btn-actionnew .btn:hover{
     transform: scale(1.1, 1.1);
 }
 
-.btn-actionnew .circle:active{
+.btn-actionnew .btn:active{
      transform: unset;
  }
 

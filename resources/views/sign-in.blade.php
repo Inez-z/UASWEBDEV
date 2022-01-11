@@ -8,21 +8,16 @@
 
 </head>
 
-@if(Session::get('authentication2'))
-      <div class="alert show" role="alert">
-        {{Session::get('authentication')}}
-        <span class="msg">You have successfully created your account! Please Login.</span>
-        {{-- <span class="close-btn">
-          <span class="fas fa-times" data-dismiss="alert"></span>
-          <span aria-label="true"></span>
-        </span> --}}
-        </div>
-      @endif
-
 <body>
     <div class="body-sign-in">
         <div class="container-signin-right">
         </div>
+        @if(Session::get('authentication2'))
+      <div class="alert show" role="alert">
+        {{Session::get('authentication')}}
+        <span class="msg">You have successfully created your account! Please Login.</span>
+        </div>
+      @endif
         <br>
         <br>
         <div class="container-signin-left">

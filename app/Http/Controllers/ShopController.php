@@ -108,7 +108,8 @@ class ShopController extends Controller
         // dd($item);
         return view("detail", [
             "nama" => $item->J_MERK,
-            "i" => $item
+            "i" => $item,
+            "sku" => $sku
         ]);
     }
     public function welcome_lowprice(){
@@ -148,7 +149,8 @@ class ShopController extends Controller
             'ukuranproduk'    => $req->ukuranproduk,
             'deskripsiproduk'     => $req->deskripsiproduk,
             'jumlahproduk'     => $req->jumlahproduk,
-            'email' => $email
+            'email' => $email,
+            'kode'     => $req->kode
         ];
         // dd($data);
         $usr = new TransaksiModel();
