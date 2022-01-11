@@ -24,6 +24,8 @@ Route::prefix("/welcome")->group(function(){
     Route::get("/highprice", [ShopController::class, "welcome_highprice"]);
 });
 
+Route::get("/posts", [ShopController::class, "index"]);
+
 Route::prefix("/men")->group(function(){
     Route::get("/", [ShopController::class, "MenWatches"]);
     Route::get("/detail/{sku}", [ShopController::class, "detail"]);

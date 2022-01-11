@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use illuminate\Database\Eloquent\Factories\HasFactory;
-use illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use DB;
 
 class Item extends Model{
