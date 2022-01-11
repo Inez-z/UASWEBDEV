@@ -79,13 +79,11 @@
                         <div class="nav-profile">
                           <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
                         </div>
-                        @else
+                @endif
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
                           <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
-                        @endif
-
             </div>
           </nav>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
