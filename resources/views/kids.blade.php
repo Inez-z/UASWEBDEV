@@ -125,7 +125,7 @@
                 <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('kids/detail/'.$i->J_KODE) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            <div class="productprice"> $ {{$i->J_HARGA}}</div>
             </div>
         <div>
     @endforeach
@@ -147,6 +147,22 @@
     <p class="tulisankanan">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
   </div>
 
+{{-- scrollup --}}
+<button class="btnScrollTop" id="btnScrollTop" onclick="scrollToTop()">
+    {{-- <img src="../image/up.png" width="30" height="30"> --}}
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script> var btnScrollTop = document.getElementById(btnScrollTop)
+var rootElement = document.documentElement
+function scrollToTop(){
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+btnScrollTop.addEventListener("click", scrollToTop)
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
