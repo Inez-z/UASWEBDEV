@@ -130,7 +130,7 @@
     <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
   </div>
   <div class="footer-home3">
-    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
+    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a href="https://twitter.com/Twitter">watchout_global</a></p>
   </div>
 
 
