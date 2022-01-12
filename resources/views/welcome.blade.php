@@ -251,27 +251,31 @@
   <!--box popular--------------------------------------------->
     <div class="boxpopular-container">
       <div class="popularproduct">
-        <a target="_blank" href="image/kids1.png">
-          <img src="../image/kids1.png" alt="kids1">
+        <a target="_blank" href="http://127.0.0.1:8000/kids/detail/KTXRU_PK29.png">
+            <img src="../image/fotoproduk/KTXRU_PK29.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <br>
+        <a href="http://127.0.0.1:8000/kids/detail/KTXRU_PK29.png">Timex Rainbow Unicorn</a>
+        <div class="productprice">$ 25</div>
       </div>
 
       <div class="popularproduct">
-        <a target="_blank" href="image/kids2.png">
-          <img src="../image/kids2.png" alt="kids2">
+        <a target="_blank" href="http://127.0.0.1:8000/women/detail/WDWCC_WE32.png">
+            <img src="../image/fotoproduk/WDWCC_WE32.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <a href="http://127.0.0.1:8000/women/detail/WDWCC_WE32.png">Daniel Wellington Classic Cambridge</a>
+        <div class="productprice">$ 199</div>
       </div>
 
       <div class="popularproduct">
-        <a target="_blank" href="image/men1.png">
-          <img src="../image/men1.png" alt="men1">
+        <a target="_blank" href="http://127.0.0.1:8000/men/detail/MDWCY_WE36.png">
+            <img src="../image/fotoproduk/MDWCY_WE36.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <a href="http://127.0.0.1:8000/men/detail/MDWCY_WE36.png">Daniel Wellington Classic York</a>
+        <div class="productprice">$ 199</div>
       </div>
     </div>
     </div>
