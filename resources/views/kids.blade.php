@@ -125,7 +125,7 @@
                 <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('kids/detail/'.$i->J_KODE) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            <div class="productprice"> $ {{$i->J_HARGA}}</div>
             </div>
         <div>
     @endforeach
