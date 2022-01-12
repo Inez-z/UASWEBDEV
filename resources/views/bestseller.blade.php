@@ -159,7 +159,7 @@ btnScrollTop.addEventListener("click", scrollToTop)
 <div class="footer-home">
     <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
     <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
-    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a href="https://twitter.com/Twitter">watchout_global</a></p>
+    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a style="color:white" href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a style="color:white" href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a style="color:white" href="https://twitter.com/Twitter">watchout_global</a></p>
   </div>
 
 

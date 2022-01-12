@@ -155,6 +155,8 @@ div.foto-foto img{
     text-align: center;
     font-family: Poppins;
     transform: translateY(5%);
+    /* position: absolute; */
+    /* left: 100px; */
 }
 div.popularproduct{
     float: left;
