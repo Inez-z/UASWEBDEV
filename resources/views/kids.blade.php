@@ -108,11 +108,13 @@
 <!--Category---->
 <div class="categorymen">
 <p>Category</p>
+<p></p>
 <a href="http://127.0.0.1:8000/all"><button class="btncatmen">All</button></a><br>
 <a href="http://127.0.0.1:8000/men"><button class="btncatmen">Men</button></a><br>
 <a href="http://127.0.0.1:8000/women"><button class="btncatmen">Women</button></a><br>
 <a href="http://127.0.0.1:8000/kids"><button class="btncatmen">Kids</button></a><br>
-<a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a>
+<br>
+{{-- <a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a> --}}
 </div>
 
 <div class="product-container" id="product-list">

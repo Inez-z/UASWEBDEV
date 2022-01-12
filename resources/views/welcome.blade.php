@@ -169,16 +169,18 @@
         </div>
     @endforeach --}}
 
+
+
     @foreach ($items as $i)
-        <div class="boxproduct-container">
-            <div class="galleryproduct">
-            <a target="_blank" href="{{ url('detail/'.$i->J_SKU) }}">
-                <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
-            </a>
-            <div class="productname"><a href="{{ url('detail/'.$i->J_SKU) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-            <div class="productprice"> $. {{$i->J_HARGA}}</div>
-            </div>
-        <div>
+    <div class="boxproduct-container">
+        <div class="galleryproductmen">
+        <a target="_blank" href="{{ url('women/detail/'.$i->J_KODE) }}">
+            <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
+        </a>
+        <div class="productname"><a href="{{ url('women/detail/'.$i->J_KODE) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
+        <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+        </div>
+    <div>
     @endforeach
     {{-- <div class="col mb-5">
         <div class="card h-100">

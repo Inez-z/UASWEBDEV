@@ -113,7 +113,8 @@
 <a href="http://127.0.0.1:8000/men"><button class="btncatmen">Men</button></a><br>
 <a href="http://127.0.0.1:8000/women"><button class="btncatmen">Women</button></a><br>
 <a href="http://127.0.0.1:8000/kids"><button class="btncatmen">Kids</button></a><br>
-<a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a>
+{{-- <a href="http://127.0.0.1:8000/bestseller"><button class="btncatmen">Best Seller</button></a> --}}
+<br>
 </div>
 
 
@@ -129,6 +130,8 @@
             </div>
         <div>
     @endforeach
+
+
 
 </div>
 <div class="row">
@@ -146,6 +149,7 @@
     <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
     <p class="tulisankanan">SOCIAL MEDIA<br><br><br>Instagram<br>@watchout_co<br><br>Facebook<br>watchout_global<br><br>Twitter<br>watchout_global</p>
   </div>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
