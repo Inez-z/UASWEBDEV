@@ -56,7 +56,7 @@
                     <a class="dropdown-item" href="http://127.0.0.1:8000/men">Men</a>
                     <a class="dropdown-item" href="http://127.0.0.1:8000/women">Women</a>
                     <a class="dropdown-item" href="http://127.0.0.1:8000/kids">Kids</a>
-                    <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a>
+                    {{-- <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a> --}}
                     {{-- <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a> --}}
                   </div>
@@ -144,8 +144,8 @@
 <div class="product" id="product-list">
     <!--text------------->
           <div class="product-text">
+              <p></p>
               <p>Our Collections</p>
-              <p>Best Seller</p>
               <p><a href="http://127.0.0.1:8000/bestseller">Best Seller</a>  | <a href="/welcome/lowprice">Low Price</a> | <a href="/welcome/highprice">High Price</a></p>
 
           </div>

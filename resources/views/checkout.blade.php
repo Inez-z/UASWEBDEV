@@ -40,7 +40,7 @@
                             <a class="dropdown-item" href="http://127.0.0.1:8000/men">Men</a>
                             <a class="dropdown-item" href="http://127.0.0.1:8000/women">Women</a>
                             <a class="dropdown-item" href="http://127.0.0.1:8000/kids">Kids</a>
-                            <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a>
+                            {{-- <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a> --}}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                           </div>
