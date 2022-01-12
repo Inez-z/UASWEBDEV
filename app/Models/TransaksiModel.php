@@ -57,10 +57,11 @@ class TransaksiModel extends Model
 
         $datacart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
         $check = false;
-        //kalo udh ada tinggal nambahin qty
+        //kalo udh ada tinggal nambahin qty dan harga
         foreach ($datacart as $d) {
             if ($d ->J_SKU == $produk[0]->J_SKU) {
                 $d -> J_STOK = $d -> J_STOK + (double)$data['jumlahproduk'];
+                $d -> J_HARGA = $d -> J_STOK * (double)$data['hargaproduk'];
                 $check = true;
             }
         }
@@ -80,7 +81,7 @@ class TransaksiModel extends Model
                 ['R_ID', '=', $reseller_id[0]->R_ID],
                 ['J_SKU', '=', $produk[0]->J_SKU]
                 ])
-            ->update(['J_STOK' => $d -> J_STOK]);
+            ->update(['J_STOK' => $d -> J_STOK, 'J_HARGA' => $d -> J_HARGA]);
 
         }
 

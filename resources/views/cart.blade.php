@@ -80,11 +80,11 @@
 
                             <div class="card" style="background-color: transparent">
                                 <div class="cart-info">
-                                    <img src="image/men2.png" width="150">
+                                    <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
                                         <h2 class="Product-name">{{$c->J_MERK}}</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
-                                        <h4 class="Product-price">{{$c->J_HARGA}}</h4>
+                                        <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
                                     </div>
@@ -92,7 +92,7 @@
 
                             <div class="card-action">
                                 <button class="btn minus-btn disabled" type="button">-</button>
-                                <input type="text" id="quantity" value=1 size="2">
+                                <input type="text" id="quantity" value={{$c->J_STOK}} size="2">
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
 
@@ -100,7 +100,7 @@
                                 <i class="far fa-trash-alt"></i>
                             </div>
                             <p class="toprice">
-                                <span id="price">$229</span>
+                                <span id="price">${{$c->J_HARGA}}</span>
                             </p>
                         </div>
                         {{-- <div class="card" style="background-color: transparent">
@@ -130,30 +130,31 @@
                            </div>
                         </div> --}}
 
-                        <div class="total-price">
-                        <h6>$388</h6>
-                        <h7>Disc : 5%</h7>
 
-                        <!-- <td colspan=2 class="text-end">Total : </td>
-                        <td><span class="totalamount">0</span></td>
-                        </td> -->
-
-                        <p>
-                        <span>Subtotal</span>
-                        <span>$366</span>
-                        </p>
-
-                        <div class="btn-con">
-                        <div class="item">
-                            <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
-                        </div>
-                        <div class="item2">
-                            <button class="btn-decor">Checkout</button>
-                        </div>
                     </div>
                 </div>
             </div>
             @endforeach
+            <div class="total-price">
+                <h6>$388</h6>
+                <h7>Disc : 5%</h7>
+
+                <!-- <td colspan=2 class="text-end">Total : </td>
+                <td><span class="totalamount">0</span></td>
+                </td> -->
+
+                <p>
+                <span>Subtotal</span>
+                <span>$366</span>
+                </p>
+
+                <div class="btn-con">
+                <div class="item">
+                    <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
+                </div>
+                <div class="item2">
+                    <button class="btn-decor">Checkout</button>
+                </div>
             </section>
      <script>
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
