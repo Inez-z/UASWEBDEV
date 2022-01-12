@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             {{-- diganti logo --}}
             <a class="navbar-brand" href="/welcome">
-                <img src="image/logo.png" width="30" height="30" alt="">
+                <img src="../image/logo.png" width="30" height="30" alt="">
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -80,10 +80,12 @@
                           <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a>
                         </div>
                 @endif
+                @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
                           <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
+                @endif
             </div>
           </nav>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
