@@ -42,13 +42,8 @@ class TransaksiModel extends Model
 
         //cari SKU
         $kode = $data['kode'];
-        $s ="select J_SKU from jam_tangan where J_KODE='".$kode[0]."';";
-        $sku = DB::select($s);
-        dd($sku);
-
-        if($reseller_id)
-
-        $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        $s ="select J_SKU, J_WARNA, J_MERK from jam_tangan where J_KODE='".$kode."';";
+        $produk = DB::select($s);
 
         $data = [
             'namaproduk'  => $data['namaproduk'],
@@ -60,10 +55,40 @@ class TransaksiModel extends Model
             'email' =>  $data['email']
         ];
 
-        $cmd2 = "CALL pInsertDetailBeli(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        $datacart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
+        $check = false;
+        //kalo udh ada tinggal nambahin qty
+        foreach ($datacart as $d) {
+            if ($d ->J_SKU == $produk[0]->J_SKU) {
+                $d -> J_STOK = $d -> J_STOK + (double)$data['jumlahproduk'];
+                $check = true;
+            }
+        }
+        // dd($check);
+        //kalo blm ada diinsert
+        if (!$check) {
+            //insert cart
+            $insertcart = "CALL pInsertCart('".$reseller_id[0]->R_ID."','".$produk[0]->J_SKU."','".$produk[0]->J_MERK."',".$total_harga.",".$jumlahproduk.",'".$produk[0]->J_WARNA."','".$kode."')";
+            $res = DB::insert($insertcart);
+            return $res;
+        }
+        //kalo ada diupdate
+        else {
 
-        $res = DB::insert($cmd);
-        // $res = DB::insert($data);
-        return $res;
+            DB::table('cart')
+            ->where([
+                ['R_ID', '=', $reseller_id[0]->R_ID],
+                ['J_SKU', '=', $produk[0]->J_SKU]
+                ])
+            ->update(['J_STOK' => $d -> J_STOK]);
+
+        }
+
+
+        // $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+
+
+
+        // $cmd2 = "CALL pInsertDetailBeli(fGENBeliID(), '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
     }
 }

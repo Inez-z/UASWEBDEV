@@ -57,6 +57,8 @@ Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 
 Route::get("/checkout/{sku}", [ShopController::class, "buynow"]);
 
+Route::post("/cart/{sku}", [ShopController::class, "transaksi"]);
+
 Route::post("/transaksi", [ShopController::class, "transaksi"]);
 
 // Route::get("/cart/{sku}", [ShopController::class, "addcart"]);

@@ -67,16 +67,18 @@
 
                     </div>
                   </nav>
+                  <h1>My Shopping Cart</h1>
+            @foreach ($cart as $c)
             <div class="small-container cart page">
                      <div class="container">
-                            <h1>My Shopping Cart</h1>
+
                             <div class="card" style="background-color: transparent">
                                 <div class="cart-info">
                                     <img src="image/men2.png" width="150">
                                     <div>
-                                        <h2 class="Product-name">Daniel Wellington Classic</h2>
+                                        <h2 class="Product-name">{{$c->J_MERK}}</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
-                                        <h4 class="Product-price">$229</h4>
+                                        <h4 class="Product-price">{{$c->J_HARGA}}</h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
                                     </div>
@@ -95,7 +97,7 @@
                                 <span id="price">$229</span>
                             </p>
                         </div>
-                        <div class="card" style="background-color: transparent">
+                        {{-- <div class="card" style="background-color: transparent">
                             <div class="cart-info">
                                        <img src="image/women1.png" width="150">
                                        <div>
@@ -120,7 +122,7 @@
                                 <span id="price">$159</span>
                             </p>
                            </div>
-                        </div>
+                        </div> --}}
 
                         <div class="total-price">
                         <h6>$388</h6>
@@ -144,7 +146,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
+            @endforeach
             </section>
      <script>
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");

@@ -152,12 +152,27 @@ class ShopController extends Controller
             'email' => $email,
             'kode'     => $req->kode
         ];
+
         // dd($data);
         $usr = new TransaksiModel();
         $res = $usr->insert_transaksi($data);
 
-        return view("cart");
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+
+        $cart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
+        // dd($cart);
+        return view("cart", [
+            "cart" => $cart,
+        ]);
+
     }
+
+    // public function show_cart($data)
+    // {
+    //     $email=Session::get('login');
+
+    // }
     // public function addDetailBuy(Request $request, $sku){
     //     $request->validate([
     //         "inputQuantity"=>"numeric"

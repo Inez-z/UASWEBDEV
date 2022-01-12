@@ -68,7 +68,7 @@
 
                     </div>
                   </nav>
-                  <form action="/transaksi" method="POST">
+                  <form action="/cart/{{$i->J_KODE}}" method="POST">
                     @csrf
                   <div class="detail-produk">
                       <input type="hidden" name="namaproduk" value="{{$nama}}">
