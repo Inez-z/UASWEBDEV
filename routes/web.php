@@ -55,7 +55,7 @@ Route::prefix("/all")->group(function(){
 Route::get("/detail/{sku}", [ShopController::class, "detail"]);
 });
 
-Route::get("/checkout/{sku}", [ShopController::class, "buynow"]);
+Route::get("/checkout/{email}", [ShopController::class, "checkout"]);
 
 Route::POST("/cart/{email}", [ShopController::class, "transaksi"]);
 

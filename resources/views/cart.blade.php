@@ -96,10 +96,10 @@
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
 
-                            <form action="/cart/{{$c->J_KODE}}" method="POST">
+                            <form action="/cart/{{$email}}" method="POST">
                                 @csrf
                             <div class="Product-remove">
-                                <input type="submit" value="" class="far fa-trash-alt">
+                                <input type="submit" value="" id={{$c->J_KODE}} class="far fa-trash-alt">
 
                             </div>
                             </form>
@@ -158,7 +158,7 @@
                     <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
                 </div>
                 <div class="item2">
-                    <button class="btn-decor">Checkout</button>
+                    <a href="/checkout/{{$email}}"><button class="btn-decor" >Checkout</button></a>
                 </div>
             </section>
      <script>

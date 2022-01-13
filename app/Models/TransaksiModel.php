@@ -11,6 +11,10 @@ class TransaksiModel extends Model
     use HasFactory;
 
     public function insert_transaksi($data){
+        
+    }
+
+    public function insert_cart($data){
         // dd($data);
 
         // query untuk panggil func beli id
