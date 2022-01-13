@@ -67,7 +67,7 @@
                 @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                 @endif
 
