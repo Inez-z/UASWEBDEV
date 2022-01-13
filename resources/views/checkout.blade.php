@@ -99,7 +99,7 @@
                                 <h2>Detail Order</h2>
                                 <br>
                                 <h3>Total :</h3>
-                                <h3>Disc :</h3>
+                                <h3>Disc {{$diskon}}%:</h3>
                                 <h3>Subtotal :</h3>
                                 <br>
                                 <br>
@@ -113,13 +113,13 @@
                             <br>
                             <br>
                             <br>
-                            <h3>Total</h3>
-                            <h3>Disc</h3>
-                            <h3>Subtotal</h3>
+                            <h3>${{$totalharga}}</h3>
+                            <h3>${{$hargadiskon}}</h3>
+                            <h3>${{$totalfinal}}</h3>
                             <br>
                             <br>
                             <h3>____</h3>
-                            <h3>Grand Total</h3>
+                            <h3>${{$totalfinal}}</h3>
 
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                         </div>
 
 
-                        <button class="paybutton">Pay Now</button>
+                        <a href=""><button class="paybutton">Pay Now</button></a>
                         <br>
                         <br>
                         <br>
