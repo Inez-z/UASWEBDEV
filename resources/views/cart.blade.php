@@ -83,13 +83,8 @@
                                 <div class="cart-info">
                                     <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
-<<<<<<< HEAD
                                         <h2 class="Product-name" style="font-size: 25px;font-weight: 400;margin-top: 35px;">{{$c->J_MERK}}</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
-=======
-                                        <h2 class="Product-name">{{$c->J_MERK}}</h2>
-                                        <h3 class="Product-size">color {{$c->J_WARNA}}</h3>
->>>>>>> d2a5011e296ab0febe9205cba2cd5f17a8ff3fbf
                                         <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
