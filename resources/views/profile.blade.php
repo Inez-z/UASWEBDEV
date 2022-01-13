@@ -81,7 +81,6 @@
         <div style="text-align:center">
         <h2>My Profile</h2>
             <br>
-            <br>
         </div>
         <div class="row">
           <div class="column">
