@@ -83,7 +83,7 @@
                                     <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
                                         <h2 class="Product-name">{{$c->J_MERK}}</h2>
-                                        <h3 class="Product-size">Size 28 color Brown</h3>
+                                        <h3 class="Product-size">color {{$c->J_WARNA}}</h3>
                                         <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>

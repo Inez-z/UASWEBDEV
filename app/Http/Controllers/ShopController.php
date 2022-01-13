@@ -145,16 +145,19 @@ class ShopController extends Controller
 
         $tanggal = date("Y-m-d");
 
+        //cari detail cart
         $d ="select SUM(J_STOK) as `qty`, SUM(J_HARGA) as `totalharga` from cart where R_ID='".$reseller_id[0]->R_ID."';";
         $detailcart = DB::select($d);
 
+        // dd($detailcart[0]->qty);
+        //cari diskom
         $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
         $diskon = DB::select($disc);
 
         // cari totalfinal
         $total_final = (double)$detailcart[0]->totalharga * ((100-(double)$diskon[0]->M_DISKON)/100);
 
-        //insert transaksi pembelian
+        //INSERT TRANSAKSI PEMBELIAN
         $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$detailcart[0]->qty.", ".$detailcart[0]->totalharga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
         $res = DB::insert($cmd);
 
@@ -162,17 +165,22 @@ class ShopController extends Controller
         $c = "select * from cart where R_ID='".$reseller_id[0]->R_ID."';";
         $allcart = DB::select($c);
 
-        //kalo udh ada tinggal nambahin qty dan harga
-        foreach ($allcart as $cart) {
-             //insert detail pembelian
-            $cmd2 = "CALL pInsertDetailBeli('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        //cari jumlah array per reseller
+        $jml = "select count(*) as `count` from cart where R_ID='".$reseller_id[0]->R_ID."';";
+        $count = DB::select($jml);
+        // dd($allcart,$count);
+
+       //masukin detail beli
+        for($i=0;$i<$count[0]->count;$i++) {
+            //insert detail pembelian
+            $cmd2 = "CALL pInsertDetailBeli('".$beli_id[0]->bid."', '".$allcart[$i]->J_SKU."','".$allcart[$i]->J_STOK."',".$allcart[$i]->J_HARGA.", '0');";
             $res2 = DB::insert($cmd2);
         }
         // return ;
         return view("checkout",[
-            "cart" => $cart,
+            "cart" => $allcart,
             "diskon" => $diskon[0]->M_DISKON,
-            "totalharga" => $total_harga,
+            "totalharga" => $detailcart[0]->totalharga,
             "totalfinal" => $total_final,
             "email" => $email
         ]
@@ -222,7 +230,7 @@ class ShopController extends Controller
             'kode'     => $req->kode
         ];
 
-        // dd($data);
+        // dd($data['warnaproduk'], $data['ukuranproduk']);
         $usr = new TransaksiModel();
         $res = $usr->insert_cart($data);
 
@@ -234,11 +242,24 @@ class ShopController extends Controller
 
         $cart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
 
-        //  untuk menghitung total harga
-        $total_harga = (double)$data['hargaproduk']*(double)$data['jumlahproduk'];
+        //cari total qty dan total harga buat ditampilin di cart
+        $d ="select SUM(J_STOK) as `qty`, SUM(J_HARGA) as `totalharga` from cart where R_ID='".$reseller_id[0]->R_ID."';";
+        $detailcart = DB::select($d);
 
+        // $kode = $data['kode'];
+        // //cari warna ukuran buat ditampilin di cart
+        // $uk ="select J_UKURAN from jam_tangan where J_KODE='".$kode."';";
+        // $ukuran = DB::select($uk);
+
+        // $color ="select J_WARNA from jam_tangan where J_KODE='".$kode."';";
+        // $warna = DB::select($color);
+
+        // dd($ukuran,$warna);
         // cari totalfinal
-        $total_final = (double)$total_harga * ((100-(double)$diskon[0]->M_DISKON)/100);
+        $total_final = (double)$detailcart[0]->totalharga * ((100-(double)$diskon[0]->M_DISKON)/100);
+
+        //  untuk menghitung total harga
+        $total_harga = $detailcart[0]->totalharga;
 
         // dd($total_harga, $total_final);
         return view("cart", [
@@ -246,7 +267,8 @@ class ShopController extends Controller
             "diskon" => $diskon[0]->M_DISKON,
             "totalharga" => $total_harga,
             "totalfinal" => $total_final,
-            "email" => $email
+            "email" => $email,
+            "warna" => $data['warnaproduk'],
         ]);
     }
 
