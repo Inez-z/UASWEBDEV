@@ -134,17 +134,52 @@ class ShopController extends Controller
         // dd($items);
         return view("welcome", compact('items'));
     }
-    public function buynow($sku){
-        $item = DB::table('jam_tangan')
-        ->where('J_KODE', $sku)
-        ->first();
-        // dd($item);
-        return view("checkout", [
-            "nama" => $item->J_MERK,
-            "i" => $item
-        ]);
+    public function checkout($sku){
+        $email=Session::get('login');
+
+        $bid ="select fGENBeliID() as `bid`";
+        $beli_id = DB::select($bid);
+
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+
+        $tanggal = date("Y-m-d");
+
+        $d ="select SUM(J_STOK) as `qty`, SUM(J_HARGA) as `totalharga` from cart where R_ID='".$reseller_id[0]->R_ID."';";
+        $detailcart = DB::select($d);
+
+        $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
+        $diskon = DB::select($disc);
+
+        // cari totalfinal
+        $total_final = (double)$detailcart[0]->totalharga * ((100-(double)$diskon[0]->M_DISKON)/100);
+
+        //insert transaksi pembelian
+        $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$detailcart[0]->qty.", ".$detailcart[0]->totalharga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+        $res = DB::insert($cmd);
+
+        //cari cart sesuai id reseller
+        $c = "select * from cart where R_ID='".$reseller_id[0]->R_ID."';";
+        $allcart = DB::select($c);
+
+        //kalo udh ada tinggal nambahin qty dan harga
+        foreach ($allcart as $cart) {
+             //insert detail pembelian
+            $cmd2 = "CALL pInsertDetailBeli('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$jumlahproduk.", ".$total_harga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
+            $res2 = DB::insert($cmd2);
+        }
+        // return ;
+        return view("checkout",[
+            "cart" => $cart,
+            "diskon" => $diskon[0]->M_DISKON,
+            "totalharga" => $total_harga,
+            "totalfinal" => $total_final,
+            "email" => $email
+        ]
+        );
     }
-    public function deletecart($sku){
+    public function deletecart(){
+        $sku = request('sku');
         error_log("hai");
         $email=Session::get('login');
 
@@ -172,8 +207,8 @@ class ShopController extends Controller
             "totalfinal" => $total_final
         ]);
     }
+
     public function transaksi(Request $req){
-        error_log("hai");
         $email=Session::get('login');
         $tanggal=
         $data = [
@@ -189,7 +224,7 @@ class ShopController extends Controller
 
         // dd($data);
         $usr = new TransaksiModel();
-        $res = $usr->insert_transaksi($data);
+        $res = $usr->insert_cart($data);
 
         $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
         $reseller_id = DB::select($rid);
@@ -210,14 +245,15 @@ class ShopController extends Controller
             "cart" => $cart,
             "diskon" => $diskon[0]->M_DISKON,
             "totalharga" => $total_harga,
-            "totalfinal" => $total_final
+            "totalfinal" => $total_final,
+            "email" => $email
         ]);
     }
 
     //invoice
     public function invoice(Request $req){
         $email=Session::get('login');
-        
+
         $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
         $reseller_id = DB::select($rid);
 

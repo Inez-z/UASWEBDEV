@@ -74,7 +74,7 @@
 
                     </div>
                   </nav>
-                  <form action="/checkout/{{$i->J_KODE}}" method="POST">
+                  <form action="/cart/{{$email}}" method="POST">
                     @csrf
                   <div class="detail-produk">
                       <input type="hidden" name="namaproduk" value="{{$nama}}">
@@ -99,12 +99,12 @@
                       <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" name="jumlahproduk" >
                       <button class="btn plus-btn" type="button">+</button>
                     </div>
-                    @if(session('login') != "")
+                    {{-- @if(session('login') != "")
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
                         </div>
-                    @endif
+                    @endif --}}
                     </div>
                   </div>
 

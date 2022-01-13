@@ -75,7 +75,7 @@
 
                   <h1>Checkout</h1>
                   <div class="small-container cart page">
-                        @for ($j = 0; $j < 1; $j++)
+                        @foreach ($checkout as $c)
                         {{-- <tr> --}}
                         <div class="container">
                                 <div class="card" style="background-color: transparent">
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         {{-- </tr> --}}
-                        @endfor
+                        @endforeach
                     <div class="detailco">
                         <div class="co-info" >
                             <div>
