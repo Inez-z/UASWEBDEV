@@ -61,7 +61,7 @@ Route::POST("/cart/{email}", [ShopController::class, "transaksi"]);
 
 Route::POST("/cart/{sku}", [ShopController::class, "deletecart"]);
 
-Route::POST("/invoice/{sku}", [ShopController::class, "invoice"]);
+Route::POST("/invoice/{email}/{tanggal}", [ShopController::class, "invoice"]);
 
 Route::post("/transaksi", [ShopController::class, "transaksi"]);
 
