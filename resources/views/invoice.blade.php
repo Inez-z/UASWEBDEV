@@ -69,7 +69,7 @@
           </nav>
         <div class="container-invoice">
             <h4 id="title-invoice">INVOICE</h4>
-            <h5 id="date-invoice">10/12/2021</h5>
+            <h5><br><?php echo date('l, d M Y');?></h5>
             <div class="subtitle-top">
                 <p>Invoice Number</p>
                 <p>Customer Name</p>

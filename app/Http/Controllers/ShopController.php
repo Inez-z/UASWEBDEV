@@ -165,7 +165,20 @@ class ShopController extends Controller
         return view("cart", [
             "cart" => $cart,
         ]);
+    }
 
+    //invoice
+    public function invoice(Request $req){
+        $email=Session::get('login');
+        $invoice = DB::table('jam_tangan')
+        ->where('J_KODE', $sku)
+        ->first();
+        // dd($item);
+        return view("/invoice", [
+            "nama" => $invoice->J_MERK,
+            "i" => $invoice,
+            "sku" => $sku
+        ]);
     }
 
     // public function show_cart($data)
