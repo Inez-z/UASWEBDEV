@@ -73,7 +73,8 @@
 
                     </div>
                   </nav>
-                  <h1>My Shopping Cart</h1>
+                  <br>
+                  <h1 style="font-size: 30px; font-size: 30px; margin-left: 130px; margin-bottom: 15px;">My Shopping Cart</h1>
             @foreach ($cart as $c)
             <div class="small-container cart page">
                      <div class="container">
@@ -82,8 +83,13 @@
                                 <div class="cart-info">
                                     <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
-                                        <h2 class="Product-name">{{$c->J_MERK}}</h2>
+<<<<<<< HEAD
+                                        <h2 class="Product-name" style="font-size: 25px;font-weight: 400;margin-top: 35px;">{{$c->J_MERK}}</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
+=======
+                                        <h2 class="Product-name">{{$c->J_MERK}}</h2>
+                                        <h3 class="Product-size">color {{$c->J_WARNA}}</h3>
+>>>>>>> d2a5011e296ab0febe9205cba2cd5f17a8ff3fbf
                                         <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
@@ -149,8 +155,7 @@
                 </td> -->
 
                 <p>
-                <span>Subtotal</span>
-                <span>${{$totalfinal}}</span>
+                <span>Subtotal : ${{$totalfinal}}</span>
                 </p>
 
                 <div class="btn-con">
@@ -200,10 +205,10 @@
 
      </script>
      <!--footer-->
-     <div class="footer-home">
-        <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
-        <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
-        <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a style="color:white" href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a style="color:white" href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a style="color:white" href="https://twitter.com/Twitter">watchout_global</a></p>
+     <div class="footer-home-cart">
+        <p class="tulisankanancart">WATCHOUT <br><br> Address <br> Store & Office <br> Made, Surabaya <br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+        <p class="tulisantengah">GET IN TOUCH<br><br>Customer Service<br>4452244<br>Phone<br>1474832<br>Service Center<br>3593748</p>
+        <p class="tulisankiri">SOCIAL MEDIA<br><br>Instagram<br><a style="color:white" href="https://www.instagram.com/danielwellington/">@watchout_co</a><br>Facebook<br><a style="color:white" href="https://www.facebook.com/">watchout_global</a><br>Twitter<br><a style="color:white" href="https://twitter.com/Twitter">watchout_global</a></p>
       </div>
 
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

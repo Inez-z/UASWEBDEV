@@ -75,19 +75,19 @@
 
                   <h1>Checkout</h1>
                   <div class="small-container cart page">
-                        @foreach ($checkout as $c)
+                        @foreach ($cart as $c)
                         {{-- <tr> --}}
                         <div class="container">
                                 <div class="card" style="background-color: transparent">
                                     <div class="cart-info">
-                                        <img src={{asset('image/fotoproduk/'.$i->J_KODE);}} width="150">
+                                        <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                         <div>
-                                            <h2 class="Product-name">{{$i->J_MERK}}</h2>
-                                            <h3 class="Product-size">{{$i->J_WARNA}}/{{$i->J_UKURAN}}</h3>
-                                            <h4 class="Product-price">${{$i->J_HARGA}}</h4>
+                                            <h2 class="Product-name">{{$c->J_MERK}}</h2>
+                                            <h3 class="Product-size">{{$c->J_WARNA}}</h3>
+                                            <h4 class="Product-price">${{$c->J_HARGA}}</h4>
                                         </div>
                                     </div>
-                                    <h5>x1</h5>
+                                    <h5>{{$c->J_STOK}}x</h5>
                                 </div>
                             </div>
                         {{-- </tr> --}}
