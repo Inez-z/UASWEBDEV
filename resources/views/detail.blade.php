@@ -78,7 +78,7 @@
 
             </div>
         </nav>
-        <form action="/checkout/{{$i->J_KODE}}" method="POST">
+        <form action="/cart/{{$email}}" method="POST">
             @csrf
             <div class="container-detail">
                 <div class="detail-produk">
