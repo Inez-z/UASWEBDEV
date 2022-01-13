@@ -195,7 +195,7 @@ div.popularproduct img{
 .footer-home-detail{
     background-color: #2d2d2b;
    position: relative;
-   top: 700px;
+   top: 500px;
     height: 400px;
     color: #f2f2f2;
     font-family: Poppins;
@@ -585,13 +585,9 @@ td input{
 
 
 /* detail produk */
-.container-detail{
-    height: 600px;
-}
 .detail-produk > h1{
     position: absolute;
     width: 610px;
-    height: 122px;
     left: 619px;
     top: 75px;
 
@@ -599,105 +595,89 @@ td input{
     font-style: normal;
     font-weight: 600;
     font-size: 33px;
-    line-height: 65px;
     letter-spacing: 0.02em;
 }
 .detail-produk > h2{
     position: absolute;
     width: 123px;
-    height: 18px;
     left: 619px;
     top: 125px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 56px;
     color: #2D2D2B;
 }
 .detail-produk >h4{
     position: absolute;
     width: 151px;
-    height: 18px;
     left: 619px;
     top: 170px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 }
 .detail-produk >h11{
     position: absolute;
     width: 151px;
-    height: 18px;
     left: 619px;
     top: 195px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 }
 .detail-produk >h6{
     position: absolute;
     width: 181px;
-    height: 197px;
     left: 619px;
     top: 220px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 
 }
 .dp-isi >h7{
     position: absolute;
     width: 151px;
-    height: 18px;
     left: 800px;
     top: 430px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 }
 .dp-isi >h8{
     position: absolute;
     width: 151px;
-    height: 18px;
     left: 800px;
     top: 170px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 }
 .dp-isi >h9{
     position: absolute;
     width: 151px;
-    height: 18px;
     left: 800px;
     top: 195px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 35px;
     color: #2D2D2B;
 }
 .dp-isi >h10{
     position: absolute;
     width: 418.25px;
-    height: 197px;
     left: 800px;
     top: 223px;
     font-family: Poppins;
@@ -816,7 +796,6 @@ td input{
     color: #b8926a;
 } */
 .box-dp{
-    height:225px;
     align-items: center;
     text-align: center;
 }
@@ -832,8 +811,6 @@ div.dp-foto-produk{
     border-radius: 25px;
 }
 div.dp-foto-produk img{
-
-    height: 355px;
     cursor:default;
     position: relative;
     width: 500px;
