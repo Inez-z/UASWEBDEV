@@ -170,9 +170,10 @@ class ShopController extends Controller
     //invoice
     public function invoice(Request $req){
         $email=Session::get('login');
-        $invoice = DB::table('jam_tangan')
-        ->where('J_KODE', $sku)
-        ->first();
+        
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+
         // dd($item);
         return view("/invoice", [
             "nama" => $invoice->J_MERK,
