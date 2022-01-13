@@ -76,17 +76,16 @@
                   </nav>
                   <form action="/checkout/{{$i->J_KODE}}" method="POST">
                     @csrf
+                    <div class="container-detail">
                   <div class="detail-produk">
                       <input type="hidden" name="namaproduk" value="{{$nama}}">
                     <h1 class="dpnama-jam" >{{$nama}}</h1>
                     <input type="hidden" name="hargaproduk" value="{{$i->J_HARGA}}">
-                    <h2 class="dpharga-jam">{{$i->J_HARGA}}</h2>
-                    {{-- <h3>Category    :</h3> --}}
+                    <h2 class="dpharga-jam">$ {{$i->J_HARGA}}</h2>
                     <h4>Color       :</h4>
                     <h11>Size       :</h11>
                     <h6>Description :</h6>
                     <div class="dp-isi">
-                        {{-- <h7 class="dp-category">Men</h7> --}}
                         <input type="hidden" name="warnaproduk" value="{{$i->J_WARNA}}">
                         <h8 class="dp-color" >{{$i->J_WARNA}}</h8>
                         <input type="hidden"  name="ukuranproduk" value="{{$i->J_UKURAN}}">
@@ -99,14 +98,15 @@
                       <input type="text" id="quantity" value=1 size="2"min="1" max="{{$i->J_STOK}}" name="jumlahproduk" >
                       <button class="btn plus-btn" type="button">+</button>
                     </div>
-                    @if(session('login') != "")
+                    {{-- @if(session('login') != "")
                     <div class="btn-dp">
                         <div class="dp">
                             <a href="/checkout/{{$i->J_KODE}}"><button class="btn-buynow" style="font-family: Poppins"><i class="fas fa-money-bill"></i> Buy Now</button></a>
                         </div>
                     @endif
-                    </div>
+                    </div> --}}
                   </div>
+                    </div>
 
                   <div class="box-dp">
                       <div class="dp-foto-produk">
