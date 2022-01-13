@@ -212,7 +212,21 @@ class ShopController extends Controller
             "totalharga" => $total_harga,
             "totalfinal" => $total_final
         ]);
+    }
 
+    //invoice
+    public function invoice(Request $req){
+        $email=Session::get('login');
+        
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+
+        // dd($item);
+        return view("/invoice", [
+            "nama" => $invoice->J_MERK,
+            "i" => $invoice,
+            "sku" => $sku
+        ]);
     }
 
     // public function show_cart($data)
