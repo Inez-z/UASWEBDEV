@@ -66,7 +66,7 @@
                 @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                 @endif
 
@@ -125,7 +125,7 @@
                 <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
             </a>
             <div class="productname"><a href="{{ url('kids/detail/'.$i->J_KODE) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-            <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+            <div class="productprice"> $ {{$i->J_HARGA}}</div>
             </div>
         <div>
     @endforeach

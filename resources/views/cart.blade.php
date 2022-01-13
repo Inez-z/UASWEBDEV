@@ -28,9 +28,9 @@
                         <li class="nav-item active">
                           <a class="nav-link" href="/welcome">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                           <a class="nav-link" href="#">Link</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Category
@@ -41,8 +41,8 @@
                             <a class="dropdown-item" href="http://127.0.0.1:8000/women">Women</a>
                             <a class="dropdown-item" href="http://127.0.0.1:8000/kids">Kids</a>
                             {{-- <a class="dropdown-item" href="http://127.0.0.1:8000/bestseller">Best Seller</a> --}}
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+
+                            {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
                           </div>
                         </li>
                         <li class="nav-item">
@@ -66,7 +66,7 @@
                         @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                         @endif
 
@@ -80,11 +80,11 @@
 
                             <div class="card" style="background-color: transparent">
                                 <div class="cart-info">
-                                    <img src="image/men2.png" width="150">
+                                    <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
                                         <h2 class="Product-name">{{$c->J_MERK}}</h2>
                                         <h3 class="Product-size">Size 28 color Brown</h3>
-                                        <h4 class="Product-price">{{$c->J_HARGA}}</h4>
+                                        <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
                                     </div>
@@ -92,15 +92,20 @@
 
                             <div class="card-action">
                                 <button class="btn minus-btn disabled" type="button">-</button>
-                                <input type="text" id="quantity" value=1 size="2">
+                                <input type="text" id="quantity" value={{$c->J_STOK}} size="2">
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
 
+                            <form action="/cart/{{$email}}" method="POST">
+                                @csrf
                             <div class="Product-remove">
-                                <i class="far fa-trash-alt"></i>
+                                <input type="submit" value="" id={{$c->J_KODE}} class="far fa-trash-alt">
+
                             </div>
+                            </form>
+
                             <p class="toprice">
-                                <span id="price">$229</span>
+                                <span id="price">${{$c->J_HARGA}}</span>
                             </p>
                         </div>
                         {{-- <div class="card" style="background-color: transparent">
@@ -130,30 +135,31 @@
                            </div>
                         </div> --}}
 
-                        <div class="total-price">
-                        <h6>$388</h6>
-                        <h7>Disc : 5%</h7>
 
-                        <!-- <td colspan=2 class="text-end">Total : </td>
-                        <td><span class="totalamount">0</span></td>
-                        </td> -->
-
-                        <p>
-                        <span>Subtotal</span>
-                        <span>$366</span>
-                        </p>
-
-                        <div class="btn-con">
-                        <div class="item">
-                            <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
-                        </div>
-                        <div class="item2">
-                            <button class="btn-decor">Checkout</button>
-                        </div>
                     </div>
                 </div>
             </div>
             @endforeach
+            <div class="total-price">
+                <h6>${{$totalharga}}</h6>
+                <h7>Disc : {{$diskon}}%</h7>
+
+                <!-- <td colspan=2 class="text-end">Total : </td>
+                <td><span class="totalamount">0</span></td>
+                </td> -->
+
+                <p>
+                <span>Subtotal</span>
+                <span>${{$totalfinal}}</span>
+                </p>
+
+                <div class="btn-con">
+                <div class="item">
+                    <a href="/welcome"><button class="btn-decor-outline">Continue Shopping</button></a>
+                </div>
+                <div class="item2">
+                    <a href="/checkout/{{$email}}"><button class="btn-decor" >Checkout</button></a>
+                </div>
             </section>
      <script>
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");

@@ -26,6 +26,7 @@
     height: 404px;
     border: 1px solid #d4c8be;
     border-radius: 19px;
+    /* background-image: url('../image/signin.jpg'); */
     background-color: #eae6df;
     /* position: fixed; */
 }
@@ -231,7 +232,7 @@
 
 .container-invoice h5{
     position: absolute;
-    left: 1003px;
+    left: 900px;
     top: 105px;
 }
 

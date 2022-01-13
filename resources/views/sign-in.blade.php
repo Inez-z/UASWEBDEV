@@ -21,6 +21,7 @@
         <br>
         <br>
         <div class="container-signin-left">
+            <img src={{asset('image/signin.jpg')}} width="300" height="350" alt="" style="margin-top:27px; margin-left:17px; border-radius: 5%">
         </div>
         <div class="form-sign-in">
             <img src="signIn.png" alt="">

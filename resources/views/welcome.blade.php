@@ -83,7 +83,7 @@
                 @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                 @endif
             </div>
@@ -178,7 +178,7 @@
             <img src="../image/fotoproduk/{{$i->J_KODE}}" alt="kids1">
         </a>
         <div class="productname"><a href="{{ url('women/detail/'.$i->J_KODE) }}">{{ $i->J_WARNA }} {{ $i->J_MERK }}</a></div>
-        <div class="productprice"> Rp. {{$i->J_HARGA}}</div>
+        <div class="productprice"> $ {{$i->J_HARGA}}</div>
         </div>
     <div>
     @endforeach
@@ -246,32 +246,36 @@
 
 <!--Popular This Week-->
 <div class="popular-container">
-    <p style="font-size:35px">Popular This Week</p>
+    <p style="font-size:35px"><br>Popular This Week</p>
 
   <!--box popular--------------------------------------------->
     <div class="boxpopular-container">
       <div class="popularproduct">
-        <a target="_blank" href="image/kids1.png">
-          <img src="../image/kids1.png" alt="kids1">
+        <a target="_blank" href="http://127.0.0.1:8000/kids/detail/KTXRU_PK29.png">
+            <img src="../image/fotoproduk/KTXRU_PK29.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <br>
+        <a href="http://127.0.0.1:8000/kids/detail/KTXRU_PK29.png">Timex Rainbow Unicorn</a>
+        <div class="productprice">$ 25</div>
       </div>
 
       <div class="popularproduct">
-        <a target="_blank" href="image/kids2.png">
-          <img src="../image/kids2.png" alt="kids2">
+        <a target="_blank" href="http://127.0.0.1:8000/women/detail/WDWCC_WE32.png">
+            <img src="../image/fotoproduk/WDWCC_WE32.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <a href="http://127.0.0.1:8000/women/detail/WDWCC_WE32.png">Daniel Wellington Classic Cambridge</a>
+        <div class="productprice">$ 199</div>
       </div>
 
       <div class="popularproduct">
-        <a target="_blank" href="image/men1.png">
-          <img src="../image/men1.png" alt="men1">
+        <a target="_blank" href="http://127.0.0.1:8000/men/detail/MDWCY_WE36.png">
+            <img src="../image/fotoproduk/MDWCY_WE36.png" alt="kids1">
         </a>
-        <div class="productname">Product Name</div>
-        <div class="productprice">Price</div>
+        <div class="productname"></div>
+        <a href="http://127.0.0.1:8000/men/detail/MDWCY_WE36.png">Daniel Wellington Classic York</a>
+        <div class="productprice">$ 199</div>
       </div>
     </div>
     </div>

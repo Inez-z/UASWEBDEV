@@ -66,7 +66,7 @@
                         @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                         @endif
 
@@ -75,7 +75,7 @@
 
                   <h1>Checkout</h1>
                   <div class="small-container cart page">
-                        @for ($j = 0; $j < 1; $j++)
+                        @foreach ($checkout as $c)
                         {{-- <tr> --}}
                         <div class="container">
                                 <div class="card" style="background-color: transparent">
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         {{-- </tr> --}}
-                        @endfor
+                        @endforeach
                     <div class="detailco">
                         <div class="co-info" >
                             <div>
