@@ -86,7 +86,7 @@
         <div class="row">
           <div class="column">
             <div style="text-align:center">
-            <img src="/image/song kang.jpg" style="width:60%">
+            <img src="/image/profile.jpg" style="width:60%">
             <h3> </h3>
 
             <h3>{{$profile_login->R_NAMA}}</h3>

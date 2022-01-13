@@ -278,6 +278,7 @@ div.popularproduct img{
 
 
 /* cart */
+
 .cart-page{
     margin: 80px auto;
 }
@@ -288,23 +289,19 @@ table{
 .cart-info{
     display: flex;
     flex-wrap: wrap;
-
 }
-
-.container > h1{
-    padding: 50px 0;
-    font-weight: bold;
-}
-
 .toprice{
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     right: 80px;
     padding: 20px;
     color: black;
     font-weight: bold;
 }
-
+.cart-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
 th{
     font-size: 35px;
 }
@@ -319,7 +316,7 @@ td input{
 }
 .Product-remove{
     position: absolute;
-    bottom: 85px;
+    bottom: 57px;
     right: 20px;
     padding: 20px;
     background-color: transparent;
@@ -339,23 +336,28 @@ td input{
     cursor: pointer;
     font-size: 30px;
 }
-
-
-
-
-
-
-
+.footer-home-cart {
+    background-color: #2d2d2b;
+    height: 300px;
+    color: #f2f2f2;
+    font-family: Poppins;
+    position: relative;
+    text-align: left;
+}
+.tulisankanancart {
+    font-size: 17px;
+    padding-top: 4%;
+    padding-left: 10%;
+}
 
 /* box cart */
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .card{
     width: 1000px;
-    /* background-color: #b8926a; */
+    left: 5%;
     background-color: transparent;
     padding: 16px;
     border-radius: 14px;
@@ -364,10 +366,9 @@ td input{
 
 .card-action{
     position: absolute;
-    bottom: 70px;
+    bottom: 50px;
     right: 170px;
     padding: 20px;
-
 }
 
 .card-action .btn{
@@ -413,68 +414,49 @@ td input{
 .total-price{
     flex: 0.25;
     margin-right: 170px;
-    padding: 25px;
     height: 240px;
     border: 1px black;
     border-radius: 5px;
     font-weight: bold;
 }
-
-.total-price h6{
-   position: relative;
-    top: 30px;
-    margin-right: 50px;
-    font-size: 28px;
+.total-price h6 {
+    position: relative;
+    top: 15px;
+    margin-right: 65px;
+    font-size: 23px;
     text-align: right;
     color: red;
 }
-
-.total-price h7{
-    /* margin-left: 450px;
-    font-size: 22px;
-    text-align: right; */
+.total-price h7 {
     position: relative;
-    top: 40px;
-    margin-left: 280px;
+    top: 35px;
+    margin-left: 470px;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 22px;
     text-align: left;
-
+    word-spacing: 10px;
 }
-.total-price span{
-    /* display: flex;  */
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-left: 450px;
-    font-weight: bold;
-    font-size: 28px;
+.total-price span {
+    margin-left: 813px;
+    font-weight: 700;
+    font-size: 23px;
     text-align: right;
-
+    word-spacing: 10px;
 }
-
-.total-price a{
-    /* display: block; */
+.total-price a {
     text-align: center;
     height: 40px;
-    background-color: #b8926a;
     color: white;
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 0px 1px;
     position: relative;
-    top: 30px;
-    left: 300px;
+    left: 130px;
 }
-
-.item2{
-    margin-left: 650px;
-    bottom: 100px;
+.item2 {
+    margin-left: 555px;
+    bottom: 97px;
     position: relative;
 }
-.item{
-    margin-left: 100px;
-    top: 80px;
-}
-
 /* bikin button di cart */
 .btn-decor{
     outline: none;
@@ -623,7 +605,7 @@ td input{
     position: absolute;
     width: 151px;
     left: 590px;
-    top: 220px;
+    top: 218px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
