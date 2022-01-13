@@ -246,7 +246,7 @@
 
 <!--Popular This Week-->
 <div class="popular-container">
-    <p style="font-size:35px">Popular This Week</p>
+    <p style="font-size:35px"><br>Popular This Week</p>
 
   <!--box popular--------------------------------------------->
     <div class="boxpopular-container">
