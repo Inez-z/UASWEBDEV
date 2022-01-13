@@ -61,6 +61,8 @@ Route::POST("/cart/{email}", [ShopController::class, "transaksi"]);
 
 Route::POST("/cart/{sku}", [ShopController::class, "deletecart"]);
 
+Route::POST("/invoice/{sku}", [ShopController::class, "invoice"]);
+
 Route::post("/transaksi", [ShopController::class, "transaksi"]);
 
 // Route::get("/cart/{sku}", [ShopController::class, "addcart"]);
@@ -100,8 +102,8 @@ Route::get('/editprofile', function () {
     return view('editprof');
 });
 
-Route::get('/invoice', function () {
-    return view('invoice');
-});
+// Route::get('/invoice', function () {
+//     return view('invoice');
+// });
 
 Route::post('/sign-up/insert', 'App\Http\Controllers\SignUpController@insert');

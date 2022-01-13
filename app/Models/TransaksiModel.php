@@ -11,7 +11,7 @@ class TransaksiModel extends Model
     use HasFactory;
 
     public function insert_transaksi($data){
-        
+
     }
 
     public function insert_cart($data){
@@ -69,6 +69,7 @@ class TransaksiModel extends Model
                 $check = true;
             }
         }
+        // dd($total_harga,$jumlahproduk,$kode);
         // dd($check);
         //kalo blm ada diinsert
         if (!$check) {

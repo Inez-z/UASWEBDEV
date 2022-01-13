@@ -157,6 +157,9 @@ class ShopController extends Controller
         // cari totalfinal
         $total_final = (double)$detailcart[0]->totalharga * ((100-(double)$diskon[0]->M_DISKON)/100);
 
+        // potongan harga diskon
+        $hargadiskon = ((double)$diskon[0]->M_DISKON/100)*(double)$detailcart[0]->totalharga;
+
         //INSERT TRANSAKSI PEMBELIAN
         $cmd = "CALL pInsertTransaksiPembelian('".$beli_id[0]->bid."', '".$reseller_id[0]->R_ID."','".$tanggal."',".$detailcart[0]->qty.", ".$detailcart[0]->totalharga.",". $diskon[0]->M_DISKON.",".$total_final.",'0','0')";
         $res = DB::insert($cmd);
@@ -176,10 +179,15 @@ class ShopController extends Controller
             $cmd2 = "CALL pInsertDetailBeli('".$beli_id[0]->bid."', '".$allcart[$i]->J_SKU."','".$allcart[$i]->J_STOK."',".$allcart[$i]->J_HARGA.", '0');";
             $res2 = DB::insert($cmd2);
         }
+
+        // //hapus cart
+        // $delete = DB::table('cart')->where('R_ID', '=', $reseller_id[0])->delete();
+
         // return ;
         return view("checkout",[
             "cart" => $allcart,
             "diskon" => $diskon[0]->M_DISKON,
+            "hargadiskon" => $hargadiskon,
             "totalharga" => $detailcart[0]->totalharga,
             "totalfinal" => $total_final,
             "email" => $email
@@ -227,10 +235,10 @@ class ShopController extends Controller
             'deskripsiproduk'     => $req->deskripsiproduk,
             'jumlahproduk'     => $req->jumlahproduk,
             'email' => $email,
-            'kode'     => $req->kode
+            'kode'     => $req->kode,
         ];
 
-        // dd($data['warnaproduk'], $data['ukuranproduk']);
+        // dd($data['ukuran']);
         $usr = new TransaksiModel();
         $res = $usr->insert_cart($data);
 
@@ -268,7 +276,6 @@ class ShopController extends Controller
             "totalharga" => $total_harga,
             "totalfinal" => $total_final,
             "email" => $email,
-            "warna" => $data['warnaproduk'],
         ]);
     }
 

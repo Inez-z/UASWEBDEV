@@ -66,7 +66,7 @@
                         @if(session('login') == "")
                         <div class="nav-profile">
                           <!-- <a class="far fa-user" style="color:black" href="http://127.0.0.1:8000/profile"></a> -->
-                          <a class="nav-link" style="color:black; font-size: 21px" href="http://127.0.0.1:8000/sign-in">Sign In </a>
+                          <a class="nav-link" style="color:black" href="http://127.0.0.1:8000/sign-in">Sign In </a>
                         </div>
                         @endif
 
@@ -84,7 +84,7 @@
                                     <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                                     <div>
                                         <h2 class="Product-name" style="font-size: 25px;font-weight: 400;margin-top: 35px;">{{$c->J_MERK}}</h2>
-                                        <h3 class="Product-size">Size 28 color Brown</h3>
+                                        <h3 class="Product-size"> color {{$c->J_WARNA}}</h3>
                                         <h4 class="Product-price"></h4>
                                         <input type="hidden" name="Product-price" value=$229>
                                         <input type="hidden" namespace="totaltxtprice" value=0>
