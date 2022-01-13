@@ -106,12 +106,18 @@ class ShopController extends Controller
         ->where('J_KODE', $sku)
         ->first();
         // dd($item);
+        $email=Session::get('login');
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+        // dd($reseller_id);
         return view("detail", [
             "nama" => $item->J_MERK,
             "i" => $item,
-            "sku" => $sku
+            "sku" => $sku,
+            "email"=> $email
         ]);
     }
+
     public function welcome_lowprice(){
         $items = DB::table('jam_tangan')
         ->orderBy('J_HARGA')
@@ -138,8 +144,36 @@ class ShopController extends Controller
             "i" => $item
         ]);
     }
+    public function deletecart($sku){
+        error_log("hai");
+        $email=Session::get('login');
 
+        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
+        $reseller_id = DB::select($rid);
+
+        $delete = DB::table('cart')->where('J_KODE', '=', $sku, 'and', 'R_ID', '=', $reseller_id)->delete();
+
+        $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
+        $diskon = DB::select($disc);
+
+        $cart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
+
+        //  untuk menghitung total harga
+        $total_harga = (double)$data['hargaproduk']*(double)$data['jumlahproduk'];
+
+        // cari totalfinal
+        $total_final = (double)$total_harga * ((100-(double)$diskon[0]->M_DISKON)/100);
+
+        // dd($total_harga, $total_final);
+        return view("cart", [
+            "cart" => $cart,
+            "diskon" => $diskon[0]->M_DISKON,
+            "totalharga" => $total_harga,
+            "totalfinal" => $total_final
+        ]);
+    }
     public function transaksi(Request $req){
+        error_log("hai");
         $email=Session::get('login');
         $tanggal=
         $data = [
@@ -160,10 +194,23 @@ class ShopController extends Controller
         $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
         $reseller_id = DB::select($rid);
 
+        $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
+        $diskon = DB::select($disc);
+
         $cart = DB::table('cart')->where('R_ID', $reseller_id[0]->R_ID)->get();
-        // dd($cart);
+
+        //  untuk menghitung total harga
+        $total_harga = (double)$data['hargaproduk']*(double)$data['jumlahproduk'];
+
+        // cari totalfinal
+        $total_final = (double)$total_harga * ((100-(double)$diskon[0]->M_DISKON)/100);
+
+        // dd($total_harga, $total_final);
         return view("cart", [
             "cart" => $cart,
+            "diskon" => $diskon[0]->M_DISKON,
+            "totalharga" => $total_harga,
+            "totalfinal" => $total_final
         ]);
 
     }

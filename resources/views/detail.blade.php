@@ -74,7 +74,7 @@
 
                     </div>
                   </nav>
-                  <form action="/cart/{{$i->J_KODE}}" method="POST">
+                  <form action="/checkout/{{$i->J_KODE}}" method="POST">
                     @csrf
                   <div class="detail-produk">
                       <input type="hidden" name="namaproduk" value="{{$nama}}">
@@ -118,7 +118,7 @@
                     </div>
                     @if(session('login') != "")
                     <div class="dp2">
-                        <a href="/cart/{{$i->J_KODE}}"><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
+                        <a href="/cart/{{$email}}"><button class="btn-add" type="submit"  style="font-family: Poppins"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                     </div>
                     @endif
 

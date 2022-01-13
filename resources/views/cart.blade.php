@@ -96,9 +96,14 @@
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
 
+                            <form action="/cart/{{$c->J_KODE}}" method="POST">
+                                @csrf
                             <div class="Product-remove">
-                                <i class="far fa-trash-alt"></i>
+                                <input type="submit" value="" class="far fa-trash-alt">
+
                             </div>
+                            </form>
+
                             <p class="toprice">
                                 <span id="price">${{$c->J_HARGA}}</span>
                             </p>
@@ -136,8 +141,8 @@
             </div>
             @endforeach
             <div class="total-price">
-                <h6>$388</h6>
-                <h7>Disc : 5%</h7>
+                <h6>${{$totalharga}}</h6>
+                <h7>Disc : {{$diskon}}%</h7>
 
                 <!-- <td colspan=2 class="text-end">Total : </td>
                 <td><span class="totalamount">0</span></td>
@@ -145,7 +150,7 @@
 
                 <p>
                 <span>Subtotal</span>
-                <span>$366</span>
+                <span>${{$totalfinal}}</span>
                 </p>
 
                 <div class="btn-con">
