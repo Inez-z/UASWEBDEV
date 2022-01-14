@@ -153,6 +153,8 @@ class ShopController extends Controller
         //cari diskom
         $disc = "Select M_DISKON from membership where M_ID = (Select M_ID from reseller where R_EMAIL ='".$email."');";
         $diskon = DB::select($disc);
+        // $GLOBALS['diskon_global']=$GLOBALS['diskon'];
+
 
         // cari totalfinal
         $total_final = (double)$detailcart[0]->totalharga * ((100-(double)$diskon[0]->M_DISKON)/100);
@@ -293,14 +295,17 @@ class ShopController extends Controller
         ];
 
         // dd($data['beli_id']);
-        $res ="select R_ID, R_ALAMAT, R_NAMA from reseller where R_EMAIL='".$email."';";
+        $res ="select R_ID, R_ALAMAT, R_NAMA, M_ID from reseller where R_EMAIL='".$email."';";
         $data_reseller = DB::select($res);
 
         $cmd = "select * from detail_beli d, jam_tangan j where d.BELI_ID='".$data['beli_id']."' and d.J_SKU=j.J_SKU";
         $detail_beli=DB::select($cmd);
 
-        $cmd2 = "select count(*) from detail_beli d, jam_tangan j where d.BELI_ID='".$data['beli_id']."' and d.J_SKU=j.J_SKU";
-        $count = DB::select($cmd2);
+        $cmd2 ="select * from transaksi_pembelian where BELI_ID='".$data['beli_id']."';";
+        $transaksi_pembelian=DB::select($cmd2);
+
+        $cmd3 ="select * from membership where M_ID='".$data_reseller[0]->M_ID."';";
+        $membership = DB::select($cmd3);
 
         // $cmd2 = "select * from jam_tangan where J_SKU='".$detail_beli->J_SKU."';";
         // $detail_jam=DB::select($cmd2);
@@ -310,7 +315,8 @@ class ShopController extends Controller
             "beli_id" => $data['beli_id'],
             "data_reseller" => $data_reseller,
             "detail_beli" => $detail_beli,
-            "count" => $count
+            "transaksi_pembelian" => $transaksi_pembelian,
+            "membership" => $membership
         ]);
     }
 

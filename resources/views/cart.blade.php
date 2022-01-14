@@ -91,19 +91,22 @@
                                     </div>
                                 </div>
 
+
                             <div class="card-action">
+
                                 <button class="btn minus-btn disabled" type="button">-</button>
                                 <input type="text" id="quantity" value={{$c->J_STOK}} size="2">
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
 
-                            <form action="/cart/{{$email}}" method="POST">
+
+                            {{-- <form action="/cart/{{$email}}" method="POST">
                                 @csrf
                             <div class="Product-remove">
                                 <input type="submit" value="" id={{$c->J_KODE}} class="far fa-trash-alt">
 
                             </div>
-                            </form>
+                            </form> --}}
 
                             <p class="toprice">
                                 <span id="price">${{$c->J_HARGA}}</span>
@@ -140,9 +143,14 @@
                     </div>
                 </div>
             </div>
+
+            @endforeach
             <script>
                 document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
                 var valueCount
+
+                // var x = "<?php echo"$cart"?>";
+                // document.write(x);
 
 
                 var price = document.getElementById("price").innerText;
@@ -178,7 +186,6 @@
                 })
 
              </script>
-            @endforeach
             <div class="total-price">
                 <h6>${{$totalharga}}</h6>
                 <h7>Disc : {{$diskon}}%</h7>

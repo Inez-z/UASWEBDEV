@@ -111,9 +111,9 @@
                     <p>Grand Total</p>
                 </div>
                 <div class="subtitle-bottom-value">
-                    <p>: $289</p>
-                    <p>: 5%</p>
-                    <p style="font-weight: bolder">: $280</p>
+                    <p>: ${{$transaksi_pembelian[0]->BELI_TOTALHARGA}}</p>
+                    <p>: {{$membership[0]->M_DISKON}}%</p>
+                    <p style="font-weight: bolder">: ${{$transaksi_pembelian[0]->BELI_TOTALFINAL}}</p>
                 </div>
         </div>
 
