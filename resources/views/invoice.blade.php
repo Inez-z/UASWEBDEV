@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{-- <link rel="stylesheet" href="css/style2.css"> --}}
 <link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -120,13 +121,13 @@
     </div>
    <!--footer-->
 <div class="footer-home">
-    <p class="tulisankanan" >WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+    <p class="tulisankanan" style="font-family:Poppins">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
   </div>
-  <div class="footer-home2">
-    <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
+  <div class="footer-home2inv">
+    <p class="tulisantengah" style="font-family:Poppins">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
   </div>
-  <div class="footer-home3">
-    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a href="https://twitter.com/Twitter">watchout_global</a></p>
+  <div class="footer-home3inv">
+    <p class="tulisankiri" style="font-family:Poppins">SOCIAL MEDIA<br><br><br>Instagram<br><a href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a href="https://twitter.com/Twitter">watchout_global</a></p>
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

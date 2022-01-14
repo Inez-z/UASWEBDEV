@@ -293,32 +293,29 @@
 }
 .footer-home{
     background-color: #2d2d2b;
-    height: 400px;
+    height: 350px;
     color: #f2f2f2;
     font-family: Poppins;
     margin-top: 22px;
     position: relative;
     display: flex;
-   text-align: left 100px;
-   padding-left: 150px;
-   padding-top: 50px;
-
+    text-align: left 100px;
+    padding-left: 150px;
+    padding-top: 50px;
   }
-  .footer-home2{
+  .footer-home2inv{
     color: #f2f2f2;
     font-family: Poppins;
     position: absolute;
-   text-align: left;
-   padding: 70px;
-   top: 550px;
-   left: 520px;
+    text-align: left;
+    top: 651px;
+    left: 570px;
   }
-  .footer-home3{
+  .footer-home3inv{
     color: #f2f2f2;
     font-family: Poppins;
     position: absolute;
-   text-align: left;
-   padding: 70px;
-   top: 550px;
-   right: 110px;
+    text-align: left;
+    top: 651px;
+    right: 125px;
   }
