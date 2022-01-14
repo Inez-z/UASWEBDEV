@@ -180,8 +180,11 @@ class ShopController extends Controller
             $res2 = DB::insert($cmd2);
         }
 
-        // //hapus cart
+        //hapus cart
         // $delete = DB::table('cart')->where('R_ID', '=', $reseller_id[0])->delete();
+        $cmd3 = "Delete from cart where R_ID='".$reseller_id[0]->R_ID."';";
+        $res3 = DB::delete($cmd3);
+
 
         // return ;
         return view("checkout",[
@@ -296,6 +299,9 @@ class ShopController extends Controller
         $cmd = "select * from detail_beli d, jam_tangan j where d.BELI_ID='".$data['beli_id']."' and d.J_SKU=j.J_SKU";
         $detail_beli=DB::select($cmd);
 
+        $cmd2 = "select count(*) from detail_beli d, jam_tangan j where d.BELI_ID='".$data['beli_id']."' and d.J_SKU=j.J_SKU";
+        $count = DB::select($cmd2);
+
         // $cmd2 = "select * from jam_tangan where J_SKU='".$detail_beli->J_SKU."';";
         // $detail_jam=DB::select($cmd2);
 
@@ -303,7 +309,8 @@ class ShopController extends Controller
         return view("/invoice", [
             "beli_id" => $data['beli_id'],
             "data_reseller" => $data_reseller,
-            "detail_beli" => $detail_beli
+            "detail_beli" => $detail_beli,
+            "count" => $count
         ]);
     }
 

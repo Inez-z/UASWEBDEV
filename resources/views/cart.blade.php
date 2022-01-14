@@ -140,6 +140,44 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+                var valueCount
+
+
+                var price = document.getElementById("price").innerText;
+                function toprice(){
+                    var total = valueCount * price;
+                    document.getElementById("price").innerText = total
+                }
+
+                document.querySelector(".plus-btn").addEventListener("click", function(){
+                    valueCount = document.getElementById("quantity").value;
+                    valueCount++;
+                    document.getElementById("quantity").value = valueCount
+
+                    if(valueCount > 1){
+                        document.querySelector(".minus-btn").removeAttribute("disabled");
+                        document.querySelector(".minus-btn").classlist.remove("disabled")
+                    }
+
+
+                })
+
+                document.querySelector(".minus-btn").addEventListener("click", function(){
+                    valueCount = document.getElementById("quantity").value;
+                    valueCount--;
+                    document.getElementById("quantity").value = valueCount
+
+                    if(valueCount == 1){
+                        document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+                    }
+
+
+
+                })
+
+             </script>
             @endforeach
             <div class="total-price">
                 <h6>${{$totalharga}}</h6>
@@ -161,44 +199,7 @@
                     <a href="/checkout/{{$email}}"><button class="btn-decor" >Checkout</button></a>
                 </div>
             </section>
-     <script>
-        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
-        var valueCount
 
-
-        var price = document.getElementById("price").innerText;
-        function toprice(){
-            var total = valueCount * price;
-            document.getElementById("price").innerText = total
-        }
-
-        document.querySelector(".plus-btn").addEventListener("click", function(){
-            valueCount = document.getElementById("quantity").value;
-            valueCount++;
-            document.getElementById("quantity").value = valueCount
-
-            if(valueCount > 1){
-                document.querySelector(".minus-btn").removeAttribute("disabled");
-                document.querySelector(".minus-btn").classlist.remove("disabled")
-            }
-
-
-        })
-
-        document.querySelector(".minus-btn").addEventListener("click", function(){
-            valueCount = document.getElementById("quantity").value;
-            valueCount--;
-            document.getElementById("quantity").value = valueCount
-
-            if(valueCount == 1){
-                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
-            }
-
-
-
-        })
-
-     </script>
      <!--footer-->
      <div class="footer-home-cart">
         <p class="tulisankanancart">WATCHOUT <br><br> Address <br> Store & Office <br> Made, Surabaya <br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>

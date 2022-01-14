@@ -96,7 +96,7 @@
                     <td>{{$d->J_UKURAN}}</td>
                     <td>{{$d->J_WARNA}}</td>
                     <td>{{$d->DR_PRICE}}</td>
-                    <td>{{$d->DR_QTY}}</td>
+                    <td>{{$d->DB_QTY}}</td>
                     <td>${{$d->DR_PRICE}}</td>
                 </tr>
                 @endforeach
