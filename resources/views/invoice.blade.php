@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style2.css">
+{{-- <link rel="stylesheet" href="css/style2.css"> --}}
+<link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -12,7 +13,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             {{-- diganti logo --}}
             <a class="navbar-brand" href="/welcome">
-                <img src="image/logo.png" width="30" height="30" alt="">
+                <img src="{{asset('image/logo.png')}}" width="30" height="30" alt="">
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -76,27 +77,30 @@
                 <p>Address</p>
             </div>
             <div class="subtitle-top-value">
-                <p>: INV/466/HJ</p>
-                <p>: Zefanya Okta</p>
-                <p>: Jalan Raya Indah 21 Jakarta</p>
+                <p>: {{$beli_id}}</p>
+                <p>: {{$data_reseller[0]->R_NAMA}}</p>
+                <p>: {{$data_reseller[0]->R_ALAMAT}}</p>
             </div>
             <table class="table-invoice">
                 <tr>
-                    <th>Product Name</th>
-                    <th>Size</th>
-                    <th>Color</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Subtotal</th>
+                    <th style="column-width: 367px;">Product Name</th>
+                    <th style="column-width: 138px;">Size</th>
+                    <th style="column-width: 138px;">Color</th>
+                    <th style="column-width: 138px;">Price</th>
+                    <th style="column-width: 138px;">Qty</th>
+                    <th style="column-width: 138px;">Subtotal</th>
                 </tr>
+                @foreach($detail_beli as $d)
                 <tr>
-                    <td>Daniel Wellington Iconic Emerald</td>
-                    <td>27</td>
-                    <td>Green</td>
-                    <td>$289</td>
-                    <td>1</td>
-                    <td>$289</td>
+                    <td>{{$d->J_MERK}}</td>
+                    <td>{{$d->J_UKURAN}}</td>
+                    <td>{{$d->J_WARNA}}</td>
+                    <td>{{$d->DR_PRICE}}</td>
+                    <td>{{$d->DB_QTY}}</td>
+                    <td>${{$d->DR_PRICE}}</td>
                 </tr>
+                @endforeach
+
             </table>
             </div>
 

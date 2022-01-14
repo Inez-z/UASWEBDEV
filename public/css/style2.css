@@ -204,7 +204,7 @@
     margin-top: 22px;
     height: 89px;
     /* margin: auto; */
-    height: 467px;
+    height: 498px;
     border: none;
     border-radius: 5px;
     background-color: #d4c8be;
@@ -232,8 +232,8 @@
 
 .container-invoice h5{
     position: absolute;
-    left: 900px;
-    top: 105px;
+    left: 942px;
+    top: 122px;
 }
 
 .subtitle-top{
@@ -256,7 +256,7 @@
 
 .subtitle-bottom{
     position: absolute;
-    left: 841px;
+    left: 845px;
     top: 24px;
     font-size: 15px;
     font-weight: 500;
@@ -265,7 +265,7 @@
 
 .subtitle-bottom-value{
     position: absolute;
-    left: 939px;
+    left: 983px;
     top: 24px;
     font-size: 15px;
     line-height: 8px;
