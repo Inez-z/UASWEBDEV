@@ -76,7 +76,6 @@
 
     {{-- profile form --}}
     <div class="container">
-        <br>
         <a href="/logout"><p class="logout">Log Out</p></a>
         <div style="text-align:center">
         <h2>My Profile</h2>
@@ -85,7 +84,7 @@
         <div class="row">
           <div class="column">
             <div style="text-align:center">
-            <img src="/image/profile.jpg" style="width:60%">
+            <img src="/image/profile.jpg" style="width:70%; border-radius:20px;margin-top: 30px;">
             <h3> </h3>
 
             <h3>{{$profile_login->R_NAMA}}</h3>
@@ -123,13 +122,13 @@
       </div>
 <!--footer-->
 <div class="footer-home">
-    <p class="tulisankanan">WATCHOUT <br><br><br> Address <br> Store & Office <br> Made, Surabaya <br><br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
+    <p class="tulisankanan">WATCHOUT <br><br> Address <br> Store & Office <br> Made, Surabaya <br><br>Office Hour<br>Monday - Sunday <br> 10.00-18.00 </p>
   </div>
   <div class="footer-home2">
-    <p class="tulisantengah">GET IN TOUCH<br><br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
+    <p class="tulisantengah">GET IN TOUCH<br><br>Customer Service<br>4452244<br><br>Phone<br>1474832<br><br>Service Center<br>3593748</p>
   </div>
   <div class="footer-home3">
-    <p class="tulisankiri">SOCIAL MEDIA<br><br><br>Instagram<br><a style="color:white" href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a style="color:white" href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a style="color:white" href="https://twitter.com/Twitter">watchout_global</a></p>
+    <p class="tulisankiri">SOCIAL MEDIA<br><br>Instagram<br><a style="color:white" href="https://www.instagram.com/danielwellington/">@watchout_co</a><br><br>Facebook<br><a style="color:white" href="https://www.facebook.com/">watchout_global</a><br><br>Twitter<br><a style="color:white" href="https://twitter.com/Twitter">watchout_global</a></p>
   </div>
 
 
