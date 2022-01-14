@@ -78,7 +78,7 @@
             </div>
         </nav>
 
-        <h1>Checkout</h1>
+        <h1 style="font-size: 35px; margin-top: 30px; margin-left: 80px;">Checkout</h1>
         <div class="small-container cart page">
             @foreach ($cart as $c)
             {{-- <tr> --}}
@@ -87,12 +87,12 @@
                     <div class="cart-info">
                         <img src={{asset('image/fotoproduk/'.$c->J_KODE);}} width="150">
                         <div>
-                            <h2 class="Product-name">{{$c->J_MERK}}</h2>
-                            <h3 class="Product-size">{{$c->J_WARNA}}</h3>
-                            <h4 class="Product-price">${{$c->J_HARGA}}</h4>
+                            <h2 class="Product-name" style="margin-top: 15px;font-size: 30px;font-weight: 400;">{{$c->J_MERK}}</h2>
+                            <h3 class="Product-size" style="font-size: 26px;font-weight: 400;">{{$c->J_WARNA}}</h3>
+                            <h4 class="Product-price" style="font-size: 28px;">${{$c->J_HARGA}}</h4>
                         </div>
                     </div>
-                    <h5>{{$c->J_STOK}}x</h5>
+                    <h5 style="top: 113px;font-size: 25px;font-style: italic;right: 10px;">{{$c->J_STOK}}x</h5>
                 </div>
             </div>
             {{-- </tr> --}}
