@@ -200,9 +200,9 @@ div.popularproduct img{
     color: #f2f2f2;
     font-family: Poppins;
 }
-.footer-home-about{
+.footer-home-about {
     background-color: #2d2d2b;
-    height: 400px;
+    height: 350px;
     color: #f2f2f2;
     font-family: Poppins;
     position: relative;
@@ -251,25 +251,34 @@ div.popularproduct img{
     overflow: hidden;
     display: flex;
 }
-.box-abt{
+.box-abt {
     position: absolute;
-    top: 700px;
+    top: 695px;
     left: 0;
-    width: 1550px;
-    height: 750px;
+    width: 1263px;
+    height: 711px;
     overflow: hidden;
     display: flex;
 }
-.box-team{
+.box-team {
     position: absolute;
-    top: 1500px;
+    top: 1465px;
     left: 0;
-    width: 1350px;
-    height: 650px;
+    width: 100%;
+    height: 609px;
     overflow: hidden;
     display: flex;
 }
-
+.tulisantengahabout{
+    font-size: 17px;
+    padding-left: 45%;
+    transform: translateY(-100%);
+}
+.tulisankiriabout{
+    font-size: 17px;
+    padding-left:78%;
+    transform: translateY(-208%);
+}
 
 
 
@@ -475,6 +484,7 @@ td input{
 .btn-decor:hover,
 .btn-decor:focus{
     background:#b8926a;
+    text-decoration: underline #f2f2f2;
 }
 .btn-decor:active{
     background: #d4c8be;
@@ -498,6 +508,7 @@ td input{
 .btn-decor-outline:focus{
     background:#b8926a;
     color: #ffffff;
+    text-decoration: underline #f2f2f2;
 }
 .btn-decor-outline:active{
     background: #ffffff;
