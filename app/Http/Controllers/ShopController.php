@@ -190,7 +190,9 @@ class ShopController extends Controller
             "hargadiskon" => $hargadiskon,
             "totalharga" => $detailcart[0]->totalharga,
             "totalfinal" => $total_final,
-            "email" => $email
+            "email" => $email,
+            "tanggal"=> $tanggal,
+            "beli_id" => $beli_id[0]->bid
         ]
         );
     }
@@ -226,7 +228,7 @@ class ShopController extends Controller
 
     public function transaksi(Request $req){
         $email=Session::get('login');
-        $tanggal=
+        $tanggal=date("Y-m-d");
         $data = [
             'namaproduk'=>$req->namaproduk,
             'hargaproduk'  => $req->hargaproduk,
@@ -283,14 +285,25 @@ class ShopController extends Controller
     public function invoice(Request $req){
         $email=Session::get('login');
 
-        $rid ="select R_ID from reseller where R_EMAIL='".$email."';";
-        $reseller_id = DB::select($rid);
+        $data = [
+            'beli_id'=> $req->beli_id
+        ];
 
-        // dd($item);
+        // dd($data['beli_id']);
+        $res ="select R_ID, R_ALAMAT, R_NAMA from reseller where R_EMAIL='".$email."';";
+        $data_reseller = DB::select($res);
+
+        $cmd = "select * from detail_beli d, jam_tangan j where d.BELI_ID='".$data['beli_id']."' and d.J_SKU=j.J_SKU";
+        $detail_beli=DB::select($cmd);
+
+        // $cmd2 = "select * from jam_tangan where J_SKU='".$detail_beli->J_SKU."';";
+        // $detail_jam=DB::select($cmd2);
+
+        // dd($detail_beli);
         return view("/invoice", [
-            "nama" => $invoice->J_MERK,
-            "i" => $invoice,
-            "sku" => $sku
+            "beli_id" => $data['beli_id'],
+            "data_reseller" => $data_reseller,
+            "detail_beli" => $detail_beli
         ]);
     }
 
